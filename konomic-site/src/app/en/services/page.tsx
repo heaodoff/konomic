@@ -16,8 +16,8 @@ export default function ServicesPage() {
     <main className="mx-auto max-w-7xl px-6 py-16 lg:px-10 lg:py-20">
       <SectionIntro
         eyebrow="Services"
-        title="A service structure that is built to rank and convert"
-        text="These services combine competitor demand signals with a cleaner commercial structure for Konomic. The first four are the launch priority. The rest expand authority and search coverage."
+        title="A service structure designed around real demand"
+        text="This service architecture is based on what competitors already sell, but cleaned up for stronger positioning, better lead quality, and more useful multilingual SEO."
       />
 
       <div className="mt-12 grid gap-6">
@@ -29,7 +29,7 @@ export default function ServicesPage() {
           >
             <div className="flex flex-wrap items-center justify-between gap-3">
               <div className="text-xs uppercase tracking-[0.3em] text-[#8f7d67]">
-                {index < 4 ? 'Launch priority' : 'Phase two expansion'}
+                {index < 4 ? 'Launch priority' : 'Expansion service'}
               </div>
               <div className="rounded-full border border-black/8 bg-[#faf7f3] px-3 py-1 text-xs text-[#59646e]">{service.eyebrow}</div>
             </div>
