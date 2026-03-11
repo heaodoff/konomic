@@ -1,5 +1,15 @@
+import type { Metadata } from 'next';
 import { SectionIntro } from '@/components/SiteShell';
 import { coreServices } from '@/content/site';
+
+export const metadata: Metadata = {
+  title: 'Legal Services in Tenerife',
+  description:
+    'Explore Konomic’s legal service structure for Tenerife: property, immigration, business setup, contracts, inheritance, and disputes.',
+  alternates: {
+    canonical: '/en/services',
+  },
+};
 
 export default function ServicesPage() {
   return (

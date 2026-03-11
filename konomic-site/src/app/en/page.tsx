@@ -1,5 +1,21 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { coreServices, faqs, trustPoints } from '@/content/site';
+
+export const metadata: Metadata = {
+  title: 'English-Speaking Legal Services in Tenerife',
+  description:
+    'Premium multilingual legal support in Tenerife for foreign clients, with services for property, residency, business, and contracts.',
+  alternates: {
+    canonical: '/en',
+  },
+  openGraph: {
+    title: 'English-Speaking Legal Services in Tenerife',
+    description:
+      'Premium multilingual legal support in Tenerife for foreign clients, with services for property, residency, business, and contracts.',
+    url: '/en',
+  },
+};
 
 const topServices = coreServices.slice(0, 4);
 

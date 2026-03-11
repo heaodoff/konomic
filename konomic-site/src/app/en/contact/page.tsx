@@ -1,4 +1,14 @@
+import type { Metadata } from 'next';
 import { SectionIntro } from '@/components/SiteShell';
+
+export const metadata: Metadata = {
+  title: 'Contact a Lawyer in Tenerife',
+  description:
+    'Start a legal enquiry with Konomic for Tenerife property, residency, business, contract, and foreign-client legal matters.',
+  alternates: {
+    canonical: '/en/contact',
+  },
+};
 
 export default function ContactPage() {
   return (

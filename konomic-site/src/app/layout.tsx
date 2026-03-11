@@ -12,10 +12,51 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const siteUrl = "https://konomic.es";
+const siteName = "Konomic";
+const defaultTitle = "Konomic — Premium Legal Support in Tenerife";
+const defaultDescription =
+  "Premium multilingual legal support in Tenerife for foreign clients, property buyers, founders, and families.";
+
 export const metadata: Metadata = {
-  title: "Konomic — Premium Legal Support in Tenerife",
-  description:
-    "Premium multilingual legal and business support in Tenerife for foreign clients, property buyers, founders, and families.",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: defaultTitle,
+    template: `%s | ${siteName}`,
+  },
+  description: defaultDescription,
+  applicationName: siteName,
+  alternates: {
+    canonical: "/en",
+    languages: {
+      en: "/en",
+    },
+  },
+  openGraph: {
+    type: "website",
+    url: siteUrl,
+    siteName,
+    title: defaultTitle,
+    description: defaultDescription,
+    locale: "en_GB",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: defaultTitle,
+    description: defaultDescription,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+  category: "legal services",
 };
 
 export default function RootLayout({
