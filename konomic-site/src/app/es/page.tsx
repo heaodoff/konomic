@@ -55,20 +55,20 @@ export default function EsHomePage() {
         <div className="space-y-4 sm:space-y-6"><div className="ui-card-dark p-6 text-white sm:p-8 md:p-10"><div className="relative z-10"><div className="text-[11px] uppercase tracking-[0.24em] text-[#fca311] sm:text-xs sm:tracking-[0.28em]">Por qué Konomic</div><h2 className="mt-3 text-2xl font-semibold tracking-tight sm:text-3xl">{copy.home.whyTitle}</h2><p className="mt-3 text-sm leading-6 text-white/78 sm:mt-4 sm:leading-7">{copy.home.whyText}</p><div className="mt-5 space-y-3 sm:mt-6 sm:space-y-4">{trustPoints.map((item) => <div key={item} className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white/88">{item}</div>)}</div></div></div><div className="ui-card-soft rounded-[1.5rem] px-6 py-6 sm:rounded-[2rem] sm:px-8 sm:py-7 md:px-10"><div className="text-[11px] uppercase tracking-[0.24em] text-[#9a6200] sm:text-xs sm:tracking-[0.3em]">Ruta de contacto</div><p className="mt-3 text-sm leading-7 text-[#516074] sm:text-base sm:leading-8">Empieza por WhatsApp para la respuesta más rápida. Usa Telegram para coordinación breve y email cuando haya documentos o más contexto.</p></div></div>
       </section>
       <section className="ui-section border-t border-[#14213d]/8">
-        <div className="grid gap-6 lg:grid-cols-2">
-          <div className="ui-card p-8 md:p-9">
+        <div className="grid gap-4 md:gap-6 lg:grid-cols-2">
+          <div className="ui-card p-6 sm:p-7 md:p-9">
             <div className="text-xs uppercase tracking-[0.3em] text-[#9a6200]">A quién ayudamos</div>
-            <h2 className="mt-3 text-3xl font-semibold tracking-tight">Diseñado para los perfiles que realmente generan demanda</h2>
-            <div className="mt-6 grid gap-3 sm:grid-cols-2">
+            <h2 className="mt-3 text-2xl font-semibold tracking-tight sm:text-3xl">Diseñado para los perfiles que realmente generan demanda</h2>
+            <div className="mt-5 grid gap-2.5 sm:mt-6 sm:grid-cols-2 sm:gap-3">
               {audiences.map((item) => (
-                <div key={item} className="ui-card-soft px-4 py-4 text-sm text-[#33404a]">{item}</div>
+                <div key={item} className="ui-card-soft px-4 py-3 text-sm text-[#33404a]">{item}</div>
               ))}
             </div>
           </div>
-          <div className="ui-card p-8 md:p-9">
+          <div className="ui-card p-6 sm:p-7 md:p-9">
             <div className="text-xs uppercase tracking-[0.3em] text-[#9a6200]">Cómo funciona</div>
-            <h2 className="mt-3 text-3xl font-semibold tracking-tight">Proceso claro desde el primer mensaje hasta el soporte de pago</h2>
-            <ol className="mt-6 space-y-4 text-sm leading-7 text-[#59646e] md:text-base">
+            <h2 className="mt-3 text-2xl font-semibold tracking-tight sm:text-3xl">Proceso claro desde el primer mensaje hasta el soporte de pago</h2>
+            <ol className="mt-5 space-y-3 text-sm leading-7 text-[#59646e] md:mt-6 md:space-y-4 md:text-base">
               {processSteps.map((step, index) => (
                 <li key={step} className="flex gap-4">
                   <span className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#14213d] text-xs font-semibold text-white">0{index + 1}</span>
@@ -79,9 +79,9 @@ export default function EsHomePage() {
           </div>
         </div>
       </section>
-      <section className="ui-section border-t border-[#14213d]/8"><div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between"><div><div className="text-xs uppercase tracking-[0.3em] text-[#9a6200]">{copy.home.coreServicesEyebrow}</div><h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-5xl">{copy.home.coreServicesTitle}</h2></div><p className="max-w-2xl text-sm leading-7 text-[#59646e] md:text-base">{copy.home.coreServicesText}</p></div><div className="mt-10 grid gap-6 md:grid-cols-2">{topServices.map((service) => <article key={service.slug} className="ui-card p-8 md:p-9"><div className="text-xs uppercase tracking-[0.25em] text-[#9a6200]">{service.eyebrow}</div><h3 className="mt-3 text-2xl font-semibold tracking-tight">{service.title}</h3><p className="mt-3 text-sm leading-7 text-[#59646e] md:text-base">{service.summary}</p><Link href="/es/services" className="ui-link-soft mt-5 inline-flex text-sm font-medium text-[#14213d]">Ver servicios →</Link></article>)}</div></section>
+      <section className="ui-section border-t border-[#14213d]/8"><div className="flex flex-col gap-3 md:gap-4 md:flex-row md:items-end md:justify-between"><div><div className="text-xs uppercase tracking-[0.3em] text-[#9a6200]">{copy.home.coreServicesEyebrow}</div><h2 className="mt-3 text-2xl font-semibold tracking-tight sm:text-3xl md:text-5xl">{copy.home.coreServicesTitle}</h2></div><p className="max-w-2xl text-sm leading-7 text-[#59646e] md:text-base">{copy.home.coreServicesText}</p></div><div className="mt-8 grid gap-4 md:mt-10 md:gap-6 md:grid-cols-2">{topServices.map((service) => <article key={service.slug} className="ui-card p-6 sm:p-7 md:p-9"><div className="text-xs uppercase tracking-[0.25em] text-[#9a6200]">{service.eyebrow}</div><h3 className="mt-3 text-2xl font-semibold tracking-tight">{service.title}</h3><p className="mt-3 text-sm leading-7 text-[#59646e] md:text-base">{service.summary}</p><Link href="/es/services" className="ui-link-soft mt-5 inline-flex text-sm font-medium text-[#14213d]">Ver servicios →</Link></article>)}</div></section>
       <section className="border-t border-[#14213d]/8 bg-[#14213d] py-18 text-white"><div className="mx-auto grid max-w-7xl gap-10 px-6 lg:grid-cols-2 lg:px-10"><div><div className="text-xs uppercase tracking-[0.3em] text-[#fca311]">{copy.home.marketEyebrow}</div><h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-5xl">{copy.home.marketTitle}</h2></div></div></section>
-      <section className="ui-section border-t border-[#14213d]/8"><div className="max-w-3xl"><div className="text-xs uppercase tracking-[0.3em] text-[#9a6200]">{copy.home.faqEyebrow}</div><h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-5xl">{copy.home.faqTitle}</h2></div><div className="mt-10 grid gap-5">{faqs.map((item) => <div key={item.q} className="ui-card px-6 py-6 md:px-7 md:py-7"><h3 className="text-lg font-semibold tracking-tight">{item.q}</h3><p className="mt-3 text-sm leading-7 text-[#59646e] md:text-base">{item.a}</p></div>)}</div></section>
+      <section className="ui-section border-t border-[#14213d]/8"><div className="max-w-3xl"><div className="text-xs uppercase tracking-[0.3em] text-[#9a6200]">{copy.home.faqEyebrow}</div><h2 className="mt-3 text-2xl font-semibold tracking-tight sm:text-3xl md:text-5xl">{copy.home.faqTitle}</h2></div><div className="mt-8 grid gap-4 md:mt-10 md:gap-5">{faqs.map((item) => <div key={item.q} className="ui-card px-5 py-5 sm:px-6 sm:py-6 md:px-7 md:py-7"><h3 className="text-lg font-semibold tracking-tight">{item.q}</h3><p className="mt-3 text-sm leading-7 text-[#59646e] md:text-base">{item.a}</p></div>)}</div></section>
     </main>
   );
 }
