@@ -30,9 +30,9 @@ export function SiteShell({ children, locale = 'en' }: { children: ReactNode; lo
               </div>
               <Link
                 href={`/${locale}/book-consultation`}
-                className="ui-button ui-button-secondary hidden rounded-full border border-[#14213d] px-5 py-2 text-sm font-medium hover:bg-[#14213d] hover:text-white sm:inline-flex"
+                className="ui-button ui-button-primary hidden rounded-full border border-[#14213d] bg-[#14213d] px-5 py-2 text-sm font-medium text-white hover:bg-[#0d1528] hover:text-white sm:inline-flex"
               >
-                {copy.nav.book}
+                <span className="text-white">{copy.nav.book}</span>
               </Link>
             </div>
           </div>
@@ -68,9 +68,9 @@ export function SiteShell({ children, locale = 'en' }: { children: ReactNode; lo
 
             <Link
               href={`/${locale}/book-consultation`}
-              className="ui-button ui-button-secondary inline-flex items-center justify-center rounded-full border border-[#14213d] px-5 py-2.5 text-sm font-medium hover:bg-[#14213d] hover:text-white"
+              className="ui-button ui-button-primary inline-flex items-center justify-center rounded-full border border-[#14213d] bg-[#14213d] px-5 py-2.5 text-sm font-medium text-white hover:bg-[#0d1528] hover:text-white"
             >
-              {copy.nav.book}
+              <span className="text-white">{copy.nav.book}</span>
             </Link>
           </div>
         </div>
