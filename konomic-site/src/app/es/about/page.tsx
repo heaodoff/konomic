@@ -25,6 +25,7 @@ export default function AboutPage() {
             <li>• Teléfono / WhatsApp público habilitado</li>
             <li>• La dirección pública no se muestra</li>
             <li>• No se muestran nombres del equipo o abogados</li>
+            <li>• Aviso legal, privacidad y términos disponibles</li>
           </ul>
         </div>
       </div>
