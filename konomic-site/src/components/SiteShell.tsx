@@ -10,11 +10,11 @@ export function SiteShell({ children, locale = 'en' }: { children: ReactNode; lo
   return (
     <div className="min-h-screen pb-24 text-[#14213d] md:pb-0">
       <header className="sticky top-0 z-30 border-b border-[#14213d]/8 bg-[rgba(255,255,255,0.84)] backdrop-blur-xl">
-        <div className="mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-10 lg:py-5">
-          <div className="flex items-start justify-between gap-4">
+        <div className="mx-auto max-w-7xl px-4 py-3 sm:px-6 lg:px-10 lg:py-5">
+          <div className="flex items-start justify-between gap-3 sm:gap-4">
             <Link href={`/${locale}`} className="flex min-w-0 flex-col">
-              <span className="text-[11px] uppercase tracking-[0.3em] text-[#9a6200] sm:text-xs sm:tracking-[0.35em]">Konomic Digital SL.</span>
-              <span className="mt-1 text-xs text-[#516074] sm:text-sm">{copy.brandTagline}</span>
+              <span className="text-[11px] uppercase tracking-[0.28em] text-[#9a6200] sm:text-xs sm:tracking-[0.35em]">Konomic Digital SL.</span>
+              <span className="mt-0.5 line-clamp-1 text-xs text-[#516074] sm:mt-1 sm:text-sm">{copy.brandTagline}</span>
             </Link>
 
             <div className="flex items-center gap-3">
@@ -51,13 +51,13 @@ export function SiteShell({ children, locale = 'en' }: { children: ReactNode; lo
             <a href={telegramUrl} target="_blank" rel="noopener noreferrer" className="ui-link-soft">Telegram</a>
           </div>
 
-          <div className="mt-3 flex flex-col gap-2.5 md:hidden">
-            <div className="flex flex-wrap gap-2 rounded-2xl border border-[#14213d]/8 bg-white/88 p-2">
+          <div className="mt-2.5 flex items-center justify-between gap-2 md:hidden">
+            <div className="flex min-w-0 flex-wrap gap-1.5 rounded-full border border-[#14213d]/8 bg-white/88 p-1.5">
               {locales.map((item) => (
                 <Link
                   key={item}
                   href={`/${item}`}
-                  className={`ui-button inline-flex min-w-[3rem] items-center justify-center rounded-full px-3 py-1.5 text-xs font-medium transition ${
+                  className={`ui-button inline-flex min-w-[2.4rem] items-center justify-center rounded-full px-2.5 py-1 text-[11px] font-medium transition ${
                     item === locale ? 'bg-[#14213d] text-white hover:text-white' : 'text-[#516074] hover:bg-[#14213d]/5'
                   }`}
                 >
@@ -66,12 +66,14 @@ export function SiteShell({ children, locale = 'en' }: { children: ReactNode; lo
               ))}
             </div>
 
-            <div className="grid grid-cols-2 gap-2 text-sm">
-              <Link href={`/${locale}/services`} className="ui-button ui-button-secondary rounded-xl border border-[#14213d]/8 bg-white/88 px-4 py-2.5 text-center text-[#47515a]">{copy.nav.services}</Link>
-              <Link href={`/${locale}/about`} className="ui-button ui-button-secondary rounded-xl border border-[#14213d]/8 bg-white/88 px-4 py-2.5 text-center text-[#47515a]">{copy.nav.about}</Link>
-              <Link href={`/${locale}/faq`} className="ui-button ui-button-secondary rounded-xl border border-[#14213d]/8 bg-white/88 px-4 py-2.5 text-center text-[#47515a]">{copy.nav.faq}</Link>
-              <Link href={`/${locale}/contact`} className="ui-button ui-button-secondary rounded-xl border border-[#14213d]/8 bg-white/88 px-4 py-2.5 text-center text-[#47515a]">{copy.nav.contact}</Link>
-            </div>
+            <a
+              href={whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ui-button ui-button-primary inline-flex shrink-0 items-center justify-center rounded-full bg-[#14213d] px-4 py-2 text-xs font-medium text-white hover:bg-[#0d1528]"
+            >
+              WhatsApp
+            </a>
           </div>
         </div>
       </header>
