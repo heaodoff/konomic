@@ -36,10 +36,18 @@ export default function EnHomePage() {
             and families who need clear guidance, fast orientation, and a more reliable way to handle legal matters in Tenerife.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
-            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="rounded-full bg-[#1d252b] px-6 py-3 text-sm font-medium text-white transition hover:bg-[#11171b]">
+            <a
+              href={whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ui-button ui-button-primary rounded-full bg-[#1d252b] px-6 py-3 text-sm font-medium text-white hover:bg-[#11171b]"
+            >
               Start on WhatsApp
             </a>
-            <Link href="/en/contact" className="rounded-full border border-[#1d252b]/15 bg-white/80 px-6 py-3 text-sm font-medium text-[#1d252b] transition hover:border-[#1d252b]/35">
+            <Link
+              href="/en/contact"
+              className="ui-button ui-button-secondary rounded-full border border-[#1d252b]/15 bg-white/80 px-6 py-3 text-sm font-medium text-[#1d252b] hover:border-[#1d252b]/35"
+            >
               View contact options
             </Link>
           </div>
@@ -83,7 +91,7 @@ export default function EnHomePage() {
               <div className="text-xs uppercase tracking-[0.25em] text-[#8f7d67]">{service.eyebrow}</div>
               <h3 className="mt-3 text-2xl font-semibold tracking-tight">{service.title}</h3>
               <p className="mt-3 text-sm leading-7 text-[#59646e] md:text-base">{service.summary}</p>
-              <Link href={`/en/services#${service.slug}`} className="mt-5 inline-flex text-sm font-medium text-[#1d252b]">
+              <Link href={`/en/services#${service.slug}`} className="ui-link-soft mt-5 inline-flex text-sm font-medium text-[#1d252b]">
                 View service details →
               </Link>
             </article>
@@ -134,7 +142,7 @@ export default function EnHomePage() {
 
 function Stat({ value, label }: { value: string; label: string }) {
   return (
-    <div className="rounded-[1.5rem] border border-black/5 bg-white/80 p-5 shadow-[0_8px_24px_rgba(24,31,38,0.04)]">
+    <div className="rounded-[1.5rem] border border-black/5 bg-white/80 p-5 shadow-[0_8px_24px_rgba(24,31,38,0.04)] transition-transform duration-200 ease-out hover:-translate-y-0.5 hover:shadow-[0_14px_30px_rgba(24,31,38,0.07)]">
       <div className="text-2xl font-semibold tracking-tight text-[#1d252b]">{value}</div>
       <div className="mt-1 text-sm text-[#59646e]">{label}</div>
     </div>

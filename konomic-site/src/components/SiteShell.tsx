@@ -20,7 +20,7 @@ export function SiteShell({ children, locale = 'en' }: { children: ReactNode; lo
                   <Link
                     key={item}
                     href={`/${item}`}
-                    className={`rounded-full px-2.5 py-1 text-xs font-medium transition ${
+                    className={`ui-button rounded-full px-2.5 py-1 text-xs font-medium transition ${
                       item === locale ? 'bg-[#1d252b] text-white' : 'text-[#56616b] hover:bg-black/5'
                     }`}
                   >
@@ -30,7 +30,7 @@ export function SiteShell({ children, locale = 'en' }: { children: ReactNode; lo
               </div>
               <Link
                 href={`/${locale}/book-consultation`}
-                className="hidden rounded-full border border-[#1d252b] px-5 py-2 text-sm font-medium transition hover:bg-[#1d252b] hover:text-white sm:inline-flex"
+                className="ui-button ui-button-secondary hidden rounded-full border border-[#1d252b] px-5 py-2 text-sm font-medium hover:bg-[#1d252b] hover:text-white sm:inline-flex"
               >
                 {copy.nav.book}
               </Link>
@@ -38,10 +38,10 @@ export function SiteShell({ children, locale = 'en' }: { children: ReactNode; lo
           </div>
 
           <div className="mt-4 hidden items-center gap-7 text-sm text-[#47515a] md:flex">
-            <Link href={`/${locale}/services`}>{copy.nav.services}</Link>
-            <Link href={`/${locale}/about`}>{copy.nav.about}</Link>
-            <Link href={`/${locale}/faq`}>{copy.nav.faq}</Link>
-            <Link href={`/${locale}/contact`}>{copy.nav.contact}</Link>
+            <Link href={`/${locale}/services`} className="ui-link-soft">{copy.nav.services}</Link>
+            <Link href={`/${locale}/about`} className="ui-link-soft">{copy.nav.about}</Link>
+            <Link href={`/${locale}/faq`} className="ui-link-soft">{copy.nav.faq}</Link>
+            <Link href={`/${locale}/contact`} className="ui-link-soft">{copy.nav.contact}</Link>
           </div>
 
           <div className="mt-4 flex flex-col gap-3 md:hidden">
@@ -50,7 +50,7 @@ export function SiteShell({ children, locale = 'en' }: { children: ReactNode; lo
                 <Link
                   key={item}
                   href={`/${item}`}
-                  className={`rounded-full px-3 py-1.5 text-xs font-medium transition ${
+                  className={`ui-button rounded-full px-3 py-1.5 text-xs font-medium transition ${
                     item === locale ? 'bg-[#1d252b] text-white' : 'text-[#56616b] hover:bg-black/5'
                   }`}
                 >
@@ -60,23 +60,23 @@ export function SiteShell({ children, locale = 'en' }: { children: ReactNode; lo
             </div>
 
             <div className="grid grid-cols-2 gap-2 text-sm">
-              <Link href={`/${locale}/services`} className="rounded-xl border border-black/6 bg-white/70 px-4 py-2.5 text-center text-[#47515a]">
+              <Link href={`/${locale}/services`} className="ui-button ui-button-secondary rounded-xl border border-black/6 bg-white/70 px-4 py-2.5 text-center text-[#47515a]">
                 {copy.nav.services}
               </Link>
-              <Link href={`/${locale}/about`} className="rounded-xl border border-black/6 bg-white/70 px-4 py-2.5 text-center text-[#47515a]">
+              <Link href={`/${locale}/about`} className="ui-button ui-button-secondary rounded-xl border border-black/6 bg-white/70 px-4 py-2.5 text-center text-[#47515a]">
                 {copy.nav.about}
               </Link>
-              <Link href={`/${locale}/faq`} className="rounded-xl border border-black/6 bg-white/70 px-4 py-2.5 text-center text-[#47515a]">
+              <Link href={`/${locale}/faq`} className="ui-button ui-button-secondary rounded-xl border border-black/6 bg-white/70 px-4 py-2.5 text-center text-[#47515a]">
                 {copy.nav.faq}
               </Link>
-              <Link href={`/${locale}/contact`} className="rounded-xl border border-black/6 bg-white/70 px-4 py-2.5 text-center text-[#47515a]">
+              <Link href={`/${locale}/contact`} className="ui-button ui-button-secondary rounded-xl border border-black/6 bg-white/70 px-4 py-2.5 text-center text-[#47515a]">
                 {copy.nav.contact}
               </Link>
             </div>
 
             <Link
               href={`/${locale}/book-consultation`}
-              className="inline-flex items-center justify-center rounded-full border border-[#1d252b] px-5 py-2.5 text-sm font-medium transition hover:bg-[#1d252b] hover:text-white"
+              className="ui-button ui-button-secondary inline-flex items-center justify-center rounded-full border border-[#1d252b] px-5 py-2.5 text-sm font-medium hover:bg-[#1d252b] hover:text-white"
             >
               {copy.nav.book}
             </Link>
@@ -93,10 +93,10 @@ export function SiteShell({ children, locale = 'en' }: { children: ReactNode; lo
           <div>
             <div className="text-sm font-semibold">{copy.nav.services}</div>
             <div className="mt-4 flex flex-col gap-3 text-sm text-[#58636d]">
-              <Link href={`/${locale}/services`}>{copy.nav.services}</Link>
-              <Link href={`/${locale}/about`}>{copy.nav.about}</Link>
-              <Link href={`/${locale}/faq`}>{copy.nav.faq}</Link>
-              <Link href={`/${locale}/contact`}>{copy.nav.contact}</Link>
+              <Link href={`/${locale}/services`} className="ui-link-soft">{copy.nav.services}</Link>
+              <Link href={`/${locale}/about`} className="ui-link-soft">{copy.nav.about}</Link>
+              <Link href={`/${locale}/faq`} className="ui-link-soft">{copy.nav.faq}</Link>
+              <Link href={`/${locale}/contact`} className="ui-link-soft">{copy.nav.contact}</Link>
             </div>
           </div>
           <div>
