@@ -150,8 +150,9 @@ export default function EnHomePage() {
         </div>
       </section>
 
-      <section className="border-t border-[#14213d]/8 bg-[#14213d] py-18 text-white">
-        <div className="mx-auto grid max-w-7xl gap-10 px-6 lg:grid-cols-2 lg:px-10">
+      <section className="relative overflow-hidden border-t border-[#14213d]/8 bg-[#14213d] py-18 text-white">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(252,163,17,0.16),transparent_28%),radial-gradient(circle_at_bottom_left,rgba(255,255,255,0.05),transparent_24%)]" aria-hidden="true" />
+        <div className="relative mx-auto grid max-w-7xl gap-10 px-6 lg:grid-cols-2 lg:px-10">
           <div>
             <div className="text-xs uppercase tracking-[0.3em] text-[#fca311]">Market angle</div>
             <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-5xl">

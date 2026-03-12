@@ -9,7 +9,7 @@ export function SiteShell({ children, locale = 'en' }: { children: ReactNode; lo
   const copy = localeContent[locale];
   return (
     <div className="min-h-screen pb-24 text-[#14213d] md:pb-0">
-      <header className="z-30 border-b border-[#14213d]/8 bg-[rgba(255,255,255,0.84)] backdrop-blur-xl">
+      <header className="z-30 border-b border-[#14213d]/8 bg-[linear-gradient(180deg,rgba(255,255,255,0.92),rgba(255,255,255,0.82))] shadow-[0_10px_28px_rgba(20,33,61,0.04)] backdrop-blur-xl">
         <div className="mx-auto max-w-7xl px-4 py-3 sm:px-6 lg:px-10 lg:py-5">
           <div className="flex items-start justify-between gap-3 sm:gap-4">
             <Link href={`/${locale}`} className="flex min-w-0 flex-col">
@@ -99,10 +99,11 @@ export function SiteShell({ children, locale = 'en' }: { children: ReactNode; lo
         </div>
       </div>
 
-      <footer className="border-t border-[#14213d]/8 bg-white/70">
+      <footer className="ui-footer-shell border-t border-[#14213d]/8">
         <div className="mx-auto grid max-w-7xl gap-8 px-6 py-12 lg:grid-cols-[1.1fr_1fr_1fr] lg:px-10">
           <div>
             <div className="text-xs uppercase tracking-[0.35em] text-[#9a6200]">Konomic Digital SL.</div>
+            <div className="mt-4 h-px w-16 bg-[linear-gradient(90deg,rgba(252,163,17,0.7),rgba(20,33,61,0.12))]" />
             <p className="mt-4 max-w-sm text-sm leading-7 text-[#58636d]">{copy.footerBlurb}</p>
           </div>
           <div>

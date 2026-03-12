@@ -103,17 +103,30 @@ a {
 .ui-card-dark {
   position: relative;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  background: linear-gradient(180deg, #1b2948 0%, #14213d 100%);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0)),
+    linear-gradient(180deg, #1b2948 0%, #14213d 100%);
   border-radius: 2rem;
-  box-shadow: 0 32px 84px rgba(20, 33, 61, 0.24);
+  box-shadow: 0 36px 96px rgba(20, 33, 61, 0.28);
+}
+
+.ui-card-dark::before {
+  content: '';
+  position: absolute;
+  inset: 1px 1px auto 1px;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(255,255,255,0.34), rgba(255,255,255,0));
+  pointer-events: none;
 }
 
 .ui-card-dark::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at top right, rgba(252, 163, 17, 0.12), transparent 30%);
+  background:
+    radial-gradient(circle at top right, rgba(252, 163, 17, 0.14), transparent 30%),
+    radial-gradient(circle at bottom left, rgba(255,255,255,0.06), transparent 24%);
   pointer-events: none;
 }
 
@@ -126,7 +139,28 @@ a {
 .ui-rule {
   height: 1px;
   width: 100%;
-  background: linear-gradient(90deg, rgba(252, 163, 17, 0.55), rgba(20, 33, 61, 0.08));
+  background: linear-gradient(90deg, rgba(252, 163, 17, 0.62), rgba(20, 33, 61, 0.12), rgba(20, 33, 61, 0.02));
+}
+
+.ui-footer-shell {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(255,255,255,0.68), rgba(247,244,238,0.92));
+}
+
+.ui-footer-shell::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at top left, rgba(252,163,17,0.08), transparent 20%),
+    radial-gradient(circle at top right, rgba(20,33,61,0.05), transparent 22%);
+  pointer-events: none;
+}
+
+.ui-footer-shell > * {
+  position: relative;
+  z-index: 1;
 }
 
 .ui-mobile-sticky {
