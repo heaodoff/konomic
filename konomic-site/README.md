@@ -1,13 +1,23 @@
 # Konomic Site
 
-Initial premium homepage MVP for a multilingual Tenerife legal services website.
+Multilingual premium legal-services site for Tenerife, built as a Next.js MVP for Konomic.
 
 ## Current state
 
 - Next.js + TypeScript + Tailwind
-- English-first premium homepage draft
-- SEO-led structure reflected in homepage copy
-- Ready to expand into service pages and multilingual routes
+- English, German, Russian, and Ukrainian route structure
+- Localized service pages for:
+  - property
+  - immigration / residency
+  - business
+  - contract review
+- SEO base in place:
+  - metadata
+  - robots.txt
+  - sitemap.xml
+  - multilingual alternates
+- Contact / lead-flow scaffolding in place
+- Build passes successfully
 
 ## Run locally
 
@@ -18,22 +28,25 @@ npm run dev
 
 Then open http://localhost:3000
 
+## Verify production build
+
+```bash
+npm run build
+npm run start
+```
+
+## Deployment docs
+
+See `DEPLOY.md`.
+
 ## What still needs real business input
 
-1. Exact legal services actually offered by Konomic
-2. Public company details (legal entity, address, phone, email)
-3. Team / lawyer credentials allowed on site
-4. Preferred lead channel (form, WhatsApp, Telegram, phone)
-5. Domain and deployment target
+1. Final public Konomic contact details
+2. Final lead destination
+3. Legal/company footer details
+4. Whether address / phone / WhatsApp can be public
+5. Final domain/DNS hookup
 
-## Recommended next build steps
+## Current deployment recommendation
 
-1. Add localized routes: /en /de /ru /uk
-2. Create core service pages:
-   - immigration-lawyer-tenerife
-   - property-lawyer-tenerife
-   - business-lawyer-tenerife
-   - contract-review-tenerife
-3. Add contact form and legal footer pages
-4. Add schema.org, sitemap, robots, hreflang
-5. Deploy to Vercel
+Deploy on Vercel first, then connect `konomic.es`.
