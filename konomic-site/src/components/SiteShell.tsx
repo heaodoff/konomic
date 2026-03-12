@@ -8,13 +8,13 @@ const telegramUrl = 'https://t.me/nkitl0';
 export function SiteShell({ children, locale = 'en' }: { children: ReactNode; locale?: Locale }) {
   const copy = localeContent[locale];
   return (
-    <div className="min-h-screen text-[#14213d]">
+    <div className="min-h-screen pb-24 text-[#14213d] md:pb-0">
       <header className="sticky top-0 z-30 border-b border-[#14213d]/8 bg-[rgba(255,255,255,0.84)] backdrop-blur-xl">
-        <div className="mx-auto max-w-7xl px-6 py-5 lg:px-10">
+        <div className="mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-10 lg:py-5">
           <div className="flex items-start justify-between gap-4">
             <Link href={`/${locale}`} className="flex min-w-0 flex-col">
-              <span className="text-xs uppercase tracking-[0.35em] text-[#9a6200]">Konomic Digital SL.</span>
-              <span className="mt-1 text-sm text-[#516074]">{copy.brandTagline}</span>
+              <span className="text-[11px] uppercase tracking-[0.3em] text-[#9a6200] sm:text-xs sm:tracking-[0.35em]">Konomic Digital SL.</span>
+              <span className="mt-1 text-xs text-[#516074] sm:text-sm">{copy.brandTagline}</span>
             </Link>
 
             <div className="flex items-center gap-3">
@@ -42,7 +42,7 @@ export function SiteShell({ children, locale = 'en' }: { children: ReactNode; lo
             </div>
           </div>
 
-          <div className="mt-4 hidden items-center gap-7 text-sm text-[#47515a] md:flex">
+          <div className="mt-3 hidden items-center gap-7 text-sm text-[#47515a] md:flex">
             <Link href={`/${locale}/services`} className="ui-link-soft">{copy.nav.services}</Link>
             <Link href={`/${locale}/about`} className="ui-link-soft">{copy.nav.about}</Link>
             <Link href={`/${locale}/faq`} className="ui-link-soft">{copy.nav.faq}</Link>
@@ -51,7 +51,7 @@ export function SiteShell({ children, locale = 'en' }: { children: ReactNode; lo
             <a href={telegramUrl} target="_blank" rel="noopener noreferrer" className="ui-link-soft">Telegram</a>
           </div>
 
-          <div className="mt-4 flex flex-col gap-3 md:hidden">
+          <div className="mt-3 flex flex-col gap-2.5 md:hidden">
             <div className="flex flex-wrap gap-2 rounded-2xl border border-[#14213d]/8 bg-white/88 p-2">
               {locales.map((item) => (
                 <Link
@@ -71,22 +71,23 @@ export function SiteShell({ children, locale = 'en' }: { children: ReactNode; lo
               <Link href={`/${locale}/about`} className="ui-button ui-button-secondary rounded-xl border border-[#14213d]/8 bg-white/88 px-4 py-2.5 text-center text-[#47515a]">{copy.nav.about}</Link>
               <Link href={`/${locale}/faq`} className="ui-button ui-button-secondary rounded-xl border border-[#14213d]/8 bg-white/88 px-4 py-2.5 text-center text-[#47515a]">{copy.nav.faq}</Link>
               <Link href={`/${locale}/contact`} className="ui-button ui-button-secondary rounded-xl border border-[#14213d]/8 bg-white/88 px-4 py-2.5 text-center text-[#47515a]">{copy.nav.contact}</Link>
-              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="ui-button ui-button-secondary rounded-xl border border-[#14213d]/8 bg-white/88 px-4 py-2.5 text-center text-[#47515a]">WhatsApp</a>
-              <a href={telegramUrl} target="_blank" rel="noopener noreferrer" className="ui-button ui-button-secondary rounded-xl border border-[#14213d]/8 bg-white/88 px-4 py-2.5 text-center text-[#47515a]">Telegram</a>
             </div>
-
-            <a
-              href={whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="ui-button ui-button-primary inline-flex items-center justify-center rounded-full border border-[#14213d] bg-[#14213d] px-5 py-2.5 text-sm font-medium text-white hover:bg-[#0d1528] hover:text-white"
-            >
-              <span className="text-white">{copy.nav.book}</span>
-            </a>
           </div>
         </div>
       </header>
       {children}
+
+      <div className="ui-mobile-sticky md:hidden">
+        <div className="mx-auto grid max-w-7xl grid-cols-2 gap-3 px-4 py-3">
+          <a href={telegramUrl} target="_blank" rel="noopener noreferrer" className="ui-button ui-button-secondary inline-flex items-center justify-center rounded-full border border-[#14213d]/12 bg-white px-4 py-3 text-sm font-medium text-[#14213d] hover:border-[#fca311]/45">
+            Telegram
+          </a>
+          <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="ui-button ui-button-primary inline-flex items-center justify-center rounded-full bg-[#14213d] px-4 py-3 text-sm font-medium text-white hover:bg-[#0d1528]">
+            WhatsApp
+          </a>
+        </div>
+      </div>
+
       <footer className="border-t border-[#14213d]/8 bg-white/70">
         <div className="mx-auto grid max-w-7xl gap-8 px-6 py-12 lg:grid-cols-[1.1fr_1fr_1fr] lg:px-10">
           <div>
