@@ -71,3 +71,42 @@ a {
 .ui-link-soft:hover {
   opacity: 0.8;
 }
+
+.ui-card {
+  border: 1px solid rgba(17, 24, 39, 0.05);
+  background: rgba(255, 255, 255, 0.88);
+  border-radius: 1.75rem;
+  box-shadow: 0 12px 40px rgba(24, 31, 38, 0.05);
+}
+
+.ui-card-soft {
+  border: 1px solid rgba(17, 24, 39, 0.05);
+  background: #f8f4ef;
+  border-radius: 1.25rem;
+}
+
+.ui-card-dark {
+  border: 1px solid rgba(17, 24, 39, 0.05);
+  background: #1f262d;
+  border-radius: 2rem;
+  box-shadow: 0 30px 80px rgba(26, 31, 36, 0.14);
+}
+
+.ui-section {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+@media (min-width: 1024px) {
+  .ui-section {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}
