@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   },
 };
 
+const whatsappUrl = 'https://wa.me/34643319719';
 const topServices = coreServices.slice(0, 4);
 
 export default function EnHomePage() {
@@ -35,16 +36,16 @@ export default function EnHomePage() {
             and families who need clear guidance, fast orientation, and a more reliable way to handle legal matters in Tenerife.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
-            <Link href="/en/book-consultation" className="rounded-full bg-[#1d252b] px-6 py-3 text-sm font-medium text-white transition hover:bg-[#11171b]">
-              Book consultation
-            </Link>
+            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="rounded-full bg-[#1d252b] px-6 py-3 text-sm font-medium text-white transition hover:bg-[#11171b]">
+              Start on WhatsApp
+            </a>
             <Link href="/en/contact" className="rounded-full border border-[#1d252b]/15 bg-white/80 px-6 py-3 text-sm font-medium text-[#1d252b] transition hover:border-[#1d252b]/35">
-              Start an enquiry
+              View contact options
             </Link>
           </div>
           <div className="mt-10 grid gap-4 sm:grid-cols-3">
-            <Stat value="EN / DE" label="demand capture" />
-            <Stat value="RU / UK" label="differentiation" />
+            <Stat value="WhatsApp-first" label="primary lead channel" />
+            <Stat value="EN / DE / RU / UK" label="multilingual coverage" />
             <Stat value="Property / Residency" label="core commercial intent" />
           </div>
         </div>
@@ -102,7 +103,7 @@ export default function EnHomePage() {
             {[
               'Separate language folders for SEO',
               'Service-led architecture instead of generic brochure copy',
-              'Productized consultations for easier lead capture',
+              'WhatsApp-first intake for faster conversion',
               'Sharper design that feels private, premium, and trustworthy',
             ].map((item) => (
               <div key={item} className="rounded-[1.5rem] border border-white/10 bg-white/5 p-5 text-sm leading-7 text-white/85">

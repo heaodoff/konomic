@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   },
 };
 
+const whatsappUrl = 'https://wa.me/34643319719';
+const telegramUrl = 'https://t.me/nkitl0';
+
 const fields = [
   'Full name',
   'Email address',
@@ -25,12 +28,36 @@ export default function ContactPage() {
       <SectionIntro
         eyebrow="Contact"
         title="Contact Konomic Digital SL."
-        text="Konomic Digital SL. can be contacted directly by WhatsApp, email, or Telegram. The contact flow is set up without public office address or public team profiles."
+        text="Konomic Digital SL. is set up with a WhatsApp-first contact flow. Email and Telegram remain available, but the fastest path for a new enquiry is WhatsApp."
       />
+      <div className="mt-10 flex flex-wrap gap-4">
+        <a
+          href={whatsappUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="rounded-full bg-[#1d252b] px-6 py-3 text-sm font-medium text-white transition hover:bg-[#11171b]"
+        >
+          Start on WhatsApp
+        </a>
+        <a
+          href="mailto:nikita.lukashok@gmail.com"
+          className="rounded-full border border-[#1d252b]/15 bg-white/80 px-6 py-3 text-sm font-medium text-[#1d252b] transition hover:border-[#1d252b]/35"
+        >
+          Email Konomic
+        </a>
+        <a
+          href={telegramUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="rounded-full border border-[#1d252b]/15 bg-white/80 px-6 py-3 text-sm font-medium text-[#1d252b] transition hover:border-[#1d252b]/35"
+        >
+          Open Telegram
+        </a>
+      </div>
       <div className="mt-12 grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
         <div className="rounded-[2rem] border border-black/5 bg-white/90 p-8 shadow-[0_12px_40px_rgba(24,31,38,0.05)]">
           <h2 className="text-2xl font-semibold tracking-tight">Recommended enquiry form</h2>
-          <form className="mt-6 grid gap-4" action="#" method="post">
+          <form className="mt-6 grid gap-4" action={whatsappUrl} method="get">
             <div className="grid gap-4 md:grid-cols-2">
               {fields.slice(0, 4).map((label) => (
                 <label key={label} className="grid gap-2 text-sm font-medium text-[#33404a]">
@@ -64,14 +91,16 @@ export default function ContactPage() {
             </label>
             <div className="flex flex-wrap items-center justify-between gap-3 pt-2">
               <p className="max-w-md text-xs leading-6 text-[#67727c]">
-                Primary contact channel: WhatsApp. Secondary channels: email and Telegram. No public office address is displayed.
+                WhatsApp is the primary contact channel. Email and Telegram remain available for longer context and document exchange.
               </p>
-              <button
-                type="submit"
+              <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="rounded-full bg-[#1d252b] px-6 py-3 text-sm font-medium text-white transition hover:bg-[#11171b]"
               >
-                Send enquiry
-              </button>
+                Send on WhatsApp
+              </a>
             </div>
           </form>
         </div>
@@ -89,9 +118,9 @@ export default function ContactPage() {
           <div className="rounded-[2rem] border border-black/5 bg-[#1f262d] p-8 text-white shadow-[0_30px_80px_rgba(26,31,36,0.14)]">
             <h2 className="text-2xl font-semibold tracking-tight">Recommended client journey</h2>
             <ol className="mt-4 space-y-3 text-sm leading-7 text-white/80 md:text-base">
-              <li>1. Contact Konomic Digital SL. by WhatsApp or structured enquiry</li>
-              <li>2. Receive the right consultation recommendation</li>
-              <li>3. Share documents if review is needed</li>
+              <li>1. Start on WhatsApp</li>
+              <li>2. Get the right consultation recommendation</li>
+              <li>3. Share documents by email or Telegram if needed</li>
               <li>4. Move into paid consultation or ongoing support</li>
             </ol>
           </div>
