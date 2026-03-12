@@ -4,29 +4,22 @@ import { SectionIntro } from '@/components/SiteShell';
 export const metadata: Metadata = {
   title: 'Бізнес-юрист на Тенерифе',
   description:
-    'Юридична підтримка на Тенерифе для відкриття компанії, структурування бізнесу, договорів і супроводу іноземних підприємців.',
+    'Юридична підтримка на Тенерифе для відкриття компанії, структури бізнесу, комерційних договорів і супроводу іноземних підприємців.',
   alternates: { canonical: '/uk/services/biznes-yuryst-tenerife' },
 };
 
-const bullets = [
-  'Підтримка при відкритті та структуруванні бізнесу в Іспанії',
-  'Допомога з питаннями партнерів, часток і домовленостей',
-  'Перевірка комерційних договорів і юридичних ризиків',
-  'Супровід іноземних підприємців у робочому режимі',
-];
+const whatsappUrl = 'https://wa.me/34643319719';
 
 export default function UkBusinessPage() {
   return (
-    <main className="mx-auto max-w-7xl px-6 py-16 lg:px-10 lg:py-20">
+    <main className="ui-section ui-section-cream">
       <SectionIntro
-        eyebrow="Бізнес і корпоративний супровід"
+        eyebrow="Бізнес і структура"
         title="Юридична підтримка на Тенерифе для бізнесу, підприємців і міжнародних проєктів"
-        text="Ця сторінка потрібна клієнтам, які хочуть відкрити, структурувати або безпечніше вести бізнес на Тенерифе та в Іспанії. Для іноземних підприємців ризик часто виникає на стику структури компанії, договорів і місцевої практики."
+        text="Ця сторінка для клієнтів, які хочуть відкрити, структурувати або безпечніше вести бізнес на Тенерифе та в Іспанії."
       />
-      <div className="mt-12 grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
-        <div className="rounded-[2rem] border border-black/5 bg-white/90 p-8 shadow-[0_12px_40px_rgba(24,31,38,0.05)]"><h2 className="text-2xl font-semibold tracking-tight">З чим має допомагати ця послуга</h2><div className="mt-6 grid gap-3">{bullets.map((item) => <div key={item} className="rounded-2xl border border-black/5 bg-[#f8f4ef] px-4 py-4 text-sm text-[#33404a]">{item}</div>)}</div></div>
-        <div className="rounded-[2rem] border border-black/5 bg-[#1f262d] p-8 text-white shadow-[0_30px_80px_rgba(26,31,36,0.14)]"><h2 className="text-2xl font-semibold tracking-tight">Типові кейси</h2><ul className="mt-4 space-y-3 text-sm leading-7 text-white/80 md:text-base"><li>• Відкриття компанії в Іспанії або на Тенерифе</li><li>• Структура між партнерами та розподіл ролей</li><li>• Договори з підрядниками та клієнтами</li><li>• Постійна юридична підтримка міжнародного бізнесу</li></ul></div>
-      </div>
+      <div className="mt-8 ui-rule" />
+      <div className="mt-12 grid gap-6 lg:grid-cols-[1.1fr_0.9fr]"><div className="ui-card p-8 md:p-10"><h2 className="text-2xl font-semibold tracking-tight">Типові ситуації</h2><ul className="mt-6 space-y-4 text-sm leading-7 text-[#56616b] md:text-base"><li>• До запуску компанії або структури в Іспанії</li><li>• Коли між партнерами потрібні зрозумілі домовленості</li><li>• Коли комерційні документи потрібно перевірити заздалегідь</li><li>• Коли іноземному підприємцю важливо зменшити структурні помилки на старті</li></ul></div><div className="ui-card-dark p-8 text-white md:p-10"><div className="relative z-10"><h2 className="text-2xl font-semibold tracking-tight">Що може включати ця послуга</h2><div className="mt-6 grid gap-3">{['Відкриття та структура компанії','Домовленості між партнерами','Перевірка комерційних договорів','Рання юридична ясність до зростання ризику'].map((item)=><div key={item} className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white/86">{item}</div>)}</div></div></div></div><div className="mt-12 ui-card-soft rounded-[2rem] px-8 py-8 md:px-10 md:py-9"><h2 className="text-2xl font-semibold tracking-tight">Корисний перший крок</h2><p className="mt-4 text-sm leading-7 text-[#56616b] md:text-base">У першому повідомленні краще коротко пояснити, який тип бізнесу або структури планується, чи є вже чернетки документів і який термін найбільш важливий.</p><a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="ui-button ui-button-primary mt-6 inline-flex rounded-full bg-[#14213d] px-6 py-3 text-sm font-medium text-white hover:bg-[#0d1528]">Почати консультацію щодо бізнесу</a></div>
     </main>
   );
 }
