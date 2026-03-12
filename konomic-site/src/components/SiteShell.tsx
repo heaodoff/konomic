@@ -9,7 +9,7 @@ export function SiteShell({ children, locale = 'en' }: { children: ReactNode; lo
   const copy = localeContent[locale];
   return (
     <div className="min-h-screen pb-24 text-[#14213d] md:pb-0">
-      <header className="sticky top-0 z-30 border-b border-[#14213d]/8 bg-[rgba(255,255,255,0.84)] backdrop-blur-xl">
+      <header className="z-30 border-b border-[#14213d]/8 bg-[rgba(255,255,255,0.84)] backdrop-blur-xl">
         <div className="mx-auto max-w-7xl px-4 py-3 sm:px-6 lg:px-10 lg:py-5">
           <div className="flex items-start justify-between gap-3 sm:gap-4">
             <Link href={`/${locale}`} className="flex min-w-0 flex-col">
