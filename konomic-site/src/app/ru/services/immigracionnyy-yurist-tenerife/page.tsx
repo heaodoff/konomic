@@ -8,36 +8,18 @@ export const metadata: Metadata = {
   alternates: { canonical: '/ru/services/immigracionnyy-yurist-tenerife' },
 };
 
-const bullets = [
-  'Ориентация по вариантам резиденции и документам',
-  'Помощь с NIE, TIE и локальными регистрациями',
-  'Поддержка по family reunification и релокации',
-  'Подготовка ещё до приезда на Тенерифе',
-];
+const whatsappUrl = 'https://wa.me/34643319719';
 
 export default function RuImmigrationPage() {
   return (
-    <main className="mx-auto max-w-7xl px-6 py-16 lg:px-10 lg:py-20">
+    <main className="ui-section ui-section-cream">
       <SectionIntro
         eyebrow="Иммиграция и резиденция"
         title="Юридическая поддержка на Тенерифе по резиденции, документам и переезду"
-        text="Эта страница нужна клиентам, которым нужен понятный старт в вопросах переезда и легализации на Тенерифе. Ошибки здесь обычно начинаются не в офисе миграции, а раньше — когда непонятно, какие документы нужны, в каком порядке действовать и что подготовить заранее."
+        text="Эта страница для клиентов, которым нужен более понятный старт в вопросах переезда на Тенерифе, резиденции и локальных документов."
       />
-      <div className="mt-12 grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
-        <div className="rounded-[2rem] border border-black/5 bg-white/90 p-8 shadow-[0_12px_40px_rgba(24,31,38,0.05)]">
-          <h2 className="text-2xl font-semibold tracking-tight">С чем должна помогать эта услуга</h2>
-          <div className="mt-6 grid gap-3">{bullets.map((item) => <div key={item} className="rounded-2xl border border-black/5 bg-[#f8f4ef] px-4 py-4 text-sm text-[#33404a]">{item}</div>)}</div>
-        </div>
-        <div className="rounded-[2rem] border border-black/5 bg-[#1f262d] p-8 text-white shadow-[0_30px_80px_rgba(26,31,36,0.14)]">
-          <h2 className="text-2xl font-semibold tracking-tight">Типовые кейсы</h2>
-          <ul className="mt-4 space-y-3 text-sm leading-7 text-white/80 md:text-base">
-            <li>• Переезд на Тенерифе одному или с семьёй</li>
-            <li>• Понимание пути к резиденции и пакета документов</li>
-            <li>• Подготовка до приезда в Испанию</li>
-            <li>• Поддержка на локальных шагах после переезда</li>
-          </ul>
-        </div>
-      </div>
+      <div className="mt-8 ui-rule" />
+      <div className="mt-12 grid gap-6 lg:grid-cols-[1.1fr_0.9fr]"><div className="ui-card p-8 md:p-10"><h2 className="text-2xl font-semibold tracking-tight">Типовые ситуации</h2><ul className="mt-6 space-y-4 text-sm leading-7 text-[#56616b] md:text-base"><li>• До переезда на Тенерифе</li><li>• Когда неясен путь по резиденции</li><li>• Когда локальные документы и шаги вызывают путаницу</li><li>• Когда процесс нужно начать из-за границы</li></ul></div><div className="ui-card-dark p-8 text-white md:p-10"><div className="relative z-10"><h2 className="text-2xl font-semibold tracking-tight">Что помогает прояснить ранний разбор</h2><div className="mt-6 grid gap-3">{['Ориентация по резиденции и переезду','Контекст по NIE / TIE и локальным документам','Вопросы семьи и relocation','Удалённый первый шаг, если это уместно'].map((item)=><div key={item} className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white/86">{item}</div>)}</div></div></div></div><div className="mt-12 ui-card-soft rounded-[2rem] px-8 py-8 md:px-10 md:py-9"><h2 className="text-2xl font-semibold tracking-tight">Что лучше прислать первым</h2><p className="mt-4 text-sm leading-7 text-[#56616b] md:text-base">Обычно полезно сразу указать, из какой страны вы начинаете, какой у вас тип задачи по резиденции или переезду, какой срок важен и есть ли уже документы.</p><a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="ui-button ui-button-primary mt-6 inline-flex rounded-full bg-[#14213d] px-6 py-3 text-sm font-medium text-white hover:bg-[#0d1528]">Начать консультацию по резиденции</a></div>
     </main>
   );
 }
