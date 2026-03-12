@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import { SectionIntro } from '@/components/SiteShell';
 
 export const metadata: Metadata = {
-  title: 'Contact a Lawyer in Tenerife',
+  title: 'Contact Konomic Digital SL. in Tenerife',
   description:
-    'Start a legal enquiry with Konomic for Tenerife property, residency, business, contract, and foreign-client legal matters.',
+    'Contact Konomic Digital SL. for Tenerife property, residency, business, contract, and foreign-client legal matters. WhatsApp-first contact available.',
   alternates: {
     canonical: '/en/contact',
   },
@@ -24,8 +24,8 @@ export default function ContactPage() {
     <main className="mx-auto max-w-7xl px-6 py-16 lg:px-10 lg:py-20">
       <SectionIntro
         eyebrow="Contact"
-        title="Start with a structured enquiry, not a vague message"
-        text="A premium legal experience starts with a better intake. The aim is to collect the right information early, route the matter properly, and make the next step feel clear from the first contact."
+        title="Contact Konomic Digital SL."
+        text="Konomic Digital SL. can be contacted directly by WhatsApp, email, or Telegram. The contact flow is set up without public office address or public team profiles."
       />
       <div className="mt-12 grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
         <div className="rounded-[2rem] border border-black/5 bg-white/90 p-8 shadow-[0_12px_40px_rgba(24,31,38,0.05)]">
@@ -64,7 +64,7 @@ export default function ContactPage() {
             </label>
             <div className="flex flex-wrap items-center justify-between gap-3 pt-2">
               <p className="max-w-md text-xs leading-6 text-[#67727c]">
-                Final submission wiring can be connected to email, Formspree, Resend, or a CRM after real Konomic contact details are confirmed.
+                Primary contact channel: WhatsApp. Secondary channels: email and Telegram. No public office address is displayed.
               </p>
               <button
                 type="submit"
@@ -78,21 +78,21 @@ export default function ContactPage() {
 
         <div className="grid gap-6">
           <div className="rounded-[2rem] border border-black/5 bg-[#f5efe8] p-8">
-            <h2 className="text-2xl font-semibold tracking-tight">Lead-routing priority</h2>
+            <h2 className="text-2xl font-semibold tracking-tight">Public contact details</h2>
             <ul className="mt-4 space-y-3 text-sm leading-7 text-[#56616b] md:text-base">
-              <li>• Website form for structured intake</li>
-              <li>• WhatsApp for quick follow-up</li>
-              <li>• Direct email for documents and longer context</li>
-              <li>• Phone only if response quality stays premium</li>
+              <li>• WhatsApp / phone: +34 643 319 719</li>
+              <li>• Email: nikita.lukashok@gmail.com</li>
+              <li>• Telegram: @nkitl0</li>
+              <li>• Company: Konomic Digital SL.</li>
             </ul>
           </div>
           <div className="rounded-[2rem] border border-black/5 bg-[#1f262d] p-8 text-white shadow-[0_30px_80px_rgba(26,31,36,0.14)]">
             <h2 className="text-2xl font-semibold tracking-tight">Recommended client journey</h2>
             <ol className="mt-4 space-y-3 text-sm leading-7 text-white/80 md:text-base">
-              <li>1. Submit a structured enquiry</li>
-              <li>2. Receive a reply with the right consultation format</li>
+              <li>1. Contact Konomic Digital SL. by WhatsApp or structured enquiry</li>
+              <li>2. Receive the right consultation recommendation</li>
               <li>3. Share documents if review is needed</li>
-              <li>4. Move into paid consultation or ongoing legal support</li>
+              <li>4. Move into paid consultation or ongoing support</li>
             </ol>
           </div>
         </div>

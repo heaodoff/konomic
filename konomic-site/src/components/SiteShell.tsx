@@ -9,7 +9,7 @@ export function SiteShell({ children, locale = 'en' }: { children: ReactNode; lo
       <header className="sticky top-0 z-30 border-b border-black/5 bg-[rgba(255,253,250,0.82)] backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-10">
           <Link href={`/${locale}`} className="flex flex-col">
-            <span className="text-xs uppercase tracking-[0.35em] text-[#8f7d67]">Konomic</span>
+            <span className="text-xs uppercase tracking-[0.35em] text-[#8f7d67]">Konomic Digital SL.</span>
             <span className="mt-1 text-sm text-[#56616b]">{copy.brandTagline}</span>
           </Link>
           <nav className="hidden items-center gap-7 text-sm text-[#47515a] md:flex">
@@ -45,7 +45,7 @@ export function SiteShell({ children, locale = 'en' }: { children: ReactNode; lo
       <footer className="border-t border-black/5 bg-white/70">
         <div className="mx-auto grid max-w-7xl gap-8 px-6 py-12 lg:grid-cols-[1.1fr_1fr_1fr] lg:px-10">
           <div>
-            <div className="text-xs uppercase tracking-[0.35em] text-[#8f7d67]">Konomic</div>
+            <div className="text-xs uppercase tracking-[0.35em] text-[#8f7d67]">Konomic Digital SL.</div>
             <p className="mt-4 max-w-sm text-sm leading-7 text-[#58636d]">{copy.footerBlurb}</p>
           </div>
           <div>
@@ -58,8 +58,14 @@ export function SiteShell({ children, locale = 'en' }: { children: ReactNode; lo
             </div>
           </div>
           <div>
-            <div className="text-sm font-semibold">{copy.launchNoteTitle}</div>
-            <p className="mt-4 text-sm leading-7 text-[#58636d]">{copy.launchNoteText}</p>
+            <div className="text-sm font-semibold">Public contact</div>
+            <p className="mt-4 text-sm leading-7 text-[#58636d]">
+              WhatsApp: +34 643 319 719
+              <br />
+              Email: nikita.lukashok@gmail.com
+              <br />
+              Telegram: @nkitl0
+            </p>
           </div>
         </div>
       </footer>
