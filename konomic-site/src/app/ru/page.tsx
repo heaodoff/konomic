@@ -7,7 +7,16 @@ import { localizeFaqs, localizeTrustPoints } from '@/content/site-locale';
 export const metadata: Metadata = {
   title: 'Русскоязычная юридическая поддержка на Тенерифе',
   description: 'Премиальная юридическая поддержка на Тенерифе по недвижимости, резиденции, бизнесу и договорам.',
-  alternates: { canonical: '/ru' },
+  alternates: {
+    canonical: '/ru',
+    languages: {
+      en: '/en',
+      de: '/de',
+      ru: '/ru',
+      uk: '/uk',
+      'x-default': '/en',
+    },
+  },
 };
 
 export default function RuHomePage() {

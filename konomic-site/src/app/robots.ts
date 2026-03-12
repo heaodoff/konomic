@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
       },
     ],
     sitemap: 'https://konomic.es/sitemap.xml',
-    host: 'https://konomic.es',
+    host: 'konomic.es',
   };
 }

@@ -7,7 +7,16 @@ import { localizeFaqs, localizeTrustPoints } from '@/content/site-locale';
 export const metadata: Metadata = {
   title: 'Deutschsprachige Rechtsberatung auf Teneriffa',
   description: 'Mehrsprachige Premium-Rechtsberatung auf Teneriffa für Immobilien, Aufenthaltsfragen, Unternehmen und Verträge.',
-  alternates: { canonical: '/de' },
+  alternates: {
+    canonical: '/de',
+    languages: {
+      en: '/en',
+      de: '/de',
+      ru: '/ru',
+      uk: '/uk',
+      'x-default': '/en',
+    },
+  },
 };
 
 export default function DeHomePage() {

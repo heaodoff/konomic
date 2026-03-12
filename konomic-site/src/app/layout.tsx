@@ -30,6 +30,10 @@ export const metadata: Metadata = {
     canonical: "/en",
     languages: {
       en: "/en",
+      de: "/de",
+      ru: "/ru",
+      uk: "/uk",
+      "x-default": "/en",
     },
   },
   openGraph: {
