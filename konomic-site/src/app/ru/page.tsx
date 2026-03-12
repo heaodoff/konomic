@@ -32,8 +32,8 @@ export default function RuHomePage() {
           <h1 className="max-w-4xl text-5xl leading-tight font-semibold tracking-tight md:text-7xl">{copy.home.title}</h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-[#4f5a64] md:text-xl">{copy.home.text}</p>
           <div className="mt-8 flex flex-wrap gap-4">
-            <Link href="/ru/book-consultation" className="ui-button ui-button-primary rounded-full bg-[#1d252b] px-6 py-3 text-sm font-medium text-white hover:bg-[#11171b]">{copy.home.primaryCta}</Link>
-            <Link href="/ru/contact" className="ui-button ui-button-secondary rounded-full border border-[#1d252b]/15 bg-white/80 px-6 py-3 text-sm font-medium text-[#1d252b] hover:border-[#1d252b]/35">{copy.home.secondaryCta}</Link>
+            <Link href="/ru/book-consultation" className="ui-button ui-button-primary rounded-full bg-[#14213d] px-6 py-3 text-sm font-medium hover:bg-[#0d1528]">{copy.home.primaryCta}</Link>
+            <Link href="/ru/contact" className="ui-button ui-button-secondary rounded-full border border-[#14213d]/12 bg-white/88 px-6 py-3 text-sm font-medium text-[#14213d] hover:border-[#fca311]/45">{copy.home.secondaryCta}</Link>
           </div>
         </div>
         <div className="space-y-6"><div className="ui-card-dark p-8 text-white md:p-10"><div className="text-xs uppercase tracking-[0.28em] text-[#d5bd9e]">Почему Konomic</div><h2 className="mt-4 text-3xl font-semibold tracking-tight">{copy.home.whyTitle}</h2><p className="mt-4 text-sm leading-7 text-white/75">{copy.home.whyText}</p><div className="mt-6 space-y-4">{trustPoints.map((item) => <div key={item} className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white/85">{item}</div>)}</div></div><div className="ui-card-soft rounded-[2rem] px-8 py-7 md:px-10"><div className="text-xs uppercase tracking-[0.3em] text-[#8f7d67]">Быстрый контакт</div><p className="mt-3 text-base leading-8 text-[#4f5a64]">WhatsApp — самый быстрый вход. Email и Telegram остаются для длинного контекста и документов.</p></div></div>

@@ -32,8 +32,8 @@ export default function DeHomePage() {
           <h1 className="max-w-4xl text-5xl leading-tight font-semibold tracking-tight md:text-7xl">{copy.home.title}</h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-[#4f5a64] md:text-xl">{copy.home.text}</p>
           <div className="mt-8 flex flex-wrap gap-4">
-            <Link href="/de/book-consultation" className="ui-button ui-button-primary rounded-full bg-[#1d252b] px-6 py-3 text-sm font-medium text-white hover:bg-[#11171b]">{copy.home.primaryCta}</Link>
-            <Link href="/de/contact" className="ui-button ui-button-secondary rounded-full border border-[#1d252b]/15 bg-white/80 px-6 py-3 text-sm font-medium text-[#1d252b] hover:border-[#1d252b]/35">{copy.home.secondaryCta}</Link>
+            <Link href="/de/book-consultation" className="ui-button ui-button-primary rounded-full bg-[#14213d] px-6 py-3 text-sm font-medium hover:bg-[#0d1528]">{copy.home.primaryCta}</Link>
+            <Link href="/de/contact" className="ui-button ui-button-secondary rounded-full border border-[#14213d]/12 bg-white/88 px-6 py-3 text-sm font-medium text-[#14213d] hover:border-[#fca311]/45">{copy.home.secondaryCta}</Link>
           </div>
         </div>
         <div className="space-y-6">
