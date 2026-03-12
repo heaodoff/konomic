@@ -21,6 +21,20 @@ const whatsappUrl = 'https://wa.me/34643319719';
 const telegramUrl = 'https://t.me/nkitl0';
 const topServices = coreServices.slice(0, 4);
 
+const audiences = [
+  'Foreign property buyers',
+  'Expats relocating to Tenerife',
+  'Founders and business owners',
+  'Families needing legal clarity',
+];
+
+const processSteps = [
+  'Start on WhatsApp or send a structured enquiry',
+  'The matter is reviewed and routed to the right consultation',
+  'Documents are requested only where relevant',
+  'The case moves into paid consultation or ongoing support',
+];
+
 export default function EnHomePage() {
   return (
     <main>
@@ -60,18 +74,20 @@ export default function EnHomePage() {
 
         <div className="space-y-6">
           <div className="ui-card-dark p-8 text-white md:p-10">
-            <div className="text-xs uppercase tracking-[0.28em] text-[#fca311]">Why Konomic</div>
-            <h2 className="mt-4 text-3xl font-semibold tracking-tight">Built for Tenerife’s international legal demand.</h2>
-            <p className="mt-4 text-sm leading-7 text-white/78">
-              The goal is not to look like another generic local firm. The goal is to feel clear, premium,
-              multilingual, and easy to hire for foreign clients who want confidence before they commit.
-            </p>
-            <div className="mt-6 space-y-4">
-              {trustPoints.map((item) => (
-                <div key={item} className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white/88">
-                  {item}
-                </div>
-              ))}
+            <div className="relative z-10">
+              <div className="text-xs uppercase tracking-[0.28em] text-[#fca311]">Why Konomic</div>
+              <h2 className="mt-4 text-3xl font-semibold tracking-tight">Built for Tenerife’s international legal demand.</h2>
+              <p className="mt-4 text-sm leading-7 text-white/78">
+                The goal is not to look like another generic local firm. The goal is to feel clear, premium,
+                multilingual, and easy to hire for foreign clients who want confidence before they commit.
+              </p>
+              <div className="mt-6 space-y-4">
+                {trustPoints.map((item) => (
+                  <div key={item} className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white/88">
+                    {item}
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
           <div className="ui-card-soft rounded-[2rem] px-8 py-7 md:px-10">
@@ -79,6 +95,32 @@ export default function EnHomePage() {
             <p className="mt-3 text-base leading-8 text-[#516074]">
               Start on WhatsApp for the fastest reply. Use Telegram for quick written coordination. Use email when documents or longer explanations are needed.
             </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="ui-section border-t border-[#14213d]/8">
+        <div className="grid gap-6 lg:grid-cols-2">
+          <div className="ui-card p-8 md:p-9">
+            <div className="text-xs uppercase tracking-[0.3em] text-[#9a6200]">Who we help</div>
+            <h2 className="mt-3 text-3xl font-semibold tracking-tight">Designed for the client types that actually drive demand</h2>
+            <div className="mt-6 grid gap-3 sm:grid-cols-2">
+              {audiences.map((item) => (
+                <div key={item} className="ui-card-soft px-4 py-4 text-sm text-[#33404a]">{item}</div>
+              ))}
+            </div>
+          </div>
+          <div className="ui-card p-8 md:p-9">
+            <div className="text-xs uppercase tracking-[0.3em] text-[#9a6200]">How it works</div>
+            <h2 className="mt-3 text-3xl font-semibold tracking-tight">Clear process from first message to paid support</h2>
+            <ol className="mt-6 space-y-4 text-sm leading-7 text-[#59646e] md:text-base">
+              {processSteps.map((step, index) => (
+                <li key={step} className="flex gap-4">
+                  <span className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#14213d] text-xs font-semibold text-white">0{index + 1}</span>
+                  <span>{step}</span>
+                </li>
+              ))}
+            </ol>
           </div>
         </div>
       </section>
