@@ -31,9 +31,9 @@ export default function ContactPage() {
         text="Konomic Digital SL. is set up with a WhatsApp-first contact flow. Email and Telegram remain available, but the fastest path for a new enquiry is WhatsApp."
       />
       <div className="mt-10 flex flex-wrap gap-4">
-        <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="ui-button ui-button-primary rounded-full bg-[#1d252b] px-6 py-3 text-sm font-medium text-white hover:bg-[#11171b]">Start on WhatsApp</a>
-        <a href="mailto:nikita.lukashok@gmail.com" className="ui-button ui-button-secondary rounded-full border border-[#1d252b]/15 bg-white/80 px-6 py-3 text-sm font-medium text-[#1d252b] hover:border-[#1d252b]/35">Email Konomic</a>
-        <a href={telegramUrl} target="_blank" rel="noopener noreferrer" className="ui-button ui-button-secondary rounded-full border border-[#1d252b]/15 bg-white/80 px-6 py-3 text-sm font-medium text-[#1d252b] hover:border-[#1d252b]/35">Open Telegram</a>
+        <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="ui-button ui-button-primary rounded-full bg-[#14213d] px-6 py-3 text-sm font-medium text-white hover:bg-[#0d1528]">Start on WhatsApp</a>
+        <a href="mailto:nikita.lukashok@gmail.com" className="ui-button ui-button-secondary rounded-full border border-[#14213d]/12 bg-white/88 px-6 py-3 text-sm font-medium text-[#14213d] hover:border-[#fca311]/45">Email Konomic</a>
+        <a href={telegramUrl} target="_blank" rel="noopener noreferrer" className="ui-button ui-button-secondary rounded-full border border-[#14213d]/12 bg-white/88 px-6 py-3 text-sm font-medium text-[#14213d] hover:border-[#fca311]/45">Open Telegram</a>
       </div>
       <div className="mt-12 grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
         <div className="ui-card p-8 md:p-10">
@@ -43,13 +43,13 @@ export default function ContactPage() {
               {fields.slice(0, 4).map((label) => (
                 <label key={label} className="grid gap-2 text-sm font-medium text-[#33404a]">
                   <span>{label}</span>
-                  <input type="text" placeholder={label} className="rounded-2xl border border-black/8 bg-[#fcfaf7] px-4 py-3 text-sm outline-none transition focus:border-[#1d252b]/30" />
+                  <input type="text" placeholder={label} className="rounded-2xl border border-[#14213d]/12 bg-[#fffdfa] px-4 py-3 text-sm outline-none transition focus:border-[#fca311]/50" />
                 </label>
               ))}
             </div>
             <label className="grid gap-2 text-sm font-medium text-[#33404a]">
               <span>{fields[4]}</span>
-              <select className="rounded-2xl border border-black/8 bg-[#fcfaf7] px-4 py-3 text-sm outline-none transition focus:border-[#1d252b]/30">
+              <select className="rounded-2xl border border-[#14213d]/12 bg-[#fffdfa] px-4 py-3 text-sm outline-none transition focus:border-[#fca311]/50">
                 <option>Property & Real Estate</option>
                 <option>Immigration & Residency</option>
                 <option>Business Setup & Corporate</option>
@@ -60,13 +60,13 @@ export default function ContactPage() {
             </label>
             <label className="grid gap-2 text-sm font-medium text-[#33404a]">
               <span>{fields[5]}</span>
-              <textarea rows={6} placeholder="Describe the matter, your timeline, and what kind of help you need." className="rounded-2xl border border-black/8 bg-[#fcfaf7] px-4 py-3 text-sm outline-none transition focus:border-[#1d252b]/30" />
+              <textarea rows={6} placeholder="Describe the matter, your timeline, and what kind of help you need." className="rounded-2xl border border-[#14213d]/12 bg-[#fffdfa] px-4 py-3 text-sm outline-none transition focus:border-[#fca311]/50" />
             </label>
             <div className="flex flex-wrap items-center justify-between gap-3 pt-2">
               <p className="max-w-md text-xs leading-6 text-[#67727c]">
                 WhatsApp is the primary contact channel. Email and Telegram remain available for longer context and document exchange.
               </p>
-              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="ui-button ui-button-primary rounded-full bg-[#1d252b] px-6 py-3 text-sm font-medium text-white hover:bg-[#11171b]">Send on WhatsApp</a>
+              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="ui-button ui-button-primary rounded-full bg-[#14213d] px-6 py-3 text-sm font-medium text-white hover:bg-[#0d1528]">Send on WhatsApp</a>
             </div>
           </form>
         </div>
@@ -83,7 +83,7 @@ export default function ContactPage() {
           </div>
           <div className="ui-card-dark p-8 text-white md:p-10">
             <h2 className="text-2xl font-semibold tracking-tight">Recommended client journey</h2>
-            <ol className="mt-4 space-y-3 text-sm leading-7 text-white/80 md:text-base">
+            <ol className="mt-4 space-y-3 text-sm leading-7 text-white/82 md:text-base">
               <li>1. Start on WhatsApp</li>
               <li>2. Get the right consultation recommendation</li>
               <li>3. Share documents by email or Telegram if needed</li>

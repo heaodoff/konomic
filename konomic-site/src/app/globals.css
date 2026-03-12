@@ -1,8 +1,11 @@
 @import "tailwindcss";
 
 :root {
-  --background: #fffdfa;
-  --foreground: #1d252b;
+  --background: #ffffff;
+  --foreground: #14213d;
+  --accent: #fca311;
+  --muted: #e5e5e5;
+  --ink: #000000;
 }
 
 @theme inline {
@@ -22,7 +25,9 @@ html {
 
 body {
   margin: 0;
-  background: var(--background);
+  background:
+    radial-gradient(circle at top left, rgba(252, 163, 17, 0.07), transparent 30%),
+    linear-gradient(180deg, #ffffff 0%, #faf8f4 38%, #ffffff 100%);
   color: var(--foreground);
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
 }
@@ -52,16 +57,16 @@ a {
 }
 
 .ui-button:focus-visible {
-  outline: 2px solid rgba(29, 37, 43, 0.18);
+  outline: 2px solid rgba(252, 163, 17, 0.35);
   outline-offset: 3px;
 }
 
 .ui-button-primary:hover {
-  box-shadow: 0 12px 30px rgba(29, 37, 43, 0.16);
+  box-shadow: 0 14px 34px rgba(20, 33, 61, 0.18);
 }
 
 .ui-button-secondary:hover {
-  box-shadow: 0 10px 24px rgba(29, 37, 43, 0.08);
+  box-shadow: 0 10px 24px rgba(20, 33, 61, 0.08);
 }
 
 .ui-link-soft {
@@ -69,27 +74,34 @@ a {
 }
 
 .ui-link-soft:hover {
-  opacity: 0.8;
+  color: #fca311;
+  opacity: 1;
 }
 
 .ui-card {
-  border: 1px solid rgba(17, 24, 39, 0.05);
-  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(20, 33, 61, 0.07);
+  background: rgba(255, 255, 255, 0.92);
   border-radius: 1.75rem;
-  box-shadow: 0 12px 40px rgba(24, 31, 38, 0.05);
+  box-shadow: 0 14px 42px rgba(20, 33, 61, 0.06);
 }
 
 .ui-card-soft {
-  border: 1px solid rgba(17, 24, 39, 0.05);
-  background: #f8f4ef;
-  border-radius: 1.25rem;
+  border: 1px solid rgba(20, 33, 61, 0.08);
+  background: linear-gradient(180deg, rgba(252, 163, 17, 0.08), rgba(229, 229, 229, 0.32));
+  border-radius: 1.35rem;
 }
 
 .ui-card-dark {
-  border: 1px solid rgba(17, 24, 39, 0.05);
-  background: #1f262d;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: linear-gradient(180deg, #1b2948 0%, #14213d 100%);
   border-radius: 2rem;
-  box-shadow: 0 30px 80px rgba(26, 31, 36, 0.14);
+  box-shadow: 0 32px 84px rgba(20, 33, 61, 0.24);
+}
+
+.ui-accent-chip {
+  border: 1px solid rgba(252, 163, 17, 0.35);
+  background: rgba(252, 163, 17, 0.08);
+  color: #9a6200;
 }
 
 .ui-section {
