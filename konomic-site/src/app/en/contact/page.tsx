@@ -13,13 +13,37 @@ export const metadata: Metadata = {
 const whatsappUrl = 'https://wa.me/34643319719';
 const telegramUrl = 'https://t.me/nkitl0';
 
-const fields = [
-  'Full name',
-  'Email address',
-  'Phone / WhatsApp',
-  'Preferred language',
-  'Service needed',
-  'Short case description',
+const firstMessageChecklist = [
+  'What the matter is about',
+  'Whether anything has already been signed or paid',
+  'Your timeline or urgency',
+  'Your preferred language',
+  'Any document already available for review',
+];
+
+const channelGuide = [
+  {
+    title: 'WhatsApp',
+    eyebrow: 'Primary',
+    text: 'Best for new enquiries, fastest replies, and the clearest first step.',
+  },
+  {
+    title: 'Telegram',
+    eyebrow: 'Secondary',
+    text: 'Useful if you prefer Telegram for written coordination and shorter follow-up messages.',
+  },
+  {
+    title: 'Email',
+    eyebrow: 'Documents',
+    text: 'Best when you need to attach files, longer explanations, or a larger document set.',
+  },
+];
+
+const processSteps = [
+  'You send the first message, ideally on WhatsApp.',
+  'The matter is reviewed and directed to the right consultation or legal review format.',
+  'If needed, documents can be shared in advance by email or messaging.',
+  'Next steps are defined clearly so the client knows what to prepare and what happens next.',
 ];
 
 export default function ContactPage() {
@@ -28,54 +52,78 @@ export default function ContactPage() {
       <SectionIntro
         eyebrow="Contact"
         title="Contact Konomic Digital SL."
-        text="Konomic Digital SL. uses a WhatsApp-first lead flow. For most new enquiries, WhatsApp is the fastest and clearest starting point."
+        text="For most new enquiries, WhatsApp is the fastest and clearest first step. Use email when documents need to be attached and Telegram if that channel is more convenient for written coordination."
       />
       <div className="mt-8 ui-rule" />
+
       <div className="mt-8 flex flex-wrap gap-4 sm:mt-10">
-        <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="ui-button ui-button-primary rounded-full bg-[#14213d] px-6 py-3 text-sm font-medium text-white hover:bg-[#0d1528]">Start on WhatsApp</a>
-        <a href="mailto:nikita.lukashok@gmail.com" className="ui-button ui-button-secondary rounded-full border border-[#14213d]/12 bg-white/88 px-6 py-3 text-sm font-medium text-[#14213d] hover:border-[#fca311]/45">Email Konomic</a>
-        <a href={telegramUrl} target="_blank" rel="noopener noreferrer" className="ui-button ui-button-secondary rounded-full border border-[#14213d]/12 bg-white/88 px-6 py-3 text-sm font-medium text-[#14213d] hover:border-[#fca311]/45">Open Telegram</a>
+        <a
+          href={whatsappUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="ui-button ui-button-primary rounded-full bg-[#14213d] px-6 py-3 text-sm font-medium text-white hover:bg-[#0d1528]"
+        >
+          Start on WhatsApp
+        </a>
+        <a
+          href="mailto:nikita.lukashok@gmail.com"
+          className="ui-button ui-button-secondary rounded-full border border-[#14213d]/12 bg-white/88 px-6 py-3 text-sm font-medium text-[#14213d] hover:border-[#fca311]/45"
+        >
+          Send email
+        </a>
+        <a
+          href={telegramUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="ui-button ui-button-secondary rounded-full border border-[#14213d]/12 bg-white/88 px-6 py-3 text-sm font-medium text-[#14213d] hover:border-[#fca311]/45"
+        >
+          Open Telegram
+        </a>
       </div>
+
       <div className="mt-8 grid gap-4 md:grid-cols-3">
-        <div className="ui-card-soft px-6 py-6"><div className="text-xs uppercase tracking-[0.28em] text-[#9a6200]">Primary</div><h3 className="mt-3 text-lg font-semibold tracking-tight">WhatsApp</h3><p className="mt-2 text-sm leading-7 text-[#59646e]">Best for new enquiries, fastest replies, and first contact.</p></div>
-        <div className="ui-card-soft px-6 py-6"><div className="text-xs uppercase tracking-[0.28em] text-[#9a6200]">Secondary</div><h3 className="mt-3 text-lg font-semibold tracking-tight">Telegram</h3><p className="mt-2 text-sm leading-7 text-[#59646e]">Useful if you prefer Telegram for quick written coordination.</p></div>
-        <div className="ui-card-soft px-6 py-6"><div className="text-xs uppercase tracking-[0.28em] text-[#9a6200]">Documents</div><h3 className="mt-3 text-lg font-semibold tracking-tight">Email</h3><p className="mt-2 text-sm leading-7 text-[#59646e]">Best for documents, longer descriptions, and attachments.</p></div>
+        {channelGuide.map((item) => (
+          <div key={item.title} className="ui-card-soft px-6 py-6">
+            <div className="text-xs uppercase tracking-[0.28em] text-[#9a6200]">{item.eyebrow}</div>
+            <h3 className="mt-3 text-lg font-semibold tracking-tight">{item.title}</h3>
+            <p className="mt-2 text-sm leading-7 text-[#59646e]">{item.text}</p>
+          </div>
+        ))}
       </div>
+
       <div className="mt-12 grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
         <div className="ui-card p-6 sm:p-8 md:p-10">
-          <div className="text-xs uppercase tracking-[0.28em] text-[#9a6200]">Structured intake</div>
-          <h2 className="mt-3 text-2xl font-semibold tracking-tight">Recommended enquiry form</h2>
-          <form className="mt-6 grid gap-4" action={whatsappUrl} method="get">
-            <div className="grid gap-4 md:grid-cols-2">
-              {fields.slice(0, 4).map((label) => (
-                <label key={label} className="grid gap-2 text-sm font-medium text-[#33404a]">
-                  <span>{label}</span>
-                  <input type="text" placeholder={label} className="rounded-2xl border border-[#14213d]/12 bg-[#fffdfa] px-4 py-3 text-sm outline-none transition focus:border-[#fca311]/50" />
-                </label>
-              ))}
+          <div className="text-xs uppercase tracking-[0.28em] text-[#9a6200]">First message</div>
+          <h2 className="mt-3 text-2xl font-semibold tracking-tight">What to include in your first enquiry</h2>
+          <p className="mt-4 max-w-3xl text-sm leading-7 text-[#56616b] md:text-base">
+            A short, structured message usually makes the first review faster and more useful. If documents already exist, they can be shared after the first contact.
+          </p>
+          <div className="mt-6 grid gap-3">
+            {firstMessageChecklist.map((item) => (
+              <div key={item} className="ui-card-soft px-4 py-4 text-sm text-[#33404a]">
+                {item}
+              </div>
+            ))}
+          </div>
+          <div className="mt-8 rounded-[1.5rem] border border-[#14213d]/8 bg-[#fffdfa] px-5 py-5 sm:px-6 sm:py-6">
+            <div className="text-xs uppercase tracking-[0.28em] text-[#9a6200]">Suggested WhatsApp template</div>
+            <div className="mt-4 text-sm leading-7 text-[#47515a] md:text-base">
+              Hello. I need legal help with [property / residency / business / contract]. I am currently in [country/location]. The issue is [short description]. [Nothing has been signed yet / a document has already been signed]. My preferred language is [language]. My timeline is [timeline].
             </div>
-            <label className="grid gap-2 text-sm font-medium text-[#33404a]">
-              <span>{fields[4]}</span>
-              <select className="rounded-2xl border border-[#14213d]/12 bg-[#fffdfa] px-4 py-3 text-sm outline-none transition focus:border-[#fca311]/50">
-                <option>Property & Real Estate</option>
-                <option>Immigration & Residency</option>
-                <option>Business Setup & Corporate</option>
-                <option>Contract Review</option>
-                <option>Inheritance & Probate</option>
-                <option>Dispute Resolution</option>
-              </select>
-            </label>
-            <label className="grid gap-2 text-sm font-medium text-[#33404a]">
-              <span>{fields[5]}</span>
-              <textarea rows={6} placeholder="Describe the matter, your timeline, and what kind of help you need." className="rounded-2xl border border-[#14213d]/12 bg-[#fffdfa] px-4 py-3 text-sm outline-none transition focus:border-[#fca311]/50" />
-            </label>
-            <div className="flex flex-wrap items-center justify-between gap-3 pt-2">
-              <p className="max-w-md text-xs leading-6 text-[#67727c]">
-                If the matter is urgent, start on WhatsApp. Use email when documents need to be attached.
-              </p>
-              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="ui-button ui-button-primary rounded-full bg-[#14213d] px-6 py-3 text-sm font-medium text-white hover:bg-[#0d1528]">Send on WhatsApp</a>
-            </div>
-          </form>
+          </div>
+          <div className="mt-6 flex flex-wrap items-center justify-between gap-3">
+            <p className="max-w-md text-xs leading-6 text-[#67727c]">
+              If the matter is urgent or a deadline is close, start on WhatsApp first.
+            </p>
+            <a
+              href={whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ui-button ui-button-primary rounded-full bg-[#14213d] px-6 py-3 text-sm font-medium text-white hover:bg-[#0d1528]"
+            >
+              Send on WhatsApp
+            </a>
+          </div>
         </div>
 
         <div className="grid gap-6">
@@ -93,10 +141,9 @@ export default function ContactPage() {
               <div className="text-xs uppercase tracking-[0.28em] text-[#fca311]">Client flow</div>
               <h2 className="mt-3 text-2xl font-semibold tracking-tight">What happens next</h2>
               <ol className="mt-4 space-y-3 text-sm leading-7 text-white/82 md:text-base">
-                <li>1. You send the first message, ideally on WhatsApp</li>
-                <li>2. The matter is routed to the right consultation type</li>
-                <li>3. If needed, documents are shared by email or Telegram</li>
-                <li>4. The matter moves into paid consultation or ongoing support</li>
+                {processSteps.map((item, index) => (
+                  <li key={item}>{index + 1}. {item}</li>
+                ))}
               </ol>
             </div>
           </div>
