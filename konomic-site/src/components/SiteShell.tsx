@@ -109,6 +109,11 @@ export function SiteShell({ children, locale = 'en' }: { children: ReactNode; lo
               <a href="mailto:nikita.lukashok@gmail.com" className="ui-link-soft">Email: nikita.lukashok@gmail.com</a>
               <a href={telegramUrl} target="_blank" rel="noopener noreferrer" className="ui-link-soft">Telegram: @nkitl0</a>
             </div>
+            <div className="mt-5 flex flex-col gap-2 text-sm leading-7 text-[#58636d]">
+              <Link href="/en/legal-notice" className="ui-link-soft">Legal Notice</Link>
+              <Link href="/en/privacy-policy" className="ui-link-soft">Privacy Policy</Link>
+              <Link href="/en/terms" className="ui-link-soft">Terms & Disclaimer</Link>
+            </div>
           </div>
         </div>
       </footer>

@@ -25,6 +25,7 @@ export default function AboutPage() {
             <li>• Public phone / WhatsApp is enabled</li>
             <li>• Public address is intentionally hidden</li>
             <li>• Public lawyer / team names are intentionally hidden</li>
+            <li>• Legal notice, privacy, and terms pages are available</li>
           </ul>
         </div>
       </div>
