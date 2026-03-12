@@ -35,16 +35,16 @@ export default function EsHomePage() {
   const topServices = coreServices.slice(0, 4);
   return (
     <main>
-      <section className="mx-auto grid max-w-7xl gap-10 px-6 py-16 lg:grid-cols-[1.08fr_0.92fr] lg:px-10 lg:py-24">
+      <section className="mx-auto grid max-w-7xl gap-8 px-5 py-10 lg:grid-cols-[1.08fr_0.92fr] lg:gap-10 lg:px-10 lg:py-24">
         <div className="flex flex-col justify-center">
           <div className="ui-accent-chip mb-4 inline-flex w-fit rounded-full px-4 py-1 text-xs uppercase tracking-[0.28em]">{copy.home.badge}</div>
-          <h1 className="max-w-4xl text-5xl leading-tight font-semibold tracking-tight md:text-7xl">{copy.home.title}</h1>
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-[#516074] md:text-xl">{copy.home.text}</p>
-          <div className="mt-8 flex flex-wrap gap-4">
-            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="ui-button ui-button-primary rounded-full bg-[#14213d] px-6 py-3 text-sm font-medium hover:bg-[#0d1528]">{copy.home.primaryCta}</a>
-            <Link href="/es/contact" className="ui-button ui-button-secondary rounded-full border border-[#14213d]/12 bg-white/88 px-6 py-3 text-sm font-medium text-[#14213d] hover:border-[#fca311]/45">{copy.home.secondaryCta}</Link>
+          <h1 className="max-w-4xl text-3xl leading-tight font-semibold tracking-tight sm:text-4xl md:text-7xl">{copy.home.title}</h1>
+          <p className="mt-4 max-w-2xl text-base leading-7 text-[#516074] sm:text-lg md:text-xl md:leading-8">{copy.home.text}</p>
+          <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
+            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="ui-button ui-button-primary inline-flex items-center justify-center rounded-full bg-[#14213d] px-5 py-3 text-sm font-medium hover:bg-[#0d1528] sm:px-6">{copy.home.primaryCta}</a>
+            <Link href="/es/contact" className="ui-button ui-button-secondary inline-flex items-center justify-center rounded-full border border-[#14213d]/12 bg-white/88 px-5 py-3 text-sm font-medium text-[#14213d] hover:border-[#fca311]/45 sm:px-6">{copy.home.secondaryCta}</Link>
           </div>
-          <div className="mt-6 flex flex-wrap gap-3 text-sm text-[#58636d]">
+          <div className="mt-5 flex flex-wrap gap-3 text-sm text-[#58636d] sm:mt-6">
             <span>Principal: WhatsApp</span>
             <span>•</span>
             <a href={telegramUrl} target="_blank" rel="noopener noreferrer" className="ui-link-soft">Telegram</a>
@@ -52,7 +52,7 @@ export default function EsHomePage() {
             <a href="mailto:nikita.lukashok@gmail.com" className="ui-link-soft">Email</a>
           </div>
         </div>
-        <div className="space-y-6"><div className="ui-card-dark p-8 text-white md:p-10"><div className="relative z-10"><div className="text-xs uppercase tracking-[0.28em] text-[#fca311]">Por qué Konomic</div><h2 className="mt-4 text-3xl font-semibold tracking-tight">{copy.home.whyTitle}</h2><p className="mt-4 text-sm leading-7 text-white/78">{copy.home.whyText}</p><div className="mt-6 space-y-4">{trustPoints.map((item) => <div key={item} className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white/88">{item}</div>)}</div></div></div><div className="ui-card-soft rounded-[2rem] px-8 py-7 md:px-10"><div className="text-xs uppercase tracking-[0.3em] text-[#9a6200]">Ruta de contacto</div><p className="mt-3 text-base leading-8 text-[#516074]">Empieza por WhatsApp para la respuesta más rápida. Usa Telegram para coordinación breve y email cuando haya documentos o más contexto.</p></div></div>
+        <div className="space-y-4 sm:space-y-6"><div className="ui-card-dark p-6 text-white sm:p-8 md:p-10"><div className="relative z-10"><div className="text-[11px] uppercase tracking-[0.24em] text-[#fca311] sm:text-xs sm:tracking-[0.28em]">Por qué Konomic</div><h2 className="mt-3 text-2xl font-semibold tracking-tight sm:text-3xl">{copy.home.whyTitle}</h2><p className="mt-3 text-sm leading-6 text-white/78 sm:mt-4 sm:leading-7">{copy.home.whyText}</p><div className="mt-5 space-y-3 sm:mt-6 sm:space-y-4">{trustPoints.map((item) => <div key={item} className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white/88">{item}</div>)}</div></div></div><div className="ui-card-soft rounded-[1.5rem] px-6 py-6 sm:rounded-[2rem] sm:px-8 sm:py-7 md:px-10"><div className="text-[11px] uppercase tracking-[0.24em] text-[#9a6200] sm:text-xs sm:tracking-[0.3em]">Ruta de contacto</div><p className="mt-3 text-sm leading-7 text-[#516074] sm:text-base sm:leading-8">Empieza por WhatsApp para la respuesta más rápida. Usa Telegram para coordinación breve y email cuando haya documentos o más contexto.</p></div></div>
       </section>
       <section className="ui-section border-t border-[#14213d]/8">
         <div className="grid gap-6 lg:grid-cols-2">

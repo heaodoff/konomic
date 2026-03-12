@@ -33,31 +33,31 @@ export default function RuHomePage() {
   const topServices = coreServices.slice(0, 4);
   return (
     <main>
-      <section className="mx-auto grid max-w-7xl gap-10 px-6 py-16 lg:grid-cols-[1.08fr_0.92fr] lg:px-10 lg:py-24">
+      <section className="mx-auto grid max-w-7xl gap-8 px-5 py-10 lg:grid-cols-[1.08fr_0.92fr] lg:gap-10 lg:px-10 lg:py-24">
         <div className="flex flex-col justify-center">
-          <h1 className="max-w-4xl text-4xl leading-tight font-semibold tracking-tight md:text-6xl">
+          <h1 className="max-w-4xl text-3xl leading-tight font-semibold tracking-tight sm:text-4xl md:text-6xl">
             Юридическая поддержка на Тенерифе
           </h1>
-          <p className="mt-5 max-w-2xl text-lg leading-8 text-[#4f5a64] md:text-xl">
+          <p className="mt-4 max-w-2xl text-base leading-7 text-[#4f5a64] sm:text-lg md:text-xl md:leading-8">
             Для иностранцев, покупателей недвижимости, предпринимателей и семей, которым нужна ясная и надёжная правовая поддержка на Тенерифе.
           </p>
-          <div className="mt-6 flex flex-wrap gap-3">
+          <div className="mt-5 flex flex-wrap gap-2.5 sm:gap-3">
             {heroChips.map((item) => (
-              <div key={item} className="ui-card-soft rounded-full px-4 py-2 text-sm text-[#33404a]">
+              <div key={item} className="ui-card-soft rounded-full px-3 py-1.5 text-xs leading-5 text-[#33404a] sm:px-4 sm:py-2 sm:text-sm">
                 {item}
               </div>
             ))}
           </div>
-          <div className="mt-8 flex flex-wrap gap-4">
-            <Link href="/ru/book-consultation" className="ui-button ui-button-primary rounded-full bg-[#14213d] px-6 py-3 text-sm font-medium hover:bg-[#0d1528]">
+          <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
+            <Link href="/ru/book-consultation" className="ui-button ui-button-primary inline-flex items-center justify-center rounded-full bg-[#14213d] px-5 py-3 text-sm font-medium hover:bg-[#0d1528] sm:px-6">
               {copy.home.primaryCta}
             </Link>
-            <Link href="/ru/contact" className="ui-button ui-button-secondary rounded-full border border-[#14213d]/12 bg-white/88 px-6 py-3 text-sm font-medium text-[#14213d] hover:border-[#fca311]/45">
+            <Link href="/ru/contact" className="ui-button ui-button-secondary inline-flex items-center justify-center rounded-full border border-[#14213d]/12 bg-white/88 px-5 py-3 text-sm font-medium text-[#14213d] hover:border-[#fca311]/45 sm:px-6">
               {copy.home.secondaryCta}
             </Link>
           </div>
         </div>
-        <div className="space-y-6"><div className="ui-card-dark p-8 text-white md:p-10"><div className="relative z-10"><div className="text-xs uppercase tracking-[0.28em] text-[#fca311]">Почему Konomic</div><h2 className="mt-4 text-3xl font-semibold tracking-tight">{copy.home.whyTitle}</h2><p className="mt-4 text-sm leading-7 text-white/75">{copy.home.whyText}</p><div className="mt-6 space-y-4">{trustPoints.map((item) => <div key={item} className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white/85">{item}</div>)}</div></div></div><div className="ui-card-soft rounded-[2rem] px-8 py-7 md:px-10"><div className="text-xs uppercase tracking-[0.3em] text-[#8f7d67]">Быстрый контакт</div><p className="mt-3 text-base leading-8 text-[#4f5a64]">WhatsApp — самый быстрый вход. Email и Telegram остаются для длинного контекста и документов.</p></div></div>
+        <div className="space-y-4 sm:space-y-6"><div className="ui-card-dark p-6 text-white sm:p-8 md:p-10"><div className="relative z-10"><div className="text-[11px] uppercase tracking-[0.24em] text-[#fca311] sm:text-xs sm:tracking-[0.28em]">Почему Konomic</div><h2 className="mt-3 text-2xl font-semibold tracking-tight sm:text-3xl">{copy.home.whyTitle}</h2><p className="mt-3 text-sm leading-6 text-white/75 sm:mt-4 sm:leading-7">{copy.home.whyText}</p><div className="mt-5 space-y-3 sm:mt-6 sm:space-y-4">{trustPoints.map((item) => <div key={item} className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white/85">{item}</div>)}</div></div></div><div className="ui-card-soft rounded-[1.5rem] px-6 py-6 sm:rounded-[2rem] sm:px-8 sm:py-7 md:px-10"><div className="text-[11px] uppercase tracking-[0.24em] text-[#8f7d67] sm:text-xs sm:tracking-[0.3em]">Быстрый контакт</div><p className="mt-3 text-sm leading-7 text-[#4f5a64] sm:text-base sm:leading-8">WhatsApp — самый быстрый вход. Email и Telegram остаются для длинного контекста и документов.</p></div></div>
       </section>
       <section className="ui-section border-t border-black/5"><div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between"><div><div className="text-xs uppercase tracking-[0.3em] text-[#8f7d67]">{copy.home.coreServicesEyebrow}</div><h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-5xl">{copy.home.coreServicesTitle}</h2></div><p className="max-w-2xl text-sm leading-7 text-[#59646e] md:text-base">{copy.home.coreServicesText}</p></div><div className="mt-10 grid gap-6 md:grid-cols-2">{topServices.map((service) => <article key={service.slug} className="ui-card p-8 md:p-9"><div className="text-xs uppercase tracking-[0.25em] text-[#8f7d67]">{service.eyebrow}</div><h3 className="mt-3 text-2xl font-semibold tracking-tight">{service.title}</h3><p className="mt-3 text-sm leading-7 text-[#59646e] md:text-base">{service.summary}</p><Link href="/ru/services" className="ui-link-soft mt-5 inline-flex text-sm font-medium text-[#1d252b]">К услугам →</Link></article>)}</div></section>
       <section className="border-t border-black/5 bg-[#1e252b] py-18 text-white"><div className="mx-auto grid max-w-7xl gap-10 px-6 lg:grid-cols-2 lg:px-10"><div><div className="text-xs uppercase tracking-[0.3em] text-[#d5bd9e]">{copy.home.marketEyebrow}</div><h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-5xl">{copy.home.marketTitle}</h2></div></div></section>

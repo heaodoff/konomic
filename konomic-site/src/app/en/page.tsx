@@ -38,50 +38,50 @@ const processSteps = [
 export default function EnHomePage() {
   return (
     <main>
-      <section className="mx-auto grid max-w-7xl gap-10 px-6 py-16 lg:grid-cols-[1.08fr_0.92fr] lg:px-10 lg:py-24">
+      <section className="mx-auto grid max-w-7xl gap-8 px-5 py-10 lg:grid-cols-[1.08fr_0.92fr] lg:gap-10 lg:px-10 lg:py-24">
         <div className="flex flex-col justify-center">
           <div className="ui-accent-chip mb-4 inline-flex w-fit rounded-full px-4 py-1 text-xs uppercase tracking-[0.28em]">
             English version · premium legal support in Tenerife
           </div>
-          <h1 className="max-w-4xl text-5xl leading-tight font-semibold tracking-tight md:text-7xl">
+          <h1 className="max-w-4xl text-3xl leading-tight font-semibold tracking-tight sm:text-4xl md:text-7xl">
             Legal support in Tenerife for foreign clients, property matters, and business decisions.
           </h1>
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-[#516074] md:text-xl">
+          <p className="mt-4 max-w-2xl text-base leading-7 text-[#516074] sm:text-lg md:text-xl md:leading-8">
             Konomic is presented as a premium multilingual legal brand for expats, property buyers, founders,
             and families who need clear guidance, fast orientation, and a more reliable way to handle legal matters in Tenerife.
           </p>
-          <div className="mt-8 flex flex-wrap gap-4">
-            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="ui-button ui-button-primary rounded-full bg-[#14213d] px-6 py-3 text-sm font-medium text-white hover:bg-[#0d1528]">
+          <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
+            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="ui-button ui-button-primary inline-flex items-center justify-center rounded-full bg-[#14213d] px-5 py-3 text-sm font-medium text-white hover:bg-[#0d1528] sm:px-6">
               Start on WhatsApp
             </a>
-            <Link href="/en/contact" className="ui-button ui-button-secondary rounded-full border border-[#14213d]/12 bg-white/88 px-6 py-3 text-sm font-medium text-[#14213d] hover:border-[#fca311]/45">
+            <Link href="/en/contact" className="ui-button ui-button-secondary inline-flex items-center justify-center rounded-full border border-[#14213d]/12 bg-white/88 px-5 py-3 text-sm font-medium text-[#14213d] hover:border-[#fca311]/45 sm:px-6">
               View contact options
             </Link>
           </div>
-          <div className="mt-6 flex flex-wrap gap-3 text-sm text-[#58636d]">
+          <div className="mt-5 flex flex-wrap gap-3 text-sm text-[#58636d] sm:mt-6">
             <span>Primary: WhatsApp</span>
             <span>•</span>
             <a href={telegramUrl} target="_blank" rel="noopener noreferrer" className="ui-link-soft">Telegram</a>
             <span>•</span>
             <a href="mailto:nikita.lukashok@gmail.com" className="ui-link-soft">Email</a>
           </div>
-          <div className="mt-10 grid gap-4 sm:grid-cols-3">
+          <div className="mt-8 grid gap-3 sm:mt-10 sm:grid-cols-3 sm:gap-4">
             <Stat value="WhatsApp-first" label="primary lead channel" />
             <Stat value="EN / DE / RU / UK / ES" label="multilingual coverage" />
             <Stat value="Property / Residency" label="core commercial intent" />
           </div>
         </div>
 
-        <div className="space-y-6">
-          <div className="ui-card-dark p-8 text-white md:p-10">
+        <div className="space-y-4 sm:space-y-6">
+          <div className="ui-card-dark p-6 text-white sm:p-8 md:p-10">
             <div className="relative z-10">
-              <div className="text-xs uppercase tracking-[0.28em] text-[#fca311]">Why Konomic</div>
-              <h2 className="mt-4 text-3xl font-semibold tracking-tight">Built for Tenerife’s international legal demand.</h2>
-              <p className="mt-4 text-sm leading-7 text-white/78">
+              <div className="text-[11px] uppercase tracking-[0.24em] text-[#fca311] sm:text-xs sm:tracking-[0.28em]">Why Konomic</div>
+              <h2 className="mt-3 text-2xl font-semibold tracking-tight sm:text-3xl">Built for Tenerife’s international legal demand.</h2>
+              <p className="mt-3 text-sm leading-6 text-white/78 sm:mt-4 sm:leading-7">
                 The goal is not to look like another generic local firm. The goal is to feel clear, premium,
                 multilingual, and easy to hire for foreign clients who want confidence before they commit.
               </p>
-              <div className="mt-6 space-y-4">
+              <div className="mt-5 space-y-3 sm:mt-6 sm:space-y-4">
                 {trustPoints.map((item) => (
                   <div key={item} className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white/88">
                     {item}
@@ -90,9 +90,9 @@ export default function EnHomePage() {
               </div>
             </div>
           </div>
-          <div className="ui-card-soft rounded-[2rem] px-8 py-7 md:px-10">
-            <div className="text-xs uppercase tracking-[0.3em] text-[#9a6200]">Lead routing</div>
-            <p className="mt-3 text-base leading-8 text-[#516074]">
+          <div className="ui-card-soft rounded-[1.5rem] px-6 py-6 sm:rounded-[2rem] sm:px-8 sm:py-7 md:px-10">
+            <div className="text-[11px] uppercase tracking-[0.24em] text-[#9a6200] sm:text-xs sm:tracking-[0.3em]">Lead routing</div>
+            <p className="mt-3 text-sm leading-7 text-[#516074] sm:text-base sm:leading-8">
               Start on WhatsApp for the fastest reply. Use Telegram for quick written coordination. Use email when documents or longer explanations are needed.
             </p>
           </div>
