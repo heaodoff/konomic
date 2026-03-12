@@ -20,11 +20,11 @@ export function SiteShell({ children, locale = 'en' }: { children: ReactNode; lo
                   <Link
                     key={item}
                     href={`/${item}`}
-                    className={`ui-button rounded-full px-2.5 py-1 text-xs font-medium transition ${
+                    className={`ui-button inline-flex min-w-[2.75rem] items-center justify-center rounded-full px-2.5 py-1 text-xs font-medium transition ${
                       item === locale ? 'bg-[#14213d] text-white hover:text-white' : 'text-[#516074] hover:bg-[#14213d]/5'
                     }`}
                   >
-                    {localeLabels[item]}
+                    <span className={`${item === locale ? 'text-white' : ''}`}>{localeLabels[item]}</span>
                   </Link>
                 ))}
               </div>
@@ -50,11 +50,11 @@ export function SiteShell({ children, locale = 'en' }: { children: ReactNode; lo
                 <Link
                   key={item}
                   href={`/${item}`}
-                  className={`ui-button rounded-full px-3 py-1.5 text-xs font-medium transition ${
+                  className={`ui-button inline-flex min-w-[3rem] items-center justify-center rounded-full px-3 py-1.5 text-xs font-medium transition ${
                     item === locale ? 'bg-[#14213d] text-white hover:text-white' : 'text-[#516074] hover:bg-[#14213d]/5'
                   }`}
                 >
-                  <span className="opacity-100">{localeLabels[item]}</span>
+                  <span className={`${item === locale ? 'text-white' : 'opacity-100'}`}>{localeLabels[item]}</span>
                 </Link>
               ))}
             </div>
