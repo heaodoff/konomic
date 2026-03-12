@@ -46,6 +46,7 @@ export function SiteShell({ children, locale = 'en' }: { children: ReactNode; lo
             <Link href={`/${locale}/services`} className="ui-link-soft">{copy.nav.services}</Link>
             <Link href={`/${locale}/about`} className="ui-link-soft">{copy.nav.about}</Link>
             <Link href={`/${locale}/faq`} className="ui-link-soft">{copy.nav.faq}</Link>
+            {locale === 'en' ? <Link href="/en/how-we-work" className="ui-link-soft">How we work</Link> : null}
             <Link href={`/${locale}/contact`} className="ui-link-soft">{copy.nav.contact}</Link>
             <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="ui-link-soft">WhatsApp</a>
             <a href={telegramUrl} target="_blank" rel="noopener noreferrer" className="ui-link-soft">Telegram</a>
@@ -81,7 +82,8 @@ export function SiteShell({ children, locale = 'en' }: { children: ReactNode; lo
               <Link href={`/${locale}/services`} className="ui-button ui-button-secondary rounded-xl border border-[#14213d]/8 bg-white/88 px-4 py-2.5 text-center text-[#47515a]">{copy.nav.services}</Link>
               <Link href={`/${locale}/about`} className="ui-button ui-button-secondary rounded-xl border border-[#14213d]/8 bg-white/88 px-4 py-2.5 text-center text-[#47515a]">{copy.nav.about}</Link>
               <Link href={`/${locale}/faq`} className="ui-button ui-button-secondary rounded-xl border border-[#14213d]/8 bg-white/88 px-4 py-2.5 text-center text-[#47515a]">{copy.nav.faq}</Link>
-              <Link href={`/${locale}/contact`} className="ui-button ui-button-secondary rounded-xl border border-[#14213d]/8 bg-white/88 px-4 py-2.5 text-center text-[#47515a]">{copy.nav.contact}</Link>
+              {locale === 'en' ? <Link href="/en/how-we-work" className="ui-button ui-button-secondary rounded-xl border border-[#14213d]/8 bg-white/88 px-4 py-2.5 text-center text-[#47515a]">How we work</Link> : <Link href={`/${locale}/contact`} className="ui-button ui-button-secondary rounded-xl border border-[#14213d]/8 bg-white/88 px-4 py-2.5 text-center text-[#47515a]">{copy.nav.contact}</Link>}
+              {locale === 'en' ? <Link href={`/${locale}/contact`} className="ui-button ui-button-secondary rounded-xl border border-[#14213d]/8 bg-white/88 px-4 py-2.5 text-center text-[#47515a]">{copy.nav.contact}</Link> : null}
             </div>
           </div>
         </div>
@@ -112,6 +114,7 @@ export function SiteShell({ children, locale = 'en' }: { children: ReactNode; lo
               <Link href={`/${locale}/services`} className="ui-link-soft">{copy.nav.services}</Link>
               <Link href={`/${locale}/about`} className="ui-link-soft">{copy.nav.about}</Link>
               <Link href={`/${locale}/faq`} className="ui-link-soft">{copy.nav.faq}</Link>
+              {locale === 'en' ? <Link href="/en/how-we-work" className="ui-link-soft">How we work</Link> : null}
               <Link href={`/${locale}/contact`} className="ui-link-soft">{copy.nav.contact}</Link>
             </div>
           </div>
