@@ -172,6 +172,46 @@ a {
   z-index: 1;
 }
 
+.ui-section-cream {
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid rgba(20, 33, 61, 0.07);
+  background: linear-gradient(180deg, rgba(252, 249, 243, 0.84), rgba(255, 255, 255, 0.7));
+}
+
+.ui-section-cream::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 85% 15%, rgba(252, 163, 17, 0.08), transparent 22%);
+  pointer-events: none;
+}
+
+.ui-section-cream > * {
+  position: relative;
+  z-index: 1;
+}
+
+.ui-section-cool {
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid rgba(20, 33, 61, 0.07);
+  background: linear-gradient(180deg, rgba(244, 247, 251, 0.78), rgba(255, 255, 255, 0.66));
+}
+
+.ui-section-cool::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 10% 20%, rgba(20, 33, 61, 0.06), transparent 24%);
+  pointer-events: none;
+}
+
+.ui-section-cool > * {
+  position: relative;
+  z-index: 1;
+}
+
 @media (min-width: 1024px) {
   .ui-section {
     padding-left: 2.5rem;

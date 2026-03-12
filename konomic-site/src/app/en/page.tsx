@@ -126,7 +126,7 @@ export default function EnHomePage() {
         </div>
       </section>
 
-      <section className="ui-section border-t border-[#14213d]/8">
+      <section className="ui-section ui-section-cream">
         <div className="flex flex-col gap-3 md:gap-4 md:flex-row md:items-end md:justify-between">
           <div>
             <div className="text-xs uppercase tracking-[0.3em] text-[#9a6200]">Core services</div>
@@ -173,7 +173,7 @@ export default function EnHomePage() {
         </div>
       </section>
 
-      <section className="ui-section border-t border-[#14213d]/8">
+      <section className="ui-section ui-section-cool">
         <div className="max-w-3xl">
           <div className="text-xs uppercase tracking-[0.3em] text-[#9a6200]">FAQ</div>
           <h2 className="mt-3 text-2xl font-semibold tracking-tight sm:text-3xl md:text-5xl">Questions the site should answer before a client hesitates</h2>
