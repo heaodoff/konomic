@@ -2,6 +2,9 @@ import Link from 'next/link';
 import { ReactNode } from 'react';
 import { localeContent, localeLabels, locales, type Locale } from '@/content/i18n';
 
+const whatsappUrl = 'https://wa.me/34643319719';
+const telegramUrl = 'https://t.me/nkitl0';
+
 export function SiteShell({ children, locale = 'en' }: { children: ReactNode; locale?: Locale }) {
   const copy = localeContent[locale];
   return (
@@ -28,12 +31,14 @@ export function SiteShell({ children, locale = 'en' }: { children: ReactNode; lo
                   </Link>
                 ))}
               </div>
-              <Link
-                href={`/${locale}/book-consultation`}
+              <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="ui-button ui-button-primary hidden rounded-full border border-[#14213d] bg-[#14213d] px-5 py-2 text-sm font-medium text-white hover:bg-[#0d1528] hover:text-white sm:inline-flex"
               >
                 <span className="text-white">{copy.nav.book}</span>
-              </Link>
+              </a>
             </div>
           </div>
 
@@ -42,6 +47,8 @@ export function SiteShell({ children, locale = 'en' }: { children: ReactNode; lo
             <Link href={`/${locale}/about`} className="ui-link-soft">{copy.nav.about}</Link>
             <Link href={`/${locale}/faq`} className="ui-link-soft">{copy.nav.faq}</Link>
             <Link href={`/${locale}/contact`} className="ui-link-soft">{copy.nav.contact}</Link>
+            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="ui-link-soft">WhatsApp</a>
+            <a href={telegramUrl} target="_blank" rel="noopener noreferrer" className="ui-link-soft">Telegram</a>
           </div>
 
           <div className="mt-4 flex flex-col gap-3 md:hidden">
@@ -64,14 +71,18 @@ export function SiteShell({ children, locale = 'en' }: { children: ReactNode; lo
               <Link href={`/${locale}/about`} className="ui-button ui-button-secondary rounded-xl border border-[#14213d]/8 bg-white/88 px-4 py-2.5 text-center text-[#47515a]">{copy.nav.about}</Link>
               <Link href={`/${locale}/faq`} className="ui-button ui-button-secondary rounded-xl border border-[#14213d]/8 bg-white/88 px-4 py-2.5 text-center text-[#47515a]">{copy.nav.faq}</Link>
               <Link href={`/${locale}/contact`} className="ui-button ui-button-secondary rounded-xl border border-[#14213d]/8 bg-white/88 px-4 py-2.5 text-center text-[#47515a]">{copy.nav.contact}</Link>
+              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="ui-button ui-button-secondary rounded-xl border border-[#14213d]/8 bg-white/88 px-4 py-2.5 text-center text-[#47515a]">WhatsApp</a>
+              <a href={telegramUrl} target="_blank" rel="noopener noreferrer" className="ui-button ui-button-secondary rounded-xl border border-[#14213d]/8 bg-white/88 px-4 py-2.5 text-center text-[#47515a]">Telegram</a>
             </div>
 
-            <Link
-              href={`/${locale}/book-consultation`}
+            <a
+              href={whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="ui-button ui-button-primary inline-flex items-center justify-center rounded-full border border-[#14213d] bg-[#14213d] px-5 py-2.5 text-sm font-medium text-white hover:bg-[#0d1528] hover:text-white"
             >
               <span className="text-white">{copy.nav.book}</span>
-            </Link>
+            </a>
           </div>
         </div>
       </header>
@@ -93,13 +104,11 @@ export function SiteShell({ children, locale = 'en' }: { children: ReactNode; lo
           </div>
           <div>
             <div className="text-sm font-semibold">Contact</div>
-            <p className="mt-4 text-sm leading-7 text-[#58636d]">
-              WhatsApp: +34 643 319 719
-              <br />
-              Email: nikita.lukashok@gmail.com
-              <br />
-              Telegram: @nkitl0
-            </p>
+            <div className="mt-4 flex flex-col gap-2 text-sm leading-7 text-[#58636d]">
+              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="ui-link-soft">WhatsApp: +34 643 319 719</a>
+              <a href="mailto:nikita.lukashok@gmail.com" className="ui-link-soft">Email: nikita.lukashok@gmail.com</a>
+              <a href={telegramUrl} target="_blank" rel="noopener noreferrer" className="ui-link-soft">Telegram: @nkitl0</a>
+            </div>
           </div>
         </div>
       </footer>

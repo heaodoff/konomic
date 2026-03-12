@@ -11,6 +11,7 @@ export const metadata: Metadata = {
 };
 
 const whatsappUrl = 'https://wa.me/34643319719';
+const telegramUrl = 'https://t.me/nkitl0';
 
 const offers = [
   ['Fast Legal Review', 'Best for documents, contracts, and early risk checks before signing or paying.'],
@@ -27,15 +28,20 @@ export default function BookConsultationPage() {
         title="Choose the right consultation, then move the conversation to WhatsApp"
         text="Konomic Digital SL. uses a WhatsApp-first intake. That keeps the first step fast, direct, and easier for foreign clients who want clarity without waiting."
       />
+      <div className="mt-8 flex flex-wrap gap-4">
+        <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="ui-button ui-button-primary rounded-full bg-[#14213d] px-6 py-3 text-sm font-medium hover:bg-[#0d1528]">Start on WhatsApp</a>
+        <a href={telegramUrl} target="_blank" rel="noopener noreferrer" className="ui-button ui-button-secondary rounded-full border border-[#14213d]/12 bg-white/88 px-6 py-3 text-sm font-medium text-[#14213d] hover:border-[#fca311]/45">Open Telegram</a>
+      </div>
       <div className="mt-12 grid gap-6 md:grid-cols-2">
         {offers.map(([title, text]) => (
           <div key={title} className="ui-card p-8 md:p-10">
             <div className="text-xs uppercase tracking-[0.28em] text-[#8f7d67]">Consultation format</div>
             <h2 className="mt-3 text-2xl font-semibold tracking-tight">{title}</h2>
             <p className="mt-4 text-sm leading-7 text-[#59646e] md:text-base">{text}</p>
-            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="ui-button ui-button-secondary mt-6 inline-flex rounded-full border border-[#1d252b] px-5 py-2 text-sm font-medium hover:bg-[#1d252b] hover:text-white">
-              Start on WhatsApp
-            </a>
+            <div className="mt-6 flex flex-wrap gap-3">
+              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="ui-button ui-button-secondary inline-flex rounded-full border border-[#14213d] px-5 py-2 text-sm font-medium text-[#14213d] hover:bg-[#14213d] hover:text-white">Start on WhatsApp</a>
+              <a href={telegramUrl} target="_blank" rel="noopener noreferrer" className="ui-button ui-button-secondary inline-flex rounded-full border border-[#14213d]/12 bg-white/88 px-5 py-2 text-sm font-medium text-[#14213d] hover:border-[#fca311]/45">Telegram</a>
+            </div>
           </div>
         ))}
       </div>
