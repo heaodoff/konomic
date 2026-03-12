@@ -13,6 +13,21 @@ export const metadata: Metadata = {
   },
 };
 
+const whatsappUrl = 'https://wa.me/34643319719';
+const telegramUrl = 'https://t.me/nkitl0';
+const audiences = [
+  'Compradores extranjeros de inmuebles',
+  'Personas que se trasladan a Tenerife',
+  'Emprendedores y empresarios',
+  'Familias que necesitan claridad legal',
+];
+const processSteps = [
+  'Empieza por WhatsApp o envía una consulta estructurada',
+  'El asunto se dirige al tipo de consulta adecuado',
+  'Solo se piden documentos cuando realmente hacen falta',
+  'El caso pasa a consulta de pago o acompañamiento continuo',
+];
+
 export default function EsHomePage() {
   const copy = localeContent.es;
   const trustPoints = localizeTrustPoints('es');
@@ -26,11 +41,43 @@ export default function EsHomePage() {
           <h1 className="max-w-4xl text-5xl leading-tight font-semibold tracking-tight md:text-7xl">{copy.home.title}</h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-[#516074] md:text-xl">{copy.home.text}</p>
           <div className="mt-8 flex flex-wrap gap-4">
-            <Link href="/es/book-consultation" className="ui-button ui-button-primary rounded-full bg-[#14213d] px-6 py-3 text-sm font-medium hover:bg-[#0d1528]">{copy.home.primaryCta}</Link>
+            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="ui-button ui-button-primary rounded-full bg-[#14213d] px-6 py-3 text-sm font-medium hover:bg-[#0d1528]">{copy.home.primaryCta}</a>
             <Link href="/es/contact" className="ui-button ui-button-secondary rounded-full border border-[#14213d]/12 bg-white/88 px-6 py-3 text-sm font-medium text-[#14213d] hover:border-[#fca311]/45">{copy.home.secondaryCta}</Link>
           </div>
+          <div className="mt-6 flex flex-wrap gap-3 text-sm text-[#58636d]">
+            <span>Principal: WhatsApp</span>
+            <span>•</span>
+            <a href={telegramUrl} target="_blank" rel="noopener noreferrer" className="ui-link-soft">Telegram</a>
+            <span>•</span>
+            <a href="mailto:nikita.lukashok@gmail.com" className="ui-link-soft">Email</a>
+          </div>
         </div>
-        <div className="space-y-6"><div className="ui-card-dark p-8 text-white md:p-10"><div className="text-xs uppercase tracking-[0.28em] text-[#fca311]">Por qué Konomic</div><h2 className="mt-4 text-3xl font-semibold tracking-tight">{copy.home.whyTitle}</h2><p className="mt-4 text-sm leading-7 text-white/78">{copy.home.whyText}</p><div className="mt-6 space-y-4">{trustPoints.map((item) => <div key={item} className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white/88">{item}</div>)}</div></div><div className="ui-card-soft rounded-[2rem] px-8 py-7 md:px-10"><div className="text-xs uppercase tracking-[0.3em] text-[#9a6200]">Contacto directo</div><p className="mt-3 text-base leading-8 text-[#516074]">WhatsApp es la vía más rápida para iniciar una consulta. El email y Telegram siguen disponibles para contexto más amplio y documentos.</p></div></div>
+        <div className="space-y-6"><div className="ui-card-dark p-8 text-white md:p-10"><div className="relative z-10"><div className="text-xs uppercase tracking-[0.28em] text-[#fca311]">Por qué Konomic</div><h2 className="mt-4 text-3xl font-semibold tracking-tight">{copy.home.whyTitle}</h2><p className="mt-4 text-sm leading-7 text-white/78">{copy.home.whyText}</p><div className="mt-6 space-y-4">{trustPoints.map((item) => <div key={item} className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white/88">{item}</div>)}</div></div></div><div className="ui-card-soft rounded-[2rem] px-8 py-7 md:px-10"><div className="text-xs uppercase tracking-[0.3em] text-[#9a6200]">Ruta de contacto</div><p className="mt-3 text-base leading-8 text-[#516074]">Empieza por WhatsApp para la respuesta más rápida. Usa Telegram para coordinación breve y email cuando haya documentos o más contexto.</p></div></div>
+      </section>
+      <section className="ui-section border-t border-[#14213d]/8">
+        <div className="grid gap-6 lg:grid-cols-2">
+          <div className="ui-card p-8 md:p-9">
+            <div className="text-xs uppercase tracking-[0.3em] text-[#9a6200]">A quién ayudamos</div>
+            <h2 className="mt-3 text-3xl font-semibold tracking-tight">Diseñado para los perfiles que realmente generan demanda</h2>
+            <div className="mt-6 grid gap-3 sm:grid-cols-2">
+              {audiences.map((item) => (
+                <div key={item} className="ui-card-soft px-4 py-4 text-sm text-[#33404a]">{item}</div>
+              ))}
+            </div>
+          </div>
+          <div className="ui-card p-8 md:p-9">
+            <div className="text-xs uppercase tracking-[0.3em] text-[#9a6200]">Cómo funciona</div>
+            <h2 className="mt-3 text-3xl font-semibold tracking-tight">Proceso claro desde el primer mensaje hasta el soporte de pago</h2>
+            <ol className="mt-6 space-y-4 text-sm leading-7 text-[#59646e] md:text-base">
+              {processSteps.map((step, index) => (
+                <li key={step} className="flex gap-4">
+                  <span className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#14213d] text-xs font-semibold text-white">0{index + 1}</span>
+                  <span>{step}</span>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </div>
       </section>
       <section className="ui-section border-t border-[#14213d]/8"><div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between"><div><div className="text-xs uppercase tracking-[0.3em] text-[#9a6200]">{copy.home.coreServicesEyebrow}</div><h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-5xl">{copy.home.coreServicesTitle}</h2></div><p className="max-w-2xl text-sm leading-7 text-[#59646e] md:text-base">{copy.home.coreServicesText}</p></div><div className="mt-10 grid gap-6 md:grid-cols-2">{topServices.map((service) => <article key={service.slug} className="ui-card p-8 md:p-9"><div className="text-xs uppercase tracking-[0.25em] text-[#9a6200]">{service.eyebrow}</div><h3 className="mt-3 text-2xl font-semibold tracking-tight">{service.title}</h3><p className="mt-3 text-sm leading-7 text-[#59646e] md:text-base">{service.summary}</p><Link href="/es/services" className="ui-link-soft mt-5 inline-flex text-sm font-medium text-[#14213d]">Ver servicios →</Link></article>)}</div></section>
       <section className="border-t border-[#14213d]/8 bg-[#14213d] py-18 text-white"><div className="mx-auto grid max-w-7xl gap-10 px-6 lg:grid-cols-2 lg:px-10"><div><div className="text-xs uppercase tracking-[0.3em] text-[#fca311]">{copy.home.marketEyebrow}</div><h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-5xl">{copy.home.marketTitle}</h2></div></div></section>
