@@ -26,7 +26,8 @@ html {
 body {
   margin: 0;
   background:
-    radial-gradient(circle at top left, rgba(252, 163, 17, 0.07), transparent 30%),
+    radial-gradient(circle at top left, rgba(252, 163, 17, 0.08), transparent 28%),
+    radial-gradient(circle at top right, rgba(20, 33, 61, 0.05), transparent 24%),
     linear-gradient(180deg, #ffffff 0%, #faf8f4 38%, #ffffff 100%);
   color: var(--foreground);
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
@@ -85,7 +86,7 @@ a {
 
 .ui-card {
   border: 1px solid rgba(20, 33, 61, 0.07);
-  background: rgba(255, 255, 255, 0.92);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(255, 255, 255, 0.9));
   border-radius: 1.75rem;
   box-shadow: 0 14px 42px rgba(20, 33, 61, 0.06);
 }
@@ -97,16 +98,32 @@ a {
 }
 
 .ui-card-dark {
+  position: relative;
+  overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.05);
   background: linear-gradient(180deg, #1b2948 0%, #14213d 100%);
   border-radius: 2rem;
   box-shadow: 0 32px 84px rgba(20, 33, 61, 0.24);
 }
 
+.ui-card-dark::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top right, rgba(252, 163, 17, 0.12), transparent 30%);
+  pointer-events: none;
+}
+
 .ui-accent-chip {
   border: 1px solid rgba(252, 163, 17, 0.35);
   background: rgba(252, 163, 17, 0.08);
   color: #9a6200;
+}
+
+.ui-rule {
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(90deg, rgba(252, 163, 17, 0.55), rgba(20, 33, 61, 0.08));
 }
 
 .ui-section {

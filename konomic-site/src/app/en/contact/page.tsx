@@ -30,6 +30,7 @@ export default function ContactPage() {
         title="Contact Konomic Digital SL."
         text="Konomic Digital SL. uses a WhatsApp-first lead flow. For most new enquiries, WhatsApp is the fastest and clearest starting point."
       />
+      <div className="mt-8 ui-rule" />
       <div className="mt-10 flex flex-wrap gap-4">
         <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="ui-button ui-button-primary rounded-full bg-[#14213d] px-6 py-3 text-sm font-medium text-white hover:bg-[#0d1528]">Start on WhatsApp</a>
         <a href="mailto:nikita.lukashok@gmail.com" className="ui-button ui-button-secondary rounded-full border border-[#14213d]/12 bg-white/88 px-6 py-3 text-sm font-medium text-[#14213d] hover:border-[#fca311]/45">Email Konomic</a>
@@ -42,7 +43,8 @@ export default function ContactPage() {
       </div>
       <div className="mt-12 grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
         <div className="ui-card p-8 md:p-10">
-          <h2 className="text-2xl font-semibold tracking-tight">Recommended enquiry form</h2>
+          <div className="text-xs uppercase tracking-[0.28em] text-[#9a6200]">Structured intake</div>
+          <h2 className="mt-3 text-2xl font-semibold tracking-tight">Recommended enquiry form</h2>
           <form className="mt-6 grid gap-4" action={whatsappUrl} method="get">
             <div className="grid gap-4 md:grid-cols-2">
               {fields.slice(0, 4).map((label) => (
@@ -87,13 +89,16 @@ export default function ContactPage() {
             </ul>
           </div>
           <div className="ui-card-dark p-8 text-white md:p-10">
-            <h2 className="text-2xl font-semibold tracking-tight">What happens next</h2>
-            <ol className="mt-4 space-y-3 text-sm leading-7 text-white/82 md:text-base">
-              <li>1. You send the first message, ideally on WhatsApp</li>
-              <li>2. The matter is routed to the right consultation type</li>
-              <li>3. If needed, documents are shared by email or Telegram</li>
-              <li>4. The matter moves into paid consultation or ongoing support</li>
-            </ol>
+            <div className="relative z-10">
+              <div className="text-xs uppercase tracking-[0.28em] text-[#fca311]">Client flow</div>
+              <h2 className="mt-3 text-2xl font-semibold tracking-tight">What happens next</h2>
+              <ol className="mt-4 space-y-3 text-sm leading-7 text-white/82 md:text-base">
+                <li>1. You send the first message, ideally on WhatsApp</li>
+                <li>2. The matter is routed to the right consultation type</li>
+                <li>3. If needed, documents are shared by email or Telegram</li>
+                <li>4. The matter moves into paid consultation or ongoing support</li>
+              </ol>
+            </div>
           </div>
         </div>
       </div>
