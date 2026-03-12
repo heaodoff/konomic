@@ -1,53 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { SectionIntro } from '@/components/SiteShell';
-
-export const metadata: Metadata = {
-  title: 'Услуги',
-  description: 'Русскоязычные страницы услуг по недвижимости, резиденции, бизнесу и договорам на Тенерифе.',
-  alternates: { canonical: '/ru/services' },
-};
-
-const pages = [
-  {
-    href: '/ru/services/yurist-po-nedvizhimosti-tenerife',
-    title: 'Юрист по недвижимости на Тенерифе',
-    text: 'Для покупки недвижимости, due diligence, проверки договоров и снижения рисков до депозита или сделки.',
-  },
-  {
-    href: '/ru/services/immigracionnyy-yurist-tenerife',
-    title: 'Иммиграционный юрист на Тенерифе',
-    text: 'Для резиденции, документов, локальных регистраций и переезда на Тенерифе или в Испанию.',
-  },
-  {
-    href: '/ru/services/biznes-yurist-tenerife',
-    title: 'Бизнес-юрист на Тенерифе',
-    text: 'Для открытия компании, структуры бизнеса, коммерческих договоров и постоянного сопровождения.',
-  },
-  {
-    href: '/ru/services/proverka-dogovorov-tenerife',
-    title: 'Проверка договоров на Тенерифе',
-    text: 'Для проверки договоров, правок условий и контроля рисков до подписания или оплаты.',
-  },
-];
-
-export default function Page() {
-  return (
-    <main className="ui-section">
-      <SectionIntro
-        eyebrow="Услуги"
-        title="Русскоязычные страницы услуг под основной спрос"
-        text="Здесь собраны ключевые направления для русскоязычных клиентов на Тенерифе. Каждая страница выступает как отдельная SEO-точка входа и точка заявки."
-      />
-      <div className="mt-12 grid gap-6 md:grid-cols-2">
-        {pages.map((page) => (
-          <article key={page.href} className="ui-card p-8 md:p-9">
-            <h2 className="text-2xl font-semibold tracking-tight">{page.title}</h2>
-            <p className="mt-4 text-sm leading-7 text-[#59646e] md:text-base">{page.text}</p>
-            <Link href={page.href} className="ui-link-soft mt-5 inline-flex text-sm font-medium text-[#1d252b]">Открыть страницу →</Link>
-          </article>
-        ))}
-      </div>
-    </main>
-  );
-}
+export const metadata: Metadata = { title: 'Услуги', description: 'Русскоязычные страницы услуг по недвижимости, резиденции, бизнесу и договорам на Тенерифе.', alternates: { canonical: '/ru/services' } };
+const blocks=[{href:'/ru/services/yurist-po-nedvizhimosti-tenerife',title:'Юрист по недвижимости на Тенерифе',label:'Часто нужно до покупки или оплаты',summary:'Юридическая поддержка для иностранных покупателей, инвесторов, продавцов и собственников, которым нужна проверка до резерва, оплаты или подписания документов.',situations:['Перед подписанием резерва или договора купли-продажи','Перед переводом депозита или крупной суммы','Когда есть сомнения по документам, долгам или лицензиям'],bullets:['Due diligence до покупки','Проверка договора до подписи','Проверка документальных рисков']},{href:'/ru/services/immigracionnyy-yurist-tenerife',title:'Иммиграционный юрист на Тенерифе',label:'Часто нужно до переезда',summary:'Юридическая помощь для тех, кто переезжает на Тенерифе или решает вопросы с резиденцией, местными документами и первыми шагами в Испании.',situations:['До переезда на Тенерифе','Когда непонятны вопросы резиденции и документов','Когда процесс нужно начинать из другой страны'],bullets:['Резиденция и переезд','NIE / TIE и локальные формальности','Удалённый первый этап, если это уместно']},{href:'/ru/services/biznes-yurist-tenerife',title:'Бизнес-юрист на Тенерифе',label:'Часто нужно предпринимателям',summary:'Юридическая поддержка для иностранных основателей, структуры компании, коммерческих документов и запуска деятельности в Испании.',situations:['До запуска структуры бизнеса в Испании','Когда между партнёрами нужны понятные договорённости','Когда нужно проверить коммерческие документы'],bullets:['Открытие и структура компании','Договорённости между партнёрами','Коммерческие договоры и сопровождение']},{href:'/ru/services/proverka-dogovorov-tenerife',title:'Проверка договоров на Тенерифе',label:'Часто нужно до подписания',summary:'Проверка договоров и документов до того, как клиент возьмёт на себя обязательства, переведёт деньги или зафиксирует риск.',situations:['До подписания договора с финансовым или юридическим риском','Когда нужно проверить двуязычный документ','Когда важно понять обязательства до подписи'],bullets:['Договоры купли-продажи и аренды','Коммерческие и сервисные договоры','Проверка документов на двух языках']}];
+export default function Page(){return <main className="ui-section ui-section-cream"><SectionIntro eyebrow="Услуги" title="Юридические услуги для тех задач, с которыми чаще всего стоит начинать на Тенерифе" text="Публичная структура услуг сфокусирована на недвижимости, резиденции, бизнесе и договорах — то есть там, где иностранному клиенту чаще всего нужна юридическая ясность до подписи, оплаты, переезда или лишнего риска." /><div className="mt-8 ui-rule" /><div className="mt-12 space-y-6">{blocks.map((service)=><section key={service.title} className="ui-card p-6 sm:p-8 md:p-10"><div className="flex flex-wrap items-center justify-between gap-3"><div className="text-xs uppercase tracking-[0.3em] text-[#8f7d67]">{service.label}</div><div className="rounded-full border border-black/8 bg-[#faf7f3] px-3 py-1 text-xs text-[#59646e]">Основная услуга</div></div><div className="mt-5 grid gap-8 lg:grid-cols-[1.08fr_0.92fr] lg:items-start"><div><h2 className="text-3xl font-semibold tracking-tight">{service.title}</h2><p className="mt-4 max-w-3xl text-base leading-8 text-[#56616b]">{service.summary}</p><div className="mt-6"><div className="text-xs uppercase tracking-[0.28em] text-[#9a6200]">Типовые ситуации</div><ul className="mt-4 space-y-3 text-sm leading-7 text-[#56616b] md:text-base">{service.situations.map((item)=><li key={item}>• {item}</li>)}</ul></div></div><div className="grid gap-3">{service.bullets.map((bullet)=><div key={bullet} className="ui-card-soft px-4 py-4 text-sm text-[#33404a]">{bullet}</div>)}<Link href={service.href} className="ui-button ui-button-primary mt-2 inline-flex items-center justify-center rounded-full bg-[#14213d] px-5 py-3 text-sm font-medium text-white hover:bg-[#0d1528]">Открыть услугу</Link></div></div></section>)}</div></main>}

@@ -1,12 +1,5 @@
 import type { Metadata } from 'next';
 import { SectionIntro } from '@/components/SiteShell';
-
 export const metadata: Metadata = { title: 'Контакт', alternates: { canonical: '/uk/contact' } };
-
-export default function Page() {
-  return (
-    <main className="mx-auto max-w-7xl px-6 py-16 lg:px-10 lg:py-20">
-      <SectionIntro eyebrow="Контакт" title="Контакт" text="Ця сторінка підготовлена як локалізована українська версія англомовної MVP-структури." />
-    </main>
-  );
-}
+const whatsappUrl='https://wa.me/34643319719'; const telegramUrl='https://t.me/nkitl0';
+export default function Page(){return <main className="ui-section"><SectionIntro eyebrow="Контакт" title="Зв’язатися з Konomic Digital SL." text="Для більшості нових звернень WhatsApp — найшвидший і найзрозуміліший канал. Email краще підходить для документів, а Telegram може бути додатковим письмовим каналом." /><div className="mt-8 ui-rule" /><div className="mt-8 flex flex-wrap gap-4 sm:mt-10"><a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="ui-button ui-button-primary rounded-full bg-[#14213d] px-6 py-3 text-sm font-medium text-white hover:bg-[#0d1528]">Почати у WhatsApp</a><a href="mailto:nikita.lukashok@gmail.com" className="ui-button ui-button-secondary rounded-full border border-[#14213d]/12 bg-white/88 px-6 py-3 text-sm font-medium text-[#14213d] hover:border-[#fca311]/45">Надіслати email</a><a href={telegramUrl} target="_blank" rel="noopener noreferrer" className="ui-button ui-button-secondary rounded-full border border-[#14213d]/12 bg-white/88 px-6 py-3 text-sm font-medium text-[#14213d] hover:border-[#fca311]/45">Відкрити Telegram</a></div></main>}

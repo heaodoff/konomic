@@ -1,12 +1,5 @@
 import type { Metadata } from 'next';
 import { SectionIntro } from '@/components/SiteShell';
-
 export const metadata: Metadata = { title: 'FAQ', alternates: { canonical: '/de/faq' } };
-
-export default function Page() {
-  return (
-    <main className="mx-auto max-w-7xl px-6 py-16 lg:px-10 lg:py-20">
-      <SectionIntro eyebrow="FAQ" title="FAQ" text="Diese Seite wird als lokalisierte deutsche Version der englischen MVP-Struktur vorbereitet." />
-    </main>
-  );
-}
+const faqItems=[['Muss ich auf Teneriffa sein, um zu starten?','Nicht unbedingt. In vielen Fällen kann der erste Schritt remote beginnen, besonders wenn Unterlagen geprüft oder der nächste Schritt vor Reise, Unterschrift oder Zahlung geklärt werden muss.'],['Kann ein Vertrag vor der Unterschrift geprüft werden?','Ja. Genau dafür lohnt sich ein früher Kontakt besonders. Eine Prüfung vor der Unterschrift ist meist deutlich wertvoller als eine spätere Korrektur.'],['Arbeiten Sie mit ausländischen Immobilienkäufern auf Teneriffa?','Ja. Immobilien sind einer der wichtigsten Schwerpunkte der Website, insbesondere für ausländische Käufer und Investoren, die Risiken vor einer Zahlung verstehen wollen.'],['Kann ich Unterlagen vor einer Beratung schicken?','Ja, wenn es sinnvoll ist. Liegen Dokumente bereits vor, können sie meist nach der ersten Nachricht geteilt werden, damit die Prüfung strukturierter erfolgen kann.'],['Was sollte in der ersten WhatsApp-Nachricht stehen?','Kurz das Thema, ob bereits etwas unterschrieben oder bezahlt wurde, der Zeitrahmen, die bevorzugte Sprache und ob Unterlagen vorliegen.'],['Welche Themen stehen im Vordergrund?','Der Hauptfokus liegt auf Immobilien, Aufenthalt und Relocation, Unternehmen, Vertragsprüfung sowie damit verbundenen Fragen internationaler Mandanten auf Teneriffa.'],['Kann der Prozess aus dem Ausland gestartet werden?','Ja. Viele Mandanten beginnen vor der Anreise nach Teneriffa, besonders wenn frühe rechtliche Orientierung oder Dokumentenprüfung gebraucht wird.'],['Welcher Kontaktkanal ist am besten?','WhatsApp ist der primäre Kanal, weil er meist am schnellsten und klarsten ist. Telegram eignet sich für schriftliche Abstimmung, E-Mail für Unterlagen und längere Erklärungen.']];
+export default function Page(){return <main className="ui-section ui-section-cool"><SectionIntro eyebrow="FAQ" title="Fragen, die oft vor dem ersten Kontakt auftauchen" text="Ein gutes juristisches FAQ sollte Zweifel schon vor der ersten Nachricht abbauen. Diese Seite konzentriert sich auf praktische Fragen internationaler Mandanten zu Immobilien, Aufenthalt, Unternehmen und Verträgen auf Teneriffa." /><div className="mt-8 ui-rule" /><div className="mt-10 grid gap-4 md:mt-12 md:gap-5">{faqItems.map(([q,a])=><div key={q} className="ui-card px-5 py-5 sm:px-6 sm:py-6 md:px-7 md:py-7"><h2 className="text-lg font-semibold tracking-tight">{q}</h2><p className="mt-3 text-sm leading-7 text-[#59646e] md:text-base">{a}</p></div>)}</div></main>}

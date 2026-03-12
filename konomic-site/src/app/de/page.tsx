@@ -1,57 +1,8 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { coreServices } from '@/content/site';
-import { localeContent } from '@/content/i18n';
-import { localizeFaqs, localizeTrustPoints } from '@/content/site-locale';
-
-export const metadata: Metadata = {
-  title: 'Deutschsprachige Rechtsberatung auf Teneriffa',
-  description: 'Mehrsprachige Premium-Rechtsberatung auf Teneriffa für Immobilien, Aufenthaltsfragen, Unternehmen und Verträge.',
-  alternates: {
-    canonical: '/de',
-    languages: {
-      en: '/en',
-      de: '/de',
-      ru: '/ru',
-      uk: '/uk',
-      'x-default': '/en',
-    },
-  },
-};
-
-export default function DeHomePage() {
-  const copy = localeContent.de;
-  const trustPoints = localizeTrustPoints('de');
-  const faqs = localizeFaqs('de');
-  const topServices = coreServices.slice(0, 4);
-  return (
-    <main>
-      <section className="mx-auto grid max-w-7xl gap-10 px-6 py-16 lg:grid-cols-[1.08fr_0.92fr] lg:px-10 lg:py-24">
-        <div className="flex flex-col justify-center">
-          <div className="mb-4 inline-flex w-fit rounded-full border border-[#cdb79d] bg-white/70 px-4 py-1 text-xs uppercase tracking-[0.28em] text-[#8f6e50]">{copy.home.badge}</div>
-          <h1 className="max-w-4xl text-5xl leading-tight font-semibold tracking-tight md:text-7xl">{copy.home.title}</h1>
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-[#4f5a64] md:text-xl">{copy.home.text}</p>
-          <div className="mt-8 flex flex-wrap gap-4">
-            <Link href="/de/book-consultation" className="ui-button ui-button-primary rounded-full bg-[#14213d] px-6 py-3 text-sm font-medium hover:bg-[#0d1528]">{copy.home.primaryCta}</Link>
-            <Link href="/de/contact" className="ui-button ui-button-secondary rounded-full border border-[#14213d]/12 bg-white/88 px-6 py-3 text-sm font-medium text-[#14213d] hover:border-[#fca311]/45">{copy.home.secondaryCta}</Link>
-          </div>
-        </div>
-        <div className="space-y-6">
-          <div className="ui-card-dark p-8 text-white md:p-10">
-            <div className="text-xs uppercase tracking-[0.28em] text-[#d5bd9e]">Warum Konomic</div>
-            <h2 className="mt-4 text-3xl font-semibold tracking-tight">{copy.home.whyTitle}</h2>
-            <p className="mt-4 text-sm leading-7 text-white/75">{copy.home.whyText}</p>
-            <div className="mt-6 space-y-4">{trustPoints.map((item) => <div key={item} className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white/85">{item}</div>)}</div>
-          </div>
-          <div className="ui-card-soft rounded-[2rem] px-8 py-7 md:px-10">
-            <div className="text-xs uppercase tracking-[0.3em] text-[#8f7d67]">Direkter Kontakt</div>
-            <p className="mt-3 text-base leading-8 text-[#4f5a64]">WhatsApp ist der schnellste Einstieg. E-Mail und Telegram bleiben für längeren Kontext und Dokumente verfügbar.</p>
-          </div>
-        </div>
-      </section>
-      <section className="ui-section border-t border-black/5"><div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between"><div><div className="text-xs uppercase tracking-[0.3em] text-[#8f7d67]">{copy.home.coreServicesEyebrow}</div><h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-5xl">{copy.home.coreServicesTitle}</h2></div><p className="max-w-2xl text-sm leading-7 text-[#59646e] md:text-base">{copy.home.coreServicesText}</p></div><div className="mt-10 grid gap-6 md:grid-cols-2">{topServices.map((service) => <article key={service.slug} className="ui-card p-8 md:p-9"><div className="text-xs uppercase tracking-[0.25em] text-[#8f7d67]">{service.eyebrow}</div><h3 className="mt-3 text-2xl font-semibold tracking-tight">{service.title}</h3><p className="mt-3 text-sm leading-7 text-[#59646e] md:text-base">{service.summary}</p><Link href="/de/services" className="ui-link-soft mt-5 inline-flex text-sm font-medium text-[#1d252b]">Zu den Leistungen →</Link></article>)}</div></section>
-      <section className="border-t border-black/5 bg-[#1e252b] py-18 text-white"><div className="mx-auto grid max-w-7xl gap-10 px-6 lg:grid-cols-2 lg:px-10"><div><div className="text-xs uppercase tracking-[0.3em] text-[#d5bd9e]">{copy.home.marketEyebrow}</div><h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-5xl">{copy.home.marketTitle}</h2></div></div></section>
-      <section className="ui-section border-t border-black/5"><div className="max-w-3xl"><div className="text-xs uppercase tracking-[0.3em] text-[#8f7d67]">{copy.home.faqEyebrow}</div><h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-5xl">{copy.home.faqTitle}</h2></div><div className="mt-10 grid gap-5">{faqs.map((item) => <div key={item.q} className="ui-card px-6 py-6 md:px-7 md:py-7"><h3 className="text-lg font-semibold tracking-tight">{item.q}</h3><p className="mt-3 text-sm leading-7 text-[#59646e] md:text-base">{item.a}</p></div>)}</div></section>
-    </main>
-  );
-}
+export const metadata: Metadata = { title: 'Deutschsprachige Rechtsberatung auf Teneriffa', description: 'Mehrsprachige Rechtsberatung auf Teneriffa für internationale Mandanten mit Themen rund um Immobilien, Aufenthalt, Unternehmen und Verträge.', alternates: { canonical: '/de', languages: { en: '/en', de: '/de', ru: '/ru', uk: '/uk', 'x-default': '/en' } } };
+const whatsappUrl='https://wa.me/34643319719'; const telegramUrl='https://t.me/nkitl0';
+const trust=['Für internationale Mandanten auf Teneriffa','Sinnvoll vor Unterschrift, Umzug oder Investition','Unterlagen können vorab geteilt werden','WhatsApp als primärer Erstkontakt'];
+const services=[['Immobilienrecht','Vor Kauf, Reservierung oder Zahlung'],['Aufenthalt & Relocation','Vor Umzug oder Dokumentenprozess'],['Unternehmen','Für Gründer und Betreiber'],['Vertragsprüfung','Vor Unterschrift und Risikoübernahme']];
+const faq=[['Muss ich auf Teneriffa sein, um zu starten?','Nicht unbedingt. Viele Erstschritte können remote beginnen, besonders wenn Unterlagen geprüft oder der nächste Schritt vorab geklärt werden muss.'],['Kann ein Vertrag vor der Unterschrift geprüft werden?','Ja. Gerade das ist oft einer der wichtigsten Gründe für eine frühe Kontaktaufnahme.'],['Arbeiten Sie mit ausländischen Immobilienkäufern?','Ja. Immobilien gehören zu den zentralen Themen der Website, besonders für internationale Käufer und Investoren.']];
+export default function DeHomePage(){return <main><section className="relative mx-auto grid max-w-7xl gap-8 px-5 py-10 lg:grid-cols-[1.08fr_0.92fr] lg:gap-10 lg:px-10 lg:py-24"><div className="absolute inset-x-0 top-0 -z-10 h-[28rem] bg-[radial-gradient(circle_at_top_left,rgba(252,163,17,0.10),transparent_34%),radial-gradient(circle_at_top_right,rgba(20,33,61,0.07),transparent_28%)]" aria-hidden="true" /><div className="flex flex-col justify-center"><div className="ui-accent-chip mb-4 inline-flex w-fit rounded-full px-4 py-1 text-xs uppercase tracking-[0.28em]">Deutschsprachige Rechtsberatung auf Teneriffa</div><h1 className="max-w-4xl text-3xl leading-tight font-semibold tracking-tight sm:text-4xl md:text-7xl">Mehrsprachige Rechtsberatung auf Teneriffa für internationale Mandanten.</h1><p className="mt-4 max-w-2xl text-base leading-7 text-[#516074] sm:text-lg md:text-xl md:leading-8">Unterstützung bei Immobilien, Aufenthalt, Unternehmen und Verträgen — mit einem klaren ersten Schritt für Mandanten, die vor Unterschrift, Umzug, Investition oder Strukturierung rechtliche Klarheit brauchen.</p><div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4"><a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="ui-button ui-button-primary inline-flex items-center justify-center rounded-full bg-[#14213d] px-5 py-3 text-sm font-medium text-white hover:bg-[#0d1528] sm:px-6">Auf WhatsApp starten</a><Link href="/de/services" className="ui-button ui-button-secondary inline-flex items-center justify-center rounded-full border border-[#14213d]/12 bg-white/88 px-5 py-3 text-sm font-medium text-[#14213d] hover:border-[#fca311]/45 sm:px-6">Leistungen ansehen</Link></div><div className="mt-5 flex flex-wrap gap-3 text-sm text-[#58636d] sm:mt-6"><span>Primär: WhatsApp</span><span>•</span><a href={telegramUrl} target="_blank" rel="noopener noreferrer" className="ui-link-soft">Telegram</a><span>•</span><a href="mailto:nikita.lukashok@gmail.com" className="ui-link-soft">E-Mail</a></div><div className="mt-8 grid gap-3 sm:mt-10 sm:grid-cols-2 lg:grid-cols-4 sm:gap-4">{trust.map((item)=><div key={item} className="ui-card px-5 py-5 text-sm text-[#33404a]">{item}</div>)}</div></div><div className="space-y-4 sm:space-y-6"><div className="ui-card-dark p-6 text-white sm:p-8 md:p-10"><div className="relative z-10"><div className="text-[11px] uppercase tracking-[0.24em] text-[#fca311] sm:text-xs sm:tracking-[0.28em]">Warum sich früher Kontakt lohnt</div><h2 className="mt-3 text-2xl font-semibold tracking-tight sm:text-3xl">Rechtliche Prüfung ist am wertvollsten, bevor Dokumente unterschrieben und Zahlungen geleistet werden.</h2><p className="mt-3 text-sm leading-6 text-white/78 sm:mt-4 sm:leading-7">Viele internationale Mandanten brauchen Hilfe vor Reservierungsverträgen, vor Aufenthaltsprozessen, vor Unternehmensstrukturierung oder bevor Verpflichtungen festgeschrieben werden.</p></div></div><div className="ui-card-soft rounded-[1.5rem] px-6 py-6 sm:rounded-[2rem] sm:px-8 sm:py-7 md:px-10"><div className="text-[11px] uppercase tracking-[0.24em] text-[#9a6200] sm:text-xs sm:tracking-[0.3em]">Kernleistungen</div><div className="mt-4 grid gap-2.5">{services.map(([title,text])=><div key={title} className="ui-card-soft px-4 py-3 text-sm text-[#33404a]"><strong>{title}</strong><div>{text}</div></div>)}</div></div></div></section><section className="ui-section ui-section-cool"><div className="max-w-3xl"><div className="text-xs uppercase tracking-[0.3em] text-[#9a6200]">FAQ</div><h2 className="mt-3 text-2xl font-semibold tracking-tight sm:text-3xl md:text-5xl">Fragen, die oft vor dem ersten Kontakt auftauchen</h2></div><div className="mt-8 grid gap-4 md:mt-10 md:gap-5">{faq.map(([q,a])=><div key={q} className="ui-card px-5 py-5 sm:px-6 sm:py-6 md:px-7 md:py-7"><h3 className="text-lg font-semibold tracking-tight">{q}</h3><p className="mt-3 text-sm leading-7 text-[#59646e] md:text-base">{a}</p></div>)}</div></section></main>}

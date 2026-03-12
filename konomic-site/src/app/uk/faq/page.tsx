@@ -1,12 +1,5 @@
 import type { Metadata } from 'next';
 import { SectionIntro } from '@/components/SiteShell';
-
 export const metadata: Metadata = { title: 'FAQ', alternates: { canonical: '/uk/faq' } };
-
-export default function Page() {
-  return (
-    <main className="mx-auto max-w-7xl px-6 py-16 lg:px-10 lg:py-20">
-      <SectionIntro eyebrow="FAQ" title="FAQ" text="Ця сторінка підготовлена як локалізована українська версія англомовної MVP-структури." />
-    </main>
-  );
-}
+const faqItems=[['Чи потрібно бути на Тенерифе, щоб почати?','Не обов’язково. У багатьох випадках перший етап можна почати дистанційно, особливо якщо потрібно перевірити документи або зрозуміти наступний крок до поїздки, підпису чи оплати.'],['Чи можна перевірити договір до підпису?','Так. Саме для цього ранній контакт особливо корисний. Перевірка до підпису майже завжди цінніша, ніж спроби виправити проблему пізніше.'],['Чи працюєте ви з іноземними покупцями нерухомості?','Так. Нерухомість — один із головних напрямів сайту, особливо для іноземних покупців та інвесторів, яким потрібно зрозуміти ризики до переказу коштів.'],['Що краще написати в першому WhatsApp?','Коротко опишіть ситуацію, вкажіть, чи вже щось підписано або оплачено, який термін чи терміновість, яка мова зручна та чи є документи для перевірки.']];
+export default function Page(){return <main className="ui-section ui-section-cool"><SectionIntro eyebrow="FAQ" title="Питання, які часто виникають до першого контакту" text="Хороший юридичний FAQ має знімати сумніви ще до першого повідомлення. Тут зібрані практичні питання міжнародних клієнтів щодо нерухомості, резиденції, бізнесу та договорів на Тенерифе." /><div className="mt-8 ui-rule" /><div className="mt-10 grid gap-4 md:mt-12 md:gap-5">{faqItems.map(([q,a])=><div key={q} className="ui-card px-5 py-5 sm:px-6 sm:py-6 md:px-7 md:py-7"><h2 className="text-lg font-semibold tracking-tight">{q}</h2><p className="mt-3 text-sm leading-7 text-[#59646e] md:text-base">{a}</p></div>)}</div></main>}
