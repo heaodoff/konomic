@@ -58,7 +58,7 @@ export function SiteShell({ children, locale = 'en' }: { children: ReactNode; lo
             </div>
           </div>
           <div>
-            <div className="text-sm font-semibold">Public contact</div>
+            <div className="text-sm font-semibold">Contact</div>
             <p className="mt-4 text-sm leading-7 text-[#58636d]">
               WhatsApp: +34 643 319 719
               <br />
