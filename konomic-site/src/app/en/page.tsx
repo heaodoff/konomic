@@ -38,7 +38,8 @@ const processSteps = [
 export default function EnHomePage() {
   return (
     <main>
-      <section className="mx-auto grid max-w-7xl gap-8 px-5 py-10 lg:grid-cols-[1.08fr_0.92fr] lg:gap-10 lg:px-10 lg:py-24">
+      <section className="relative mx-auto grid max-w-7xl gap-8 px-5 py-10 lg:grid-cols-[1.08fr_0.92fr] lg:gap-10 lg:px-10 lg:py-24">
+        <div className="absolute inset-x-0 top-0 -z-10 h-[28rem] bg-[radial-gradient(circle_at_top_left,rgba(252,163,17,0.10),transparent_34%),radial-gradient(circle_at_top_right,rgba(20,33,61,0.07),transparent_28%)]" aria-hidden="true" />
         <div className="flex flex-col justify-center">
           <div className="ui-accent-chip mb-4 inline-flex w-fit rounded-full px-4 py-1 text-xs uppercase tracking-[0.28em]">
             English version · premium legal support in Tenerife
@@ -99,7 +100,7 @@ export default function EnHomePage() {
         </div>
       </section>
 
-      <section className="ui-section border-t border-[#14213d]/8">
+      <section className="ui-section ui-section-tint">
         <div className="grid gap-4 md:gap-6 lg:grid-cols-2">
           <div className="ui-card p-6 sm:p-7 md:p-9">
             <div className="text-xs uppercase tracking-[0.3em] text-[#9a6200]">Who we help</div>

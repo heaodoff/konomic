@@ -35,7 +35,8 @@ export default function EsHomePage() {
   const topServices = coreServices.slice(0, 4);
   return (
     <main>
-      <section className="mx-auto grid max-w-7xl gap-8 px-5 py-10 lg:grid-cols-[1.08fr_0.92fr] lg:gap-10 lg:px-10 lg:py-24">
+      <section className="relative mx-auto grid max-w-7xl gap-8 px-5 py-10 lg:grid-cols-[1.08fr_0.92fr] lg:gap-10 lg:px-10 lg:py-24">
+        <div className="absolute inset-x-0 top-0 -z-10 h-[28rem] bg-[radial-gradient(circle_at_top_left,rgba(252,163,17,0.10),transparent_34%),radial-gradient(circle_at_top_right,rgba(20,33,61,0.07),transparent_28%)]" aria-hidden="true" />
         <div className="flex flex-col justify-center">
           <div className="ui-accent-chip mb-4 inline-flex w-fit rounded-full px-4 py-1 text-xs uppercase tracking-[0.28em]">{copy.home.badge}</div>
           <h1 className="max-w-4xl text-3xl leading-tight font-semibold tracking-tight sm:text-4xl md:text-7xl">{copy.home.title}</h1>
@@ -54,7 +55,7 @@ export default function EsHomePage() {
         </div>
         <div className="space-y-4 sm:space-y-6"><div className="ui-card-dark p-6 text-white sm:p-8 md:p-10"><div className="relative z-10"><div className="text-[11px] uppercase tracking-[0.24em] text-[#fca311] sm:text-xs sm:tracking-[0.28em]">Por qué Konomic</div><h2 className="mt-3 text-2xl font-semibold tracking-tight sm:text-3xl">{copy.home.whyTitle}</h2><p className="mt-3 text-sm leading-6 text-white/78 sm:mt-4 sm:leading-7">{copy.home.whyText}</p><div className="mt-5 space-y-3 sm:mt-6 sm:space-y-4">{trustPoints.map((item) => <div key={item} className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white/88">{item}</div>)}</div></div></div><div className="ui-card-soft rounded-[1.5rem] px-6 py-6 sm:rounded-[2rem] sm:px-8 sm:py-7 md:px-10"><div className="text-[11px] uppercase tracking-[0.24em] text-[#9a6200] sm:text-xs sm:tracking-[0.3em]">Ruta de contacto</div><p className="mt-3 text-sm leading-7 text-[#516074] sm:text-base sm:leading-8">Empieza por WhatsApp para la respuesta más rápida. Usa Telegram para coordinación breve y email cuando haya documentos o más contexto.</p></div></div>
       </section>
-      <section className="ui-section border-t border-[#14213d]/8">
+      <section className="ui-section ui-section-tint">
         <div className="grid gap-4 md:gap-6 lg:grid-cols-2">
           <div className="ui-card p-6 sm:p-7 md:p-9">
             <div className="text-xs uppercase tracking-[0.3em] text-[#9a6200]">A quién ayudamos</div>
