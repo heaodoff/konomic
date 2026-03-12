@@ -35,8 +35,8 @@ export default function ContactPage() {
         <a href="mailto:nikita.lukashok@gmail.com" className="ui-button ui-button-secondary rounded-full border border-[#1d252b]/15 bg-white/80 px-6 py-3 text-sm font-medium text-[#1d252b] hover:border-[#1d252b]/35">Email Konomic</a>
         <a href={telegramUrl} target="_blank" rel="noopener noreferrer" className="ui-button ui-button-secondary rounded-full border border-[#1d252b]/15 bg-white/80 px-6 py-3 text-sm font-medium text-[#1d252b] hover:border-[#1d252b]/35">Open Telegram</a>
       </div>
-      <div className="mt-12 grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
-        <div className="ui-card p-8 md:p-9">
+      <div className="mt-12 grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+        <div className="ui-card p-8 md:p-10">
           <h2 className="text-2xl font-semibold tracking-tight">Recommended enquiry form</h2>
           <form className="mt-6 grid gap-4" action={whatsappUrl} method="get">
             <div className="grid gap-4 md:grid-cols-2">
@@ -72,7 +72,7 @@ export default function ContactPage() {
         </div>
 
         <div className="grid gap-6">
-          <div className="ui-card-soft rounded-[2rem] px-8 py-8 md:px-9">
+          <div className="ui-card-soft rounded-[2rem] px-8 py-8 md:px-10 md:py-9">
             <h2 className="text-2xl font-semibold tracking-tight">Public contact details</h2>
             <ul className="mt-4 space-y-3 text-sm leading-7 text-[#56616b] md:text-base">
               <li>• WhatsApp / phone: +34 643 319 719</li>
@@ -81,7 +81,7 @@ export default function ContactPage() {
               <li>• Company: Konomic Digital SL.</li>
             </ul>
           </div>
-          <div className="ui-card-dark p-8 text-white md:p-9">
+          <div className="ui-card-dark p-8 text-white md:p-10">
             <h2 className="text-2xl font-semibold tracking-tight">Recommended client journey</h2>
             <ol className="mt-4 space-y-3 text-sm leading-7 text-white/80 md:text-base">
               <li>1. Start on WhatsApp</li>

@@ -29,8 +29,9 @@ export default function BookConsultationPage() {
       />
       <div className="mt-12 grid gap-6 md:grid-cols-2">
         {offers.map(([title, text]) => (
-          <div key={title} className="ui-card p-8 md:p-9">
-            <h2 className="text-2xl font-semibold tracking-tight">{title}</h2>
+          <div key={title} className="ui-card p-8 md:p-10">
+            <div className="text-xs uppercase tracking-[0.28em] text-[#8f7d67]">Consultation format</div>
+            <h2 className="mt-3 text-2xl font-semibold tracking-tight">{title}</h2>
             <p className="mt-4 text-sm leading-7 text-[#59646e] md:text-base">{text}</p>
             <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="ui-button ui-button-secondary mt-6 inline-flex rounded-full border border-[#1d252b] px-5 py-2 text-sm font-medium hover:bg-[#1d252b] hover:text-white">
               Start on WhatsApp
