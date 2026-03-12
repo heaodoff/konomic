@@ -18,6 +18,7 @@ export const metadata: Metadata = {
 };
 
 const whatsappUrl = 'https://wa.me/34643319719';
+const telegramUrl = 'https://t.me/nkitl0';
 const topServices = coreServices.slice(0, 4);
 
 export default function EnHomePage() {
@@ -43,9 +44,16 @@ export default function EnHomePage() {
               View contact options
             </Link>
           </div>
+          <div className="mt-6 flex flex-wrap gap-3 text-sm text-[#58636d]">
+            <span>Primary: WhatsApp</span>
+            <span>•</span>
+            <a href={telegramUrl} target="_blank" rel="noopener noreferrer" className="ui-link-soft">Telegram</a>
+            <span>•</span>
+            <a href="mailto:nikita.lukashok@gmail.com" className="ui-link-soft">Email</a>
+          </div>
           <div className="mt-10 grid gap-4 sm:grid-cols-3">
             <Stat value="WhatsApp-first" label="primary lead channel" />
-            <Stat value="EN / DE / RU / UK" label="multilingual coverage" />
+            <Stat value="EN / DE / RU / UK / ES" label="multilingual coverage" />
             <Stat value="Property / Residency" label="core commercial intent" />
           </div>
         </div>
@@ -67,9 +75,9 @@ export default function EnHomePage() {
             </div>
           </div>
           <div className="ui-card-soft rounded-[2rem] px-8 py-7 md:px-10">
-            <div className="text-xs uppercase tracking-[0.3em] text-[#9a6200]">Direct access</div>
+            <div className="text-xs uppercase tracking-[0.3em] text-[#9a6200]">Lead routing</div>
             <p className="mt-3 text-base leading-8 text-[#516074]">
-              WhatsApp is the fastest path for a new enquiry. Email and Telegram stay available for longer context and document exchange.
+              Start on WhatsApp for the fastest reply. Use Telegram for quick written coordination. Use email when documents or longer explanations are needed.
             </p>
           </div>
         </div>

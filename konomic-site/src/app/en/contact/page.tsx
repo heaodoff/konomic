@@ -28,12 +28,17 @@ export default function ContactPage() {
       <SectionIntro
         eyebrow="Contact"
         title="Contact Konomic Digital SL."
-        text="Konomic Digital SL. is set up with a WhatsApp-first contact flow. Email and Telegram remain available, but the fastest path for a new enquiry is WhatsApp."
+        text="Konomic Digital SL. uses a WhatsApp-first lead flow. For most new enquiries, WhatsApp is the fastest and clearest starting point."
       />
       <div className="mt-10 flex flex-wrap gap-4">
         <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="ui-button ui-button-primary rounded-full bg-[#14213d] px-6 py-3 text-sm font-medium text-white hover:bg-[#0d1528]">Start on WhatsApp</a>
         <a href="mailto:nikita.lukashok@gmail.com" className="ui-button ui-button-secondary rounded-full border border-[#14213d]/12 bg-white/88 px-6 py-3 text-sm font-medium text-[#14213d] hover:border-[#fca311]/45">Email Konomic</a>
         <a href={telegramUrl} target="_blank" rel="noopener noreferrer" className="ui-button ui-button-secondary rounded-full border border-[#14213d]/12 bg-white/88 px-6 py-3 text-sm font-medium text-[#14213d] hover:border-[#fca311]/45">Open Telegram</a>
+      </div>
+      <div className="mt-8 grid gap-4 md:grid-cols-3">
+        <div className="ui-card-soft px-6 py-6"><div className="text-xs uppercase tracking-[0.28em] text-[#9a6200]">Primary</div><h3 className="mt-3 text-lg font-semibold tracking-tight">WhatsApp</h3><p className="mt-2 text-sm leading-7 text-[#59646e]">Best for new enquiries, fastest replies, and first contact.</p></div>
+        <div className="ui-card-soft px-6 py-6"><div className="text-xs uppercase tracking-[0.28em] text-[#9a6200]">Secondary</div><h3 className="mt-3 text-lg font-semibold tracking-tight">Telegram</h3><p className="mt-2 text-sm leading-7 text-[#59646e]">Useful if you prefer Telegram for quick written coordination.</p></div>
+        <div className="ui-card-soft px-6 py-6"><div className="text-xs uppercase tracking-[0.28em] text-[#9a6200]">Documents</div><h3 className="mt-3 text-lg font-semibold tracking-tight">Email</h3><p className="mt-2 text-sm leading-7 text-[#59646e]">Best for documents, longer descriptions, and attachments.</p></div>
       </div>
       <div className="mt-12 grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
         <div className="ui-card p-8 md:p-10">
@@ -64,7 +69,7 @@ export default function ContactPage() {
             </label>
             <div className="flex flex-wrap items-center justify-between gap-3 pt-2">
               <p className="max-w-md text-xs leading-6 text-[#67727c]">
-                WhatsApp is the primary contact channel. Email and Telegram remain available for longer context and document exchange.
+                If the matter is urgent, start on WhatsApp. Use email when documents need to be attached.
               </p>
               <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="ui-button ui-button-primary rounded-full bg-[#14213d] px-6 py-3 text-sm font-medium text-white hover:bg-[#0d1528]">Send on WhatsApp</a>
             </div>
@@ -82,12 +87,12 @@ export default function ContactPage() {
             </ul>
           </div>
           <div className="ui-card-dark p-8 text-white md:p-10">
-            <h2 className="text-2xl font-semibold tracking-tight">Recommended client journey</h2>
+            <h2 className="text-2xl font-semibold tracking-tight">What happens next</h2>
             <ol className="mt-4 space-y-3 text-sm leading-7 text-white/82 md:text-base">
-              <li>1. Start on WhatsApp</li>
-              <li>2. Get the right consultation recommendation</li>
-              <li>3. Share documents by email or Telegram if needed</li>
-              <li>4. Move into paid consultation or ongoing support</li>
+              <li>1. You send the first message, ideally on WhatsApp</li>
+              <li>2. The matter is routed to the right consultation type</li>
+              <li>3. If needed, documents are shared by email or Telegram</li>
+              <li>4. The matter moves into paid consultation or ongoing support</li>
             </ol>
           </div>
         </div>
