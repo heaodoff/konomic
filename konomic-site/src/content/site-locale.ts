@@ -26,6 +26,12 @@ export function localizeTrustPoints(locale: Locale) {
       'Чіткий процес замість заплутаної юридичної мови',
       'Можна почати дистанційно та надіслати документи заздалегідь',
     ],
+    es: [
+      'Pensado para clientes internacionales en Tenerife',
+      'Posicionamiento premium y multilingüe',
+      'Proceso claro en lugar de lenguaje jurídico confuso',
+      'Posibilidad de empezar en remoto y revisar documentos antes',
+    ],
   } satisfies Record<Locale, string[]>;
   return map[locale];
 }
@@ -55,6 +61,12 @@ export function localizeFaqs(locale: Locale) {
       { q: 'Які мови плануються на сайті?', a: 'Основний фокус багатомовного SEO — англійська, німецька, російська та українська.' },
       { q: 'Чи можна почати процес дистанційно?', a: 'Так. Багато клієнтів починають ще до приїзду на Тенерифе, тому дистанційна консультація та перевірка документів є важливою частиною моделі.' },
       { q: 'Який перший крок найкращий?', a: 'Найкраще почати з консультації або структурованого юридичного розбору, щоб рано визначити ризики та наступні кроки.' },
+    ],
+    es: [
+      { q: '¿Trabajan con clientes internacionales en Tenerife?', a: 'Sí. Konomic está orientado a clientes internacionales, compradores extranjeros, emprendedores y familias con asuntos legales en Tenerife.' },
+      { q: '¿Qué idiomas ofrece la web?', a: 'La arquitectura multilingüe está pensada para inglés, alemán, ruso, ucraniano y español.' },
+      { q: '¿Se puede empezar el proceso en remoto?', a: 'Sí. Muchas personas inician el proceso antes de llegar a Tenerife, por eso la consulta remota y la revisión documental forman parte del enfoque.' },
+      { q: '¿Cuál es el mejor primer paso?', a: 'Lo más útil es empezar con una consulta o una revisión legal estructurada para definir riesgos y siguientes pasos desde el principio.' },
     ],
   } satisfies Record<Locale, { q: string; a: string }[]>;
   return map[locale];

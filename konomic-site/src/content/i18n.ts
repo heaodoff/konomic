@@ -1,4 +1,4 @@
-export const locales = ['en', 'de', 'ru', 'uk'] as const;
+export const locales = ['en', 'de', 'ru', 'uk', 'es'] as const;
 
 export type Locale = (typeof locales)[number];
 
@@ -7,6 +7,7 @@ export const localeLabels: Record<Locale, string> = {
   de: 'DE',
   ru: 'RU',
   uk: 'UK',
+  es: 'ES',
 };
 
 export const localeNames: Record<Locale, string> = {
@@ -14,6 +15,7 @@ export const localeNames: Record<Locale, string> = {
   de: 'Deutsch',
   ru: 'Русский',
   uk: 'Українська',
+  es: 'Español',
 };
 
 export const localeContent: Record<
@@ -47,8 +49,7 @@ export const localeContent: Record<
     brandTagline: 'Premium legal support in Tenerife',
     footerBlurb: 'Premium multilingual legal support in Tenerife for foreign clients, property buyers, founders, and families.',
     launchNoteTitle: 'Contact',
-    launchNoteText:
-      'WhatsApp: +34 643 319 719 · Email: nikita.lukashok@gmail.com · Telegram: @nkitl0',
+    launchNoteText: 'WhatsApp: +34 643 319 719 · Email: nikita.lukashok@gmail.com · Telegram: @nkitl0',
     home: {
       badge: 'English version · premium legal support in Tenerife',
       title: 'Legal support in Tenerife for foreign clients, property matters, and business decisions.',
@@ -71,8 +72,7 @@ export const localeContent: Record<
     brandTagline: 'Premium-Rechtsberatung auf Teneriffa',
     footerBlurb: 'Mehrsprachige Premium-Rechtsberatung auf Teneriffa für ausländische Mandanten, Immobilienkäufer, Unternehmer und Familien.',
     launchNoteTitle: 'Kontakt',
-    launchNoteText:
-      'WhatsApp: +34 643 319 719 · Email: nikita.lukashok@gmail.com · Telegram: @nkitl0',
+    launchNoteText: 'WhatsApp: +34 643 319 719 · Email: nikita.lukashok@gmail.com · Telegram: @nkitl0',
     home: {
       badge: 'Deutsche Version · Premium-Rechtsberatung auf Teneriffa',
       title: 'Rechtsberatung auf Teneriffa für internationale Mandanten, Immobilienfragen und geschäftliche Entscheidungen.',
@@ -95,8 +95,7 @@ export const localeContent: Record<
     brandTagline: 'Премиальная юридическая поддержка на Тенерифе',
     footerBlurb: 'Премиальная многоязычная юридическая поддержка на Тенерифе для иностранцев, покупателей недвижимости, предпринимателей и семей.',
     launchNoteTitle: 'Контакт',
-    launchNoteText:
-      'WhatsApp: +34 643 319 719 · Email: nikita.lukashok@gmail.com · Telegram: @nkitl0',
+    launchNoteText: 'WhatsApp: +34 643 319 719 · Email: nikita.lukashok@gmail.com · Telegram: @nkitl0',
     home: {
       badge: 'Русская версия · юридическая поддержка на Тенерифе',
       title: 'Юридическая поддержка на Тенерифе для иностранцев, сделок с недвижимостью и деловых вопросов.',
@@ -119,8 +118,7 @@ export const localeContent: Record<
     brandTagline: 'Преміальна юридична підтримка на Тенерифе',
     footerBlurb: 'Преміальна багатомовна юридична підтримка на Тенерифе для іноземних клієнтів, покупців нерухомості, підприємців і сімей.',
     launchNoteTitle: 'Контакт',
-    launchNoteText:
-      'WhatsApp: +34 643 319 719 · Email: nikita.lukashok@gmail.com · Telegram: @nkitl0',
+    launchNoteText: 'WhatsApp: +34 643 319 719 · Email: nikita.lukashok@gmail.com · Telegram: @nkitl0',
     home: {
       badge: 'Українська версія · юридична підтримка на Тенерифе',
       title: 'Юридична підтримка на Тенерифе для іноземців, питань нерухомості та бізнес-рішень.',
@@ -136,6 +134,29 @@ export const localeContent: Record<
       marketTitle: 'Більшість конкурентів виглядають застаріло або розмито. Konomic має виглядати точніше й сильніше.',
       faqEyebrow: 'FAQ',
       faqTitle: 'Питання, на які сайт має відповідати ще до того, як клієнт почне сумніватися',
+    },
+  },
+  es: {
+    nav: { services: 'Servicios', about: 'Sobre nosotros', faq: 'FAQ', contact: 'Contacto', book: 'Reservar consulta' },
+    brandTagline: 'Asistencia jurídica premium en Tenerife',
+    footerBlurb: 'Asistencia jurídica premium y multilingüe en Tenerife para clientes extranjeros, compradores de inmuebles, emprendedores y familias.',
+    launchNoteTitle: 'Contacto',
+    launchNoteText: 'WhatsApp: +34 643 319 719 · Email: nikita.lukashok@gmail.com · Telegram: @nkitl0',
+    home: {
+      badge: 'Versión en español · asistencia jurídica premium en Tenerife',
+      title: 'Asistencia jurídica en Tenerife para clientes internacionales, inmuebles y decisiones empresariales.',
+      text: 'Konomic se presenta como una marca jurídica premium y multilingüe para expatriados, compradores de inmuebles, emprendedores y familias que necesitan claridad, rapidez y una forma más fiable de resolver asuntos legales en Tenerife.',
+      primaryCta: 'Reservar consulta',
+      secondaryCta: 'Iniciar consulta',
+      whyTitle: 'Diseñado para la demanda jurídica internacional de Tenerife.',
+      whyText: 'El objetivo no es parecer otro despacho local genérico. El objetivo es transmitir claridad, nivel premium, capacidad multilingüe y confianza para clientes extranjeros.',
+      coreServicesEyebrow: 'Servicios principales',
+      coreServicesTitle: 'Los servicios con más sentido para liderar',
+      coreServicesText: 'Estos cuatro servicios ofrecen la mejor combinación de intención comercial, oportunidad SEO local y generación de confianza.',
+      marketEyebrow: 'Enfoque de mercado',
+      marketTitle: 'Muchos competidores son amplios, anticuados o vagos. Konomic debe sentirse más preciso y más fiable.',
+      faqEyebrow: 'FAQ',
+      faqTitle: 'Preguntas que la web debería resolver antes de que el cliente dude',
     },
   },
 };
