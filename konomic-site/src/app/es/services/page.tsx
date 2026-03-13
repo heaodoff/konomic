@@ -123,9 +123,16 @@ export default function Page() {
 
       <section className="mt-10 ui-card-dark p-6 text-white sm:p-8 md:p-10">
         <div className="relative z-10">
-          <div className="text-xs uppercase tracking-[0.28em] text-[#fca311]">Servicios complementarios</div>
-          <h2 className="mt-3 text-2xl font-semibold tracking-tight">Otras áreas que también pueden ser relevantes según el caso</h2>
-          <div className="mt-6 grid gap-3">
+          <div className="text-xs uppercase tracking-[0.28em] text-[#fca311]">Bloque premium de expansión</div>
+          <h2 className="mt-3 text-2xl font-semibold tracking-tight">Estructuración fiscal, ventajas de Canarias y constitución de empresa ZEC</h2>
+          <p className="mt-4 max-w-3xl text-sm leading-7 text-white/82 md:text-base">
+            Para fundadores y operadores que estudian montar empresa en Tenerife o en Canarias, el siguiente bloque fuerte es la estructuración jurídica correcta, el encaje de ZEC y la coordinación societaria y fiscal dentro del marco legal.
+          </p>
+          <div className="mt-6 flex flex-wrap gap-4">
+            <Link href="/es/services/estructuracion-fiscal-zec-canarias" className="ui-button ui-button-primary rounded-full bg-white px-6 py-3 text-sm font-medium text-[#14213d] hover:bg-white/90">Ver página ZEC y estructura fiscal</Link>
+            <Link href="/es/contact" className="ui-button ui-button-secondary rounded-full border border-white/20 bg-white/10 px-6 py-3 text-sm font-medium text-white hover:bg-white/15">Hablar sobre la estructura</Link>
+          </div>
+          <div className="mt-8 grid gap-3">
             {secondaryServices.map((item) => (
               <div key={item} className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white/86">
                 {item}
