@@ -125,16 +125,20 @@ export default function ServicesPage() {
         })}
       </div>
 
-      <section className="mt-10 ui-card-dark p-6 text-white sm:p-8 md:p-10">
-        <div className="relative z-10">
-          <div className="text-xs uppercase tracking-[0.28em] text-[#fca311]">Premium expansion block</div>
-          <h2 className="mt-3 text-2xl font-semibold tracking-tight">Tax structuring, Canary Islands advantages, and ZEC company setup</h2>
-          <p className="mt-4 max-w-3xl text-sm leading-7 text-white/82 md:text-base">
-            For founders and operators considering Tenerife or Canary Islands company setup, the next strong business-facing service layer is compliant structuring, ZEC-related setup questions, and legal coordination around the right corporate framework.
-          </p>
-          <div className="mt-6 flex flex-wrap gap-4">
-            <Link href="/en/services/tax-structuring-zec-company-setup" className="ui-button ui-button-primary rounded-full bg-white px-6 py-3 text-sm font-medium text-[#14213d] hover:bg-white/90">View tax structuring & ZEC page</Link>
-            <Link href="/en/contact" className="ui-button ui-button-secondary rounded-full border border-white/20 bg-white/10 px-6 py-3 text-sm font-medium text-white hover:bg-white/15">Discuss your structure</Link>
+      <section className="mt-10 ui-card p-6 sm:p-8 md:p-10">
+        <div className="flex flex-wrap items-center justify-between gap-3">
+          <div className="text-xs uppercase tracking-[0.3em] text-[#8f7d67]">Premium business expansion</div>
+          <div className="rounded-full border border-black/8 bg-[#faf7f3] px-3 py-1 text-xs text-[#59646e]">ZEC / Canary structure</div>
+        </div>
+        <div className="mt-5 grid gap-8 lg:grid-cols-[1.08fr_0.92fr] lg:items-start">
+          <div>
+            <h2 className="text-3xl font-semibold tracking-tight">Tax structuring, Canary Islands advantages, and ZEC company setup</h2>
+            <p className="mt-4 max-w-3xl text-base leading-8 text-[#56616b]">For founders and operators considering Tenerife or Canary Islands company setup, this service focuses on compliant structuring, ZEC-related setup questions, and legal coordination around the right corporate framework.</p>
+            <div className="mt-6"><div className="text-xs uppercase tracking-[0.28em] text-[#9a6200]">Why it attracts interest</div><ul className="mt-4 space-y-3 text-sm leading-7 text-[#56616b] md:text-base"><li>• For qualifying businesses, ZEC may offer access to a 4% corporate tax framework instead of the standard 25% Spanish corporate tax rate.</li><li>• The Canary Islands operate under IGIC rather than mainland VAT, which may create additional structural advantages in the right case.</li><li>• This is relevant where founders need more than incorporation — they need the right legal and corporate structure.</li></ul></div>
+          </div>
+          <div className="grid gap-3">
+            {['ZEC company setup support','Canary Islands business structuring','Coordination with tax advisers and accountants'].map((item)=><div key={item} className="ui-card-soft px-4 py-4 text-sm text-[#33404a]">{item}</div>)}
+            <Link href="/en/services/tax-structuring-zec-company-setup" className="ui-button ui-button-primary mt-2 inline-flex items-center justify-center rounded-full bg-[#14213d] px-5 py-3 text-sm font-medium text-white hover:bg-[#0d1528]">View service page</Link>
           </div>
         </div>
       </section>

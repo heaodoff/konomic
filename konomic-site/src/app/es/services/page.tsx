@@ -121,23 +121,20 @@ export default function Page() {
         ))}
       </div>
 
-      <section className="mt-10 ui-card-dark p-6 text-white sm:p-8 md:p-10">
-        <div className="relative z-10">
-          <div className="text-xs uppercase tracking-[0.28em] text-[#fca311]">Bloque premium de expansión</div>
-          <h2 className="mt-3 text-2xl font-semibold tracking-tight">Estructuración fiscal, ventajas de Canarias y constitución de empresa ZEC</h2>
-          <p className="mt-4 max-w-3xl text-sm leading-7 text-white/82 md:text-base">
-            Para fundadores y operadores que estudian montar empresa en Tenerife o en Canarias, el siguiente bloque fuerte es la estructuración jurídica correcta, el encaje de ZEC y la coordinación societaria y fiscal dentro del marco legal.
-          </p>
-          <div className="mt-6 flex flex-wrap gap-4">
-            <Link href="/es/services/estructuracion-fiscal-zec-canarias" className="ui-button ui-button-primary rounded-full bg-white px-6 py-3 text-sm font-medium text-[#14213d] hover:bg-white/90">Ver página ZEC y estructura fiscal</Link>
-            <Link href="/es/contact" className="ui-button ui-button-secondary rounded-full border border-white/20 bg-white/10 px-6 py-3 text-sm font-medium text-white hover:bg-white/15">Hablar sobre la estructura</Link>
+      <section className="mt-10 ui-card p-6 sm:p-8 md:p-10">
+        <div className="flex flex-wrap items-center justify-between gap-3">
+          <div className="text-xs uppercase tracking-[0.3em] text-[#8f7d67]">Expansión premium de negocio</div>
+          <div className="rounded-full border border-black/8 bg-[#faf7f3] px-3 py-1 text-xs text-[#59646e]">ZEC / estructura Canarias</div>
+        </div>
+        <div className="mt-5 grid gap-8 lg:grid-cols-[1.08fr_0.92fr] lg:items-start">
+          <div>
+            <h2 className="text-3xl font-semibold tracking-tight">Estructuración fiscal, ventajas de Canarias y constitución de empresa ZEC</h2>
+            <p className="mt-4 max-w-3xl text-base leading-8 text-[#56616b]">Para fundadores y operadores que estudian montar empresa en Tenerife o en Canarias, este servicio se centra en la estructuración correcta, el encaje de ZEC y la coordinación jurídica y societaria dentro del marco legal.</p>
+            <div className="mt-6"><div className="text-xs uppercase tracking-[0.28em] text-[#9a6200]">Por qué despierta interés</div><ul className="mt-4 space-y-3 text-sm leading-7 text-[#56616b] md:text-base"><li>• Para empresas que realmente encajan, ZEC puede ofrecer un marco de impuesto de sociedades del 4% frente al tipo general del 25% en España.</li><li>• Canarias opera con IGIC en lugar del IVA peninsular, lo que puede generar ventajas estructurales adicionales en el caso correcto.</li><li>• Este bloque interesa cuando el cliente necesita algo más que abrir una sociedad: necesita la estructura jurídica correcta.</li></ul></div>
           </div>
-          <div className="mt-8 grid gap-3">
-            {secondaryServices.map((item) => (
-              <div key={item} className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white/86">
-                {item}
-              </div>
-            ))}
+          <div className="grid gap-3">
+            {['Apoyo para empresa ZEC','Estructura empresarial en Canarias','Coordinación con fiscalistas y contables'].map((item)=><div key={item} className="ui-card-soft px-4 py-4 text-sm text-[#33404a]">{item}</div>)}
+            <Link href="/es/services/estructuracion-fiscal-zec-canarias" className="ui-button ui-button-primary mt-2 inline-flex items-center justify-center rounded-full bg-[#14213d] px-5 py-3 text-sm font-medium text-white hover:bg-[#0d1528]">Ver servicio</Link>
           </div>
         </div>
       </section>

@@ -118,6 +118,24 @@ export default function Page() {
         ))}
       </div>
 
+      <section className="mt-10 ui-card p-6 sm:p-8 md:p-10">
+        <div className="flex flex-wrap items-center justify-between gap-3">
+          <div className="text-xs uppercase tracking-[0.3em] text-[#8f7d67]">Premium business expansion</div>
+          <div className="rounded-full border border-black/8 bg-[#faf7f3] px-3 py-1 text-xs text-[#59646e]">ZEC / Канари</div>
+        </div>
+        <div className="mt-5 grid gap-8 lg:grid-cols-[1.08fr_0.92fr] lg:items-start">
+          <div>
+            <h2 className="text-3xl font-semibold tracking-tight">Податкове структурування, переваги Канар і відкриття компанії в ZEC</h2>
+            <p className="mt-4 max-w-3xl text-base leading-8 text-[#56616b]">Для засновників і операторів, які розглядають відкриття компанії на Тенерифе або Канарах, цей блок зосереджений на правильній структурі, логіці ZEC та юридичній координації корпоративної моделі.</p>
+            <div className="mt-6"><div className="text-xs uppercase tracking-[0.28em] text-[#9a6200]">Чому це викликає інтерес</div><ul className="mt-4 space-y-3 text-sm leading-7 text-[#56616b] md:text-base"><li>• Для компаній, які реально підходять під режим, ZEC може дати 4% замість стандартних 25% корпоративного податку в Іспанії.</li><li>• На Канарах діє IGIC замість материкового ПДВ, що в правильній структурі може давати додаткові переваги.</li><li>• Цей блок важливий там, де клієнту потрібна не просто реєстрація компанії, а сильніша корпоративна рамка.</li></ul></div>
+          </div>
+          <div className="grid gap-3">
+            {['Підтримка щодо компанії ZEC','Структурування бізнесу на Канарах','Координація з бухгалтерами і податковими консультантами'].map((item)=><div key={item} className="ui-card-soft px-4 py-4 text-sm text-[#33404a]">{item}</div>)}
+            <Link href="/uk/services/podatkove-strukturuvannia-zec-kompaniia" className="ui-button ui-button-primary mt-2 inline-flex items-center justify-center rounded-full bg-[#14213d] px-5 py-3 text-sm font-medium text-white hover:bg-[#0d1528]">Відкрити послугу</Link>
+          </div>
+        </div>
+      </section>
+
       <section className="mt-10 ui-card-dark p-6 text-white sm:p-8 md:p-10">
         <div className="relative z-10">
           <div className="text-xs uppercase tracking-[0.28em] text-[#fca311]">Додаткові напрями</div>
