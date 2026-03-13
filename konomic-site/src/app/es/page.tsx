@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
@@ -104,6 +105,14 @@ export default function EsHomePage() {
           aria-hidden="true"
         />
         <div className="flex flex-col justify-center">
+          <Image
+            src="/konomic-logo.png"
+            alt="Logotipo de Konomic"
+            width={420}
+            height={175}
+            priority
+            className="mb-6 h-auto w-[190px] sm:w-[230px] md:w-[280px]"
+          />
           <div className="ui-accent-chip mb-4 inline-flex w-fit rounded-full px-4 py-1 text-xs uppercase tracking-[0.28em]">
             Asistencia jurídica en Tenerife para clientes internacionales
           </div>
