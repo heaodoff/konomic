@@ -64,6 +64,27 @@ export default function TaxStructuringPage() {
         </div>
       </div>
 
+      <div className="mt-12 ui-card-dark p-8 text-white md:p-10">
+        <div className="relative z-10">
+          <div className="text-xs uppercase tracking-[0.28em] text-[#fca311]">Why founders look at ZEC</div>
+          <h2 className="mt-3 text-2xl font-semibold tracking-tight">Why ZEC can be more attractive than a standard company setup</h2>
+          <div className="mt-4 space-y-4 text-sm leading-7 text-white/82 md:text-base">
+            <p>
+              For businesses that genuinely qualify, ZEC can offer a <strong>4% corporate tax framework</strong> instead of the standard <strong>25% Spanish corporate tax rate</strong>. That is one of the main reasons the structure attracts international founders, operators, and business owners looking at the Canary Islands as a serious long-term base.
+            </p>
+            <p>
+              The Canary Islands also operate under the <strong>IGIC system rather than standard mainland VAT</strong>, which in the right structure may create additional advantages, including more favourable treatment in certain import-related scenarios.
+            </p>
+            <p>
+              That is why ZEC is often considered not simply as a company-registration option, but as a <strong>higher-value business structuring decision</strong> for the right kind of international activity.
+            </p>
+            <p>
+              ZEC is not relevant for every business, however, and eligibility, structure, and tax treatment should always be assessed case by case before relying on the regime.
+            </p>
+          </div>
+        </div>
+      </div>
+
       <div className="mt-12 grid gap-6 lg:grid-cols-[1.08fr_0.92fr]">
         <div className="ui-card p-8 md:p-10">
           <div className="text-xs uppercase tracking-[0.28em] text-[#9a6200]">What this service can cover</div>
