@@ -1,24 +1,40 @@
 # Konomic — Deploy Checklist
 
-## Current deployment status
+## Current deployment state
 
-The app is buildable and deployable as a static Next.js site on Vercel.
+The website is buildable, pushed, and structured as a product-ready multilingual legal lead-generation site for `konomic.es`.
 
-## Before production deploy
+## Current stack
 
-### Required business inputs
-1. Final domain confirmation
-2. Public contact email
-3. Preferred lead destination
-   - form endpoint
-   - email
-   - WhatsApp
-   - Telegram
-4. Whether office address / phone can be shown publicly
-5. Final legal/company footer details
+- Next.js
+- TypeScript
+- Tailwind CSS
+- Static generation for the current route set
+- Vercel deployment target
 
-### Recommended first deploy target
-- Vercel
+## Current product structure
+
+The site now includes across core locales:
+
+- home
+- about
+- services hub
+- core service detail pages
+- FAQ
+- contact
+- book consultation
+- how we work
+- legal notice
+- privacy policy
+- terms
+
+Locales currently covered:
+
+- `/en`
+- `/es`
+- `/ru`
+- `/de`
+- `/uk`
 
 ## Local verification
 
@@ -28,35 +44,93 @@ npm run build
 npm run start
 ```
 
-## Vercel deploy
+## GitHub + Vercel deployment flow
 
-### Option A — via GitHub (recommended)
-1. Push `konomic-site` to a GitHub repo
-2. Import repo into Vercel
-3. Set production domain to `konomic.es`
-4. Add environment variables from `.env.example` if/when used
-5. Deploy
+### Recommended flow
+1. Push changes from `konomic-site`
+2. GitHub receives the new commits
+3. Vercel pulls and deploys automatically
+4. Verify the production routes on `https://konomic.es`
 
-### Option B — via Vercel CLI
+## Important Vercel setting
+
+Root Directory must remain:
+
 ```bash
-npm i -g vercel
-vercel
-vercel --prod
+konomic-site
 ```
 
-## DNS notes
-At minimum, connect the root domain and `www` in Vercel using the DNS records Vercel shows during domain setup.
+If the repo root is deployed instead, Vercel can serve the wrong directory and return `404 NOT_FOUND`.
 
-## Production tasks still missing
-- real lead submission wiring
-- legal footer / privacy / terms / cookies
-- final public contact details
-- social preview image
-- schema.org enrichment beyond current metadata base
+## Production verification checklist
 
-## Safe launch order
-1. Deploy preview
-2. Review all pages on desktop/mobile
-3. Add real contacts and lead destination
-4. Connect domain
-5. Deploy production
+After each important push, verify:
+
+### Core locale routes
+- `/en`
+- `/es`
+- `/ru`
+- `/de`
+- `/uk`
+
+### Core trust / contact routes
+- `/en/contact`
+- `/es/contact`
+- `/ru/contact`
+- `/de/contact`
+- `/uk/contact`
+- `/en/how-we-work`
+- `/es/how-we-work`
+- `/ru/how-we-work`
+- `/de/how-we-work`
+- `/uk/how-we-work`
+
+### Core detail pages
+- `/en/services/property-real-estate-lawyer-tenerife`
+- `/es/services/abogado-inmobiliario-tenerife`
+- `/ru/services/yurist-po-nedvizhimosti-tenerife`
+- `/de/services/immobilienanwalt-teneriffa`
+- `/uk/services/advokat-z-nerukhomosti-tenerife`
+
+### Legal layer
+- `/en/legal-notice`
+- `/es/legal-notice`
+- `/ru/legal-notice`
+- `/de/legal-notice`
+- `/uk/legal-notice`
+
+## Public contact layer currently used
+
+- WhatsApp / phone: `+34 643 319 719`
+- Email: `nikita.lukashok@gmail.com`
+- Telegram: `@nkitl0`
+- Company: `Konomic Digital SL.`
+
+## Current lead routing logic
+
+1. Primary: WhatsApp
+2. Secondary: Telegram
+3. Tertiary: Email
+
+## Product-ready baseline already in place
+
+The following are already implemented:
+
+- multilingual structure
+- service hubs
+- service detail pages
+- trust / process pages
+- legal symmetry across locales
+- mobile CTA layer
+- SEO metadata and sitemap
+- analytics-ready CTA hooks via `data-cta-*`
+
+## Next optional layers
+
+Not required for launch, but useful later:
+
+- analytics provider integration
+- richer structured data / schema
+- guide / insights SEO layer
+- social preview image system
+- deeper behavioural conversion optimisation

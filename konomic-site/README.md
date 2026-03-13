@@ -1,23 +1,40 @@
 # Konomic Site
 
-Multilingual premium legal-services site for Tenerife, built as a Next.js MVP for Konomic.
+Multilingual legal-services website for Tenerife, built with Next.js for `konomic.es`.
 
 ## Current state
 
+The site is now a product-ready multilingual lead-generation website with:
+
 - Next.js + TypeScript + Tailwind
-- English, German, Russian, and Ukrainian route structure
-- Localized service pages for:
-  - property
-  - immigration / residency
-  - business
+- Full locale structure for:
+  - English (`/en`)
+  - Spanish (`/es`)
+  - Russian (`/ru`)
+  - German (`/de`)
+  - Ukrainian (`/uk`)
+- Core service hubs in every locale
+- Core service detail pages in every locale for:
+  - property / real estate
+  - immigration / residency / relocation
+  - business / corporate
   - contract review
+- Trust / process pages (`how-we-work`) in every locale
+- Legal pages in every locale:
+  - legal notice
+  - privacy policy
+  - terms
+- WhatsApp-first lead flow
+- Telegram secondary contact flow
+- Email tertiary contact flow
+- Mobile navigation and sticky contact CTA layer
 - SEO base in place:
   - metadata
   - robots.txt
   - sitemap.xml
   - multilingual alternates
-- Contact / lead-flow scaffolding in place
-- Build passes successfully
+- Analytics-ready CTA hooks via `data-cta-*` attributes on key call-to-action links
+- Successful production build
 
 ## Run locally
 
@@ -26,7 +43,11 @@ npm install
 npm run dev
 ```
 
-Then open http://localhost:3000
+Then open:
+
+```bash
+http://localhost:3000
+```
 
 ## Verify production build
 
@@ -35,18 +56,30 @@ npm run build
 npm run start
 ```
 
-## Deployment docs
+## Deployment
 
 See `DEPLOY.md`.
 
-## What still needs real business input
+## Current live setup assumptions
 
-1. Final public Konomic contact details
-2. Final lead destination
-3. Legal/company footer details
-4. Whether address / phone / WhatsApp can be public
-5. Final domain/DNS hookup
+- Primary domain: `https://konomic.es`
+- GitHub deploy flow is already in use
+- Vercel is the active deployment target
+- Root directory on Vercel should remain: `konomic-site`
 
-## Current deployment recommendation
+## Public contact layer currently used on the site
 
-Deploy on Vercel first, then connect `konomic.es`.
+- WhatsApp: `https://wa.me/34643319719`
+- Telegram: `https://t.me/nkitl0`
+- Email: `mailto:nikita.lukashok@gmail.com`
+- Company: `Konomic Digital SL.`
+
+## Next growth layers
+
+These are no longer required to make the site viable, but are the best next improvements:
+
+1. Analytics / conversion tracking implementation
+2. SEO guide / insights layer
+3. Behavioural conversion optimisation based on real traffic
+4. Optional deeper authority / trust content
+5. Social preview image refinement and richer structured data
