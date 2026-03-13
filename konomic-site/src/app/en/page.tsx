@@ -104,6 +104,9 @@ export default function EnHomePage() {
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
+              data-cta-channel="whatsapp"
+              data-cta-location="homepage-hero"
+              data-cta-locale="en"
               className="ui-button ui-button-primary inline-flex items-center justify-center rounded-full bg-[#14213d] px-5 py-3 text-sm font-medium text-white hover:bg-[#0d1528] sm:px-6"
             >
               Start on WhatsApp

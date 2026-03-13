@@ -61,6 +61,9 @@ export default function ContactPage() {
           href={whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
+          data-cta-channel="whatsapp"
+          data-cta-location="contact-primary"
+          data-cta-locale="en"
           className="ui-button ui-button-primary rounded-full bg-[#14213d] px-6 py-3 text-sm font-medium text-white hover:bg-[#0d1528]"
         >
           Start on WhatsApp
@@ -119,6 +122,9 @@ export default function ContactPage() {
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
+              data-cta-channel="whatsapp"
+              data-cta-location="contact-template-cta"
+              data-cta-locale="en"
               className="ui-button ui-button-primary rounded-full bg-[#14213d] px-6 py-3 text-sm font-medium text-white hover:bg-[#0d1528]"
             >
               Send on WhatsApp

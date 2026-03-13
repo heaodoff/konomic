@@ -35,6 +35,9 @@ export function SiteShell({ children, locale = 'en' }: { children: ReactNode; lo
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
+                data-cta-channel="whatsapp"
+                data-cta-location="header-desktop"
+                data-cta-locale={locale}
                 className="ui-button ui-button-primary hidden rounded-full border border-[#14213d] bg-[#14213d] px-5 py-2 text-sm font-medium text-white hover:bg-[#0d1528] hover:text-white sm:inline-flex"
               >
                 <span className="text-white">{copy.nav.book}</span>
@@ -72,6 +75,9 @@ export function SiteShell({ children, locale = 'en' }: { children: ReactNode; lo
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
+                data-cta-channel="whatsapp"
+                data-cta-location="header-mobile"
+                data-cta-locale={locale}
                 className="ui-button ui-button-primary inline-flex shrink-0 items-center justify-center rounded-full bg-[#14213d] px-4 py-2 text-xs font-medium text-white hover:bg-[#0d1528]"
               >
                 WhatsApp
@@ -92,10 +98,10 @@ export function SiteShell({ children, locale = 'en' }: { children: ReactNode; lo
 
       <div className="ui-mobile-sticky md:hidden">
         <div className="mx-auto grid max-w-7xl grid-cols-2 gap-3 px-4 py-3">
-          <a href={telegramUrl} target="_blank" rel="noopener noreferrer" className="ui-button ui-button-secondary inline-flex items-center justify-center rounded-full border border-[#14213d]/12 bg-white px-4 py-3 text-sm font-medium text-[#14213d] hover:border-[#fca311]/45">
+          <a href={telegramUrl} target="_blank" rel="noopener noreferrer" data-cta-channel="telegram" data-cta-location="sticky-mobile" data-cta-locale={locale} className="ui-button ui-button-secondary inline-flex items-center justify-center rounded-full border border-[#14213d]/12 bg-white px-4 py-3 text-sm font-medium text-[#14213d] hover:border-[#fca311]/45">
             Telegram
           </a>
-          <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="ui-button ui-button-primary inline-flex items-center justify-center rounded-full bg-[#14213d] px-4 py-3 text-sm font-medium text-white hover:bg-[#0d1528]">
+          <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" data-cta-channel="whatsapp" data-cta-location="sticky-mobile" data-cta-locale={locale} className="ui-button ui-button-primary inline-flex items-center justify-center rounded-full bg-[#14213d] px-4 py-3 text-sm font-medium text-white hover:bg-[#0d1528]">
             WhatsApp
           </a>
         </div>
