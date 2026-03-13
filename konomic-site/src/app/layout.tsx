@@ -53,6 +53,15 @@ export const metadata: Metadata = {
     title: defaultTitle,
     description: defaultDescription,
   },
+  icons: {
+    icon: [
+      { url: "/icon.png", type: "image/png", sizes: "512x512" },
+      { url: "/icon.png", type: "image/png", sizes: "192x192" },
+      { url: "/icon.png", type: "image/png", sizes: "32x32" },
+    ],
+    shortcut: ["/icon.png"],
+    apple: [{ url: "/icon.png", sizes: "180x180", type: "image/png" }],
+  },
   robots: {
     index: true,
     follow: true,
