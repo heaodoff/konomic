@@ -9,6 +9,13 @@ const SELECTOR = [
   'main .ui-card-dark',
 ].join(', ');
 
+function getRevealKind(element: HTMLElement) {
+  if (element.tagName.toLowerCase() === 'section') return 'section';
+  if (element.classList.contains('ui-card-dark')) return 'card-dark';
+  if (element.classList.contains('ui-card-soft')) return 'card-soft';
+  return 'card';
+}
+
 export default function RevealObserver() {
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -26,9 +33,19 @@ export default function RevealObserver() {
       return;
     }
 
+    const siblingCounters = new WeakMap<HTMLElement, number>();
+
     elements.forEach((element, index) => {
       element.dataset.reveal = 'true';
-      element.style.setProperty('--reveal-delay', `${Math.min((index % 6) * 70, 350)}ms`);
+      element.dataset.revealKind = getRevealKind(element);
+
+      const parent = element.parentElement ?? document.body;
+      const siblingIndex = siblingCounters.get(parent) ?? 0;
+      siblingCounters.set(parent, siblingIndex + 1);
+
+      const baseDelay = element.tagName.toLowerCase() === 'section' ? 0 : Math.min(siblingIndex * 85, 340);
+      const waveOffset = (index % 3) * 20;
+      element.style.setProperty('--reveal-delay', `${baseDelay + waveOffset}ms`);
     });
 
     const observer = new IntersectionObserver(
@@ -40,8 +57,8 @@ export default function RevealObserver() {
         });
       },
       {
-        threshold: 0.14,
-        rootMargin: '0px 0px -10% 0px',
+        threshold: 0.12,
+        rootMargin: '0px 0px -12% 0px',
       },
     );
 
