@@ -14,9 +14,9 @@ const geistMono = Geist_Mono({
 
 const siteUrl = "https://konomic.es";
 const siteName = "Konomic";
-const defaultTitle = "Konomic — Premium Legal Support in Tenerife";
+const defaultTitle = "Konomic — Multilingual Legal Support in Tenerife";
 const defaultDescription =
-  "Premium multilingual legal support in Tenerife for foreign clients, property buyers, founders, and families.";
+  "Multilingual legal support in Tenerife for foreign clients dealing with property, residency, business, and contract matters.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -33,6 +33,7 @@ export const metadata: Metadata = {
       de: "/de",
       ru: "/ru",
       uk: "/uk",
+      es: "/es",
       "x-default": "/en",
     },
   },
