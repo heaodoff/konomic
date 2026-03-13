@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import { ReactNode } from 'react';
 import { localeContent, localeLabels, locales, type Locale } from '@/content/i18n';
@@ -12,9 +13,19 @@ export function SiteShell({ children, locale = 'en' }: { children: ReactNode; lo
       <header className="z-30 border-b border-[#14213d]/8 bg-[linear-gradient(180deg,rgba(255,255,255,0.92),rgba(255,255,255,0.82))] shadow-[0_10px_28px_rgba(20,33,61,0.04)] backdrop-blur-xl">
         <div className="mx-auto max-w-7xl px-4 py-3 sm:px-6 lg:px-10 lg:py-5">
           <div className="flex items-start justify-between gap-3 sm:gap-4">
-            <Link href={`/${locale}`} className="flex min-w-0 flex-col">
-              <span className="text-[11px] uppercase tracking-[0.28em] text-[#9a6200] sm:text-xs sm:tracking-[0.35em]">Konomic Digital SL.</span>
-              <span className="mt-0.5 line-clamp-1 text-xs text-[#516074] sm:mt-1 sm:text-sm">{copy.brandTagline}</span>
+            <Link href={`/${locale}`} className="flex min-w-0 items-center gap-3 sm:gap-4">
+              <Image
+                src="/konomic-logo.png"
+                alt="Konomic logo"
+                width={150}
+                height={62}
+                priority
+                className="h-auto w-[96px] shrink-0 sm:w-[122px]"
+              />
+              <span className="flex min-w-0 flex-col">
+                <span className="text-[11px] uppercase tracking-[0.28em] text-[#9a6200] sm:text-xs sm:tracking-[0.35em]">Konomic Digital SL.</span>
+                <span className="mt-0.5 line-clamp-1 text-xs text-[#516074] sm:mt-1 sm:text-sm">{copy.brandTagline}</span>
+              </span>
             </Link>
 
             <div className="flex items-center gap-3">

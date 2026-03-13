@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Image from 'next/image';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
@@ -109,14 +108,6 @@ export default function RuHomePage() {
       <section className="relative mx-auto grid max-w-7xl gap-8 px-5 py-10 lg:grid-cols-[1.08fr_0.92fr] lg:gap-10 lg:px-10 lg:py-24">
         <div className="absolute inset-x-0 top-0 -z-10 h-[28rem] bg-[radial-gradient(circle_at_top_left,rgba(252,163,17,0.10),transparent_34%),radial-gradient(circle_at_top_right,rgba(20,33,61,0.07),transparent_28%)]" aria-hidden="true" />
         <div className="flex flex-col justify-center">
-          <Image
-            src="/konomic-logo.png"
-            alt="Логотип Konomic"
-            width={420}
-            height={175}
-            priority
-            className="mb-6 h-auto w-[190px] sm:w-[230px] md:w-[280px]"
-          />
           <div className="ui-accent-chip mb-4 inline-flex w-fit rounded-full px-4 py-1 text-xs uppercase tracking-[0.28em]">
             Русскоязычная юридическая поддержка на Тенерифе
           </div>
